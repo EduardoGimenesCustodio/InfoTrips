@@ -1,0 +1,101 @@
+/* InfoTrips - Criação das Tabelas */
+
+create database InfoTrips;
+
+use InfoTrips;
+
+create table pais(id_pais int not null auto_increment, nome_pais varchar(70), 
+informacoes_turisticas_pais varchar(500), primary key(id_pais));
+
+create table fusohorario(id_fusohorario int not null auto_increment, 
+descricao_fusohorario varchar(15), primary key(id_fusohorario));
+
+create table fusohorario_pais(id_fusohorario_pais int not null 
+auto_increment, regiao_fusohorario_pais varchar(200), 
+pais_fusohorario_pais int, 
+fusohorario_fusohorario_pais int, 
+primary key(id_fusohorario_pais), 
+foreign key(pais_fusohorario_pais) references pais(id_pais), 
+foreign key(fusohorario_fusohorario_pais) references 
+fusohorario(id_fusohorario));
+
+create table alerta(id_alerta int not null auto_increment, titulo_alerta 
+varchar(70), data_alerta date, descricao_alerta varchar(200), 
+primary key(id_alerta));
+
+create table alerta_pais(id_alerta_pais int not null auto_increment, 
+alerta_alerta_pais int, pais_alerta_pais int, 
+primary key(id_alerta_pais), 
+foreign key(alerta_alerta_pais) references alerta(id_alerta), 
+foreign key(pais_alerta_pais) references pais(id_pais));
+
+create table moeda(id_moeda int not null auto_increment, 
+nome_moeda varchar(50), 
+primary key(id_moeda));
+
+create table moeda_pais(id_moeda_pais int not null auto_increment, 
+pais_moeda_pais int, moeda_moeda_pais int, 
+primary key(id_moeda_pais), 
+foreign key(pais_moeda_pais) references pais(id_pais), 
+foreign key(moeda_moeda_pais) references moeda(id_moeda));
+
+create table visto(id_visto int not null auto_increment, 
+nome_visto varchar(50), 
+finalidade_visto varchar(300), 
+tempo_permanencia_visto varchar(150), 
+taxa_solicitacao_visto varchar(150), 
+taxa_adicional_visto varchar(150), 
+pais_visto int, 
+primary key(id_visto), 
+foreign key(pais_visto) references pais(id_pais));
+
+create table consulado(id_consulado int not null auto_increment, 
+endereco_consulado varchar(200), 
+telefone_consulado varchar(50), 
+email_consulado varchar(70), 
+pais_representado_consulado int, pais_sede_consulado int, 
+primary key(id_consulado), 
+foreign key(pais_representado_consulado) references pais(id_pais), 
+foreign key(pais_sede_consulado) references pais(id_pais));
+
+create table embaixada(id_embaixada int not null auto_increment, 
+endereco_embaixada varchar(200), 
+telefone_embaixada varchar(50), 
+email_embaixada varchar(70), 
+pais_representado_embaixada int, pais_sede_embaixada int, 
+primary key(id_embaixada), 
+foreign key(pais_representado_embaixada) references pais(id_pais), 
+foreign key(pais_sede_embaixada) references pais(id_pais));
+
+create table usuario(id_usuario int not null auto_increment, 
+nome_usuario varchar(70), 
+email_usuario varchar(70), 
+senha_usuario varchar(20), 
+foto_usuario blob, updatesareactive_usuario boolean, 
+primary key(id_usuario));
+
+create table favorito(id_favorito int not null auto_increment, isfavorite 
+int, pais_favorito int, usuario_favorito int, primary 
+key(id_favorito), foreign key(pais_favorito) references 
+pais(id_pais), foreign key(usuario_favorito) references usuario(id_usuario));
+
+create table exigencia(id_exigencia int not null auto_increment, 
+nome_exigencia varchar(150), descricao_exigencia varchar(600), 
+isrequired_exigencia boolean, isactive_exigencia boolean, 
+pais_exigencia int, primary key(id_exigencia), 
+foreign key(pais_exigencia) references pais(id_pais));
+
+create table checklist(id_checklist int not null auto_increment, 
+isdone_checklist boolean, exigencia_checklist int, 
+usuario_checklist int, primary key(id_checklist), 
+foreign key(exigencia_checklist) references exigencia(id_exigencia), 
+foreign key(usuario_checklist) references usuario(id_usuario));
+
+create table lingua(id_lingua int not null auto_increment, nome_lingua varchar(70), 
+primary key(id_lingua));
+
+create table lingua_pais(id_lingua_pais int not null auto_increment, 
+pais_lingua_pais int, lingua_lingua_pais int, 
+primary key(id_lingua_pais), 
+foreign key(pais_lingua_pais) references pais(id_pais), 
+foreign key(lingua_lingua_pais) references lingua(id_lingua));
