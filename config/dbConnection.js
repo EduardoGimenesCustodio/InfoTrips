@@ -1,14 +1,21 @@
-// var mysql = require('mysql');
+var mysql = require('mysql');
 
-// var connMySQL = function(){
-// 	console.log('Conexão com o DB foi estabelecida');
-// 	return mysql.createConnection({
-// 		host: 'localhost',
-// 		user: 'root',
-// 		password: '',
-// 		database: 'InfoTrips'			
-// 	});
-// }
+var connMySQL = function(){
+	console.log('Conexão com o DB foi estabelecida');
+	return mysql.createConnection({
+		host: 'localhost',
+		user: 'root',
+		password: '',
+		database: 'InfoTrips'			
+	});
+}
+
+module.exports = function(){
+
+	console.log('O autoload carregou o módulo de conexão com o DB');
+	return connMySQL;
+
+}
 
 ///////////////////////////////////
 
@@ -58,21 +65,27 @@
 
 /////////////////////////////////
 
-var Postgresql = require('pg');
+// var pg = require('pg');
+// var connectionString = 'postgres://postgres:123@localhost:5432/InfoTrips';
+// var pgClient = new pg.Client(connectionString);
 
-var connPostgreSQL = function(){
-	var config = {
-		user: 'postgres',
-		host: 'localhost',
-		database: 'InfoTrips',
-		password: '123',
-		port: 5432,
-		ssl: true
-	};
-	// var connection;
-	var connection = new Postgresql.Connection(config);
-	return connection;
-}
+// var connPostgreSQL = function(){
+// 	return pgClient.connect();
+// }
+
+// var connPostgreSQL = function(){
+// 	var config = {
+// 		user: 'postgres',
+// 		host: 'localhost',
+// 		database: 'InfoTrips',
+// 		password: '123',
+// 		port: 5432,
+// 		ssl: true
+// 	};
+// 	// var connection;
+// 	var connection = new Postgresql.Connection(config);
+// 	return connection();
+// }
 
 ///////////////////////////////
 
@@ -110,18 +123,11 @@ var connPostgreSQL = function(){
 
 ////////////////////////////////
 
-module.exports = function(){
-
-	 console.log('O autoload carregou o módulo de conexão com o DB');
-	 return connPostgreSQL;
-
-}
-
-////////////////////////////////
-
 // module.exports = function(){
 
-// 	console.log('O autoload carregou o módulo de conexão com o DB');
-// 	return connMySQL;
+// 	 console.log('O autoload carregou o módulo de conexão com o DB');
+// 	 return connPostgreSQL;
 
 // }
+
+////////////////////////////////

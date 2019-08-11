@@ -7,6 +7,8 @@ var app = express();
 app.set('view engine', 'ejs');
 app.set('views','./app/views');
 
+app.use(express.static('./app/public'));
+
 app.use(bodyParser.urlencoded({extended:true}));
 //aqui parametrizamos como o bodyParser vai tratar os formuklários.
 //o parametro extend:true vai permitir que seja implementada através de Json
