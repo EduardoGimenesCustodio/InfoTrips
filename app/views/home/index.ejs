@@ -15,12 +15,58 @@
     <body>
       <header class="cabecalho">
         <!-- <a href="index.ejs"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a> -->
-        <a href="favoritos.ejs"><img src="img/branco/icone_lista_favoritos_branco.svg" alt="Botão favoritos" class="botao_cabecalho"></a>
+        <a href="favoritos.ejs" class="botao_lateral_esquerda"><img src="img/branco/icone_lista_favoritos_branco.svg" alt="Botão favoritos" class="botao_cabecalho"></a>
         <a href="index.ejs"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
-        <a href="perfil.ejs"><img src="img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
+        <a href="perfil.ejs" class="botao_lateral_direita"><img src="img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
       </header>
 
       <h1 class="titulo_principal">Informe-se antes de viajar</h1>
+
+      <div class="carrossel">
+          <div class="wall wall-1" id="wall-1">
+            <img src="img/roxo/icone_aviao_roxo.svg" alt="Ícone avião" class="imagem_carrossel">
+            <p class="texto_carrossel">Acesse informações básicas sobre o país que deseja visitar</p>
+            <div class="pontos_carrossel">
+              <a href="#wall-1" class="ponto_carrossel_atual"></a>
+              <a href="#wall-2" class="ponto_carrossel"></a>
+              <a href="#wall-3" class="ponto_carrossel"></a>
+              <a href="#wall-4" class="ponto_carrossel"></a>
+            </div>
+          </div>
+      
+          <div class="wall wall-2" id="wall-2">
+            <img src="img/roxo/icone_passaporte_roxo.svg" alt="Ícone passaporte" class="imagem_carrossel">
+            <p class="texto_carrossel">Saiba quais documentos são exigidos por seu país de destino</p>
+            <div class="pontos_carrossel">
+              <a href="#wall-1" class="ponto_carrossel"></a>
+              <a href="#wall-2" class="ponto_carrossel_atual"></a>
+              <a href="#wall-3" class="ponto_carrossel"></a>
+              <a href="#wall-4" class="ponto_carrossel"></a>
+            </div>
+          </div>
+      
+          <div class="wall wall-3" id="wall-3">
+            <img src="img/roxo/icone_checklist_roxo.svg" alt="Ícone checklist" class="imagem_carrossel">
+            <p class="texto_carrossel">Crie checklists para não esquecer de nenhum documento ou exigência</p>
+            <div class="pontos_carrossel">
+              <a href="#wall-1" class="ponto_carrossel"></a>
+              <a href="#wall-2" class="ponto_carrossel"></a>
+              <a href="#wall-3" class="ponto_carrossel_atual"></a>
+              <a href="#wall-4" class="ponto_carrossel"></a>
+            </div>
+          </div>
+
+          <div class="wall wall-4" id="wall-4">
+            <img src="img/roxo/icone_torre_eiffel_roxo.svg" alt="Ícone Torre Eiffel" class="imagem_carrossel">
+            <p class="texto_carrossel">Consulte sugestões de sites com guias turísticos e atrações locais</p>
+            <div class="pontos_carrossel">
+              <a href="#wall-1" class="ponto_carrossel"></a>
+              <a href="#wall-2" class="ponto_carrossel"></a>
+              <a href="#wall-3" class="ponto_carrossel"></a>
+              <a href="#wall-4" class="ponto_carrossel_atual"></a>
+            </div>
+          </div>
+      </div>
 
       <form method="POST">
         <h2 class="titulo_busca">Saiba do que precisa anter de ir para...</h2>
