@@ -33,6 +33,8 @@ img{
 	--cor-borda-campo-formulario: #707070;
 	--cor-fundo-campo-formulario: white;
 	--cor-letra-campo-formulario: black;
+	--cor-letra-texto: black;
+	--cor-letra-botao: white;
 }
 
 /* Corpo */
@@ -49,6 +51,13 @@ body{
 	display: flex;
 	width: 100%;
 	box-shadow: 0 0 4px 0;
+    padding: 2.8%;
+}
+
+.cabecalho_login{
+	background-color: var(--cor-fundo-pagina);
+	display: flex;
+	width: 100%;
     padding: 2.8%;
 }
 
@@ -162,14 +171,78 @@ body{
 
 /* Campos formulário */
 
+.formulario_busca{
+	display: flex;
+	border: 1px solid;
+	border-color: var(--cor-borda-campo-formulario);
+	background-color: var(--cor-fundo-campo-formulario);
+	border-radius: 10px;
+	width: 94.4%;
+	margin: 0 2.8% 2.8% 2.8%;
+	padding: 2.8%;
+}
+
+.campo_formulario_busca{
+	border: none;
+	background-color: var(--cor-fundo-campo-formulario);
+	color: var(--cor-letra-campo-formulario);
+	width: 88%;
+	margin-right: auto;
+	font-size: 18px;
+}
+
+.botao_buscar{
+	margin-left: auto;
+	width: 25px;
+	height: 25px;
+}
+
 .campo_formulario{
 	border: 1px solid;
 	border-color: var(--cor-borda-campo-formulario);
-	background-color: var(--cor-fundo-campo-formulario);;
+	background-color: var(--cor-fundo-campo-formulario);
 	color: var(--cor-letra-campo-formulario);
 	width: 94.4%;
-	margin: 0 2.8% 0% 2.8%;
+	margin: 0 2.8% 2.8% 2.8%;
 	padding: 2.8%;
 	border-radius: 10px;
 	font-size: 18px;
+}
+
+.texto_conta{
+	color: var(--cor-letra-texto);
+	text-align: center;
+	margin-top: 2.8%;
+	font-size: 16px;
+}
+
+.texto_atualizacoes{
+
+}
+
+.botao{
+	background-color: var(--cor-primary-dark);
+	color: var(--cor-letra-botao);
+	display: flex;
+	font-weight: bold;
+	text-transform: uppercase;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	margin-top: 2.8%;
+	padding: 2.8%;
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+/* Cadastro */
+
+.logo_titulo{
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	width: 180px;
+	margin-top: 4%;
+	margin-bottom: 4%;
 }
