@@ -6,7 +6,7 @@
         <title>InfoTrips</title>
         <meta name="description" content="Site informativo para viagens internacionais">
         <meta name="keywords" content="Viagens Internacionais, Turismo, Burocracia">
-        <meta name="robots" content="login, follow">
+        <meta name="robots" content="cadastro, follow">
         <meta name="author" content="Eduardo Gimenes">
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
@@ -14,19 +14,21 @@
     </head>
 
     <body>
-        <header class="cabecalho cabecalho_login">
-            <a href="/"><img src="img/roxo/icone_voltar_roxo.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+        <header class="cabecalho">
+            <a href="/login" class="botao_lateral_esquerda"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+            <a href="/"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
         </header>
 
-        <img src="img/roxo/logo_com_titulo_roxa.svg" alt="Logo InfoTrips com título" class="logo_titulo">
-
         <form method="POST">
+            <div class="campo_foto_formulario">
+                <input type="file" name="foto_usuario" accept="image/*" required>
+                <img src="img/roxo/icone_inserir_foto_perfil_roxo.svg" alt="Botão inserir foto de perfil" class="foto_formulario">
+            </div>
+            <input type="text" name="nome_usuario" class="campo_formulario" placeholder="Nome" required>
             <input type="email" name="email_usuario" class="campo_formulario" placeholder="E-mail" required>
             <input type="password" name="senha_usuario" class="campo_formulario" placeholder="Senha" required>
-            <input type="submit" value="Entrar" class="botao">
+            <input type="submit" value="Cadastrar" class="botao">
         </form>
-        <p class="texto texto_conta">não possui uma conta?</p>
-        <a href="/cadastro" class="botao">Cadastre-se</a>
     </body>
     <script type="text/javascript" src="js/main.js"></script>
 </html>

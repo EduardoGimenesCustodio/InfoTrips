@@ -56,9 +56,7 @@ body{
 
 .cabecalho_login{
 	background-color: var(--cor-fundo-pagina);
-	display: flex;
-	width: 100%;
-    padding: 2.8%;
+	box-shadow: 0 0 0 0;
 }
 
 .botao_cabecalho{
@@ -101,6 +99,17 @@ body{
 	width: 100%;
 	margin-bottom: 2.8%;
 	font-size: 20px;
+}
+
+.titulo_campo_informacao{
+
+}
+
+/* Texto */
+
+.texto{
+	color: var(--cor-letra-texto);
+	font-size: 16px;
 }
 
 /* Carrossel */
@@ -148,16 +157,6 @@ body{
 	margin-top: 5%;
 }
 
-.ponto_carrossel_atual{
-	background-color: var(--cor-primary-dark);
-	border-radius: 100%;
-	cursor: pointer;
-	width: 30px;
-	height: 30px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .ponto_carrossel{
 	border: 4px solid;
 	border-color: var(--cor-primary-dark);
@@ -169,32 +168,28 @@ body{
 	margin-right: auto;
 }
 
+.ponto_carrossel_atual{
+	border: none;
+	background-color: var(--cor-primary-dark);
+}
+
 /* Campos formulário */
 
-.formulario_busca{
+.campo_foto_formulario{
 	display: flex;
-	border: 1px solid;
-	border-color: var(--cor-borda-campo-formulario);
-	background-color: var(--cor-fundo-campo-formulario);
-	border-radius: 10px;
-	width: 94.4%;
-	margin: 0 2.8% 2.8% 2.8%;
-	padding: 2.8%;
-}
-
-.campo_formulario_busca{
-	border: none;
-	background-color: var(--cor-fundo-campo-formulario);
-	color: var(--cor-letra-campo-formulario);
-	width: 88%;
-	margin-right: auto;
-	font-size: 18px;
-}
-
-.botao_buscar{
+	/* background-image: url(C:/InfoTrips/app/public/img/roxo/icone_inserir_foto_perfil_roxo.svg); */
 	margin-left: auto;
-	width: 25px;
-	height: 25px;
+	margin-right: auto;
+	width: 180px;
+	height: 180px;
+	margin-top: 4%;
+	margin-bottom: 4%;
+}
+
+input[type='file']{
+	width: 180px;
+	height: 180px;
+	opacity: 0;
 }
 
 .campo_formulario{
@@ -209,15 +204,31 @@ body{
 	font-size: 18px;
 }
 
+.formulario_busca{
+	display: flex;
+}
+
+.campo_formulario_busca{
+	border: none;
+	width: 88%;
+	margin: 0 auto 0 0;
+	padding: 0;
+	border-radius: 0;
+}
+
+.botao_buscar{
+	margin-left: auto;
+	width: 25px;
+	height: 25px;
+}
+
 .texto_conta{
-	color: var(--cor-letra-texto);
 	text-align: center;
 	margin-top: 2.8%;
-	font-size: 16px;
 }
 
 .texto_atualizacoes{
-
+	margin-left: 2.8%;
 }
 
 .botao{
