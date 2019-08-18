@@ -1,8 +1,8 @@
 /* InfoTrips - Criação das Tabelas */
 
-create database InfoTrips;
+create database infotrips;
 
-use InfoTrips;
+use infotrips;
 
 create table pais(id_pais int not null auto_increment, nome_pais varchar(70), 
 informacoes_turisticas_pais varchar(500), primary key(id_pais));

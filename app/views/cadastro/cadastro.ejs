@@ -22,14 +22,17 @@
         <form method="POST">
             <div class="campo_foto_formulario">
                 <input type="file" name="foto_usuario" accept="image/*">
-                <img src="img/roxo/icone_inserir_foto_perfil_roxo.svg" alt="Botão inserir foto de perfil" class="foto_formulario">
+                <!-- <img src="img/roxo/icone_inserir_foto_perfil_roxo.svg" alt="Botão inserir foto de perfil" class="foto_formulario"> -->
             </div>
             <input type="text" name="nome_usuario" class="campo_formulario" placeholder="Nome" required>
             <input type="email" name="email_usuario" class="campo_formulario" placeholder="E-mail" required>
             <input type="password" name="senha_usuario" class="campo_formulario" placeholder="Senha" required>
+
             <div class="campo_checkbox_formulario">
-                <input type="checkbox" class="checkbox_atualizacoes">
-                <label class="texto texto_checkbox_atualizacoes">receba atualizações sobre países favoritos</label>
+                <label class="checkbox texto">receber atualizações sobre países favoritos
+                    <input type="checkbox" name="updatesareactive_usuario" checked="checked">
+                    <span class="checkmark checkmark_atualizacoes"></span>
+                </label>
             </div>
             <input type="submit" value="Cadastrar" class="botao">
         </form>
