@@ -67,7 +67,6 @@ body{
 }
 
 .botao_lateral_esquerda{
-	margin-left: 0%;
 	margin-right: auto;
 }
 
@@ -79,7 +78,6 @@ body{
 
 .botao_lateral_direita{
 	margin-left: auto;
-	margin-right: 0%;
 }
 
 /* Títulos */
@@ -116,25 +114,23 @@ body{
 
 .carrossel{
 	width: 100%;
+	margin: 10% 0 10% 0;
 	padding: 2.8%;
-	margin-top: 10%;
-	margin-bottom: 10%;
 }
 
 .imagem_carrossel{
 	display: flex;
-	margin-left: auto;
-	margin-right: auto;
 	width: 180px;
 	height: 180px;
+	margin: 0 auto 0 auto;
 }
 
 .texto_carrossel{
 	color: var(--cor-primary-dark);
 	text-align: center;
 	font-weight: bold;
-	padding: 0 10% 0 10%;
 	margin-top: 5%;
+	padding: 0 10% 0 10%;
 	font-size: 22px;
 }
 
@@ -150,11 +146,9 @@ body{
 
 .pontos_carrossel{
 	display: flex;
-	margin-left: auto;
-	margin-right: auto;
 	width: 60%;
 	height: 30px;
-	margin-top: 5%;
+	margin: 5% auto 0 auto;
 }
 
 .ponto_carrossel{
@@ -164,8 +158,7 @@ body{
 	cursor: pointer;
 	width: 30px;
 	height: 30px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto 0 auto;
 }
 
 .ponto_carrossel_atual{
@@ -178,12 +171,9 @@ body{
 .campo_foto_formulario{
 	display: flex;
 	/* background-image: url(C:/InfoTrips/app/public/img/roxo/icone_inserir_foto_perfil_roxo.svg); */
-	margin-left: auto;
-	margin-right: auto;
 	width: 180px;
 	height: 180px;
-	margin-top: 4%;
-	margin-bottom: 4%;
+	margin: 4% auto 4% auto;
 }
 
 input[type='file']{
@@ -222,12 +212,24 @@ input[type='file']{
 	height: 25px;
 }
 
-.texto_conta{
+.texto_login{
 	text-align: center;
 	margin-top: 2.8%;
 }
 
-.texto_atualizacoes{
+.campo_checkbox_formulario{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 2.8%;
+}
+
+.checkbox_atualizacoes{
+	width: 25px;
+	height: 25px;
+}
+
+.texto_checkbox_atualizacoes{
 	margin-left: 2.8%;
 }
 
@@ -238,22 +240,17 @@ input[type='file']{
 	font-weight: bold;
 	text-transform: uppercase;
 	justify-content: center;
-	margin-left: auto;
-	margin-right: auto;
 	width: 50%;
-	margin-top: 2.8%;
+	margin: 2.8% auto 0 auto;
 	padding: 2.8%;
 	border-radius: 10px;
 	font-size: 18px;
 }
 
-/* Cadastro */
+/* Login */
 
 .logo_titulo{
 	display: flex;
-	margin-left: auto;
-	margin-right: auto;
 	width: 180px;
-	margin-top: 4%;
-	margin-bottom: 4%;
+	margin: 4% auto 4% auto;
 }
