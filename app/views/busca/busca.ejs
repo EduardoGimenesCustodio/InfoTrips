@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>InfoTrips</title>
+      <meta name="description" content="Site informativo para viagens internacionais">
+      <meta name="keywords" content="Viagens Internacionais, Turismo, Burocracia">
+      <meta name="robots" content="busca, follow">
+      <meta name="author" content="Eduardo Gimenes">
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+      <link rel="icon" href="img/roxo/logo_roxa.png">
+    </head>
+
+    <body>
+      <header class="cabecalho">
+        <a href="/"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+        <a href="/" class="titulo_cabecalho"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
+        <a href="/login"><img src="img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
+      </header>
+
+      <form class="campo_formulario formulario_busca formulario_tela_busca" method="POST">
+        <input type="search" name="pais_busca" class="campo_formulario campo_formulario_busca" placeholder="Pesquise um país" maxlength="70" required>
+        <input type="image" src="img/roxo/icone_lupa_roxo.svg" class="botao_buscar">
+      </form>
+
+      <section>
+        <a href="/pais" class="bloco_informacao bloco_informacao_checkbox">
+          <img src="img/bandeiras/Bandeira Argentina.png" alt="Bandeira Argentina" class="bandeira_pais">
+          <p class="texto_bloco_informacao">Argentina</p>
+
+          <label class="checkbox texto">
+            <input type="checkbox" name="updatesareactive_usuario">
+            <span class="checkmark checkmark_favoritos"></span>
+          </label>
+        </a>
+      </section>
+
+    </body>
+    <script type="text/javascript" src="js/main.js"></script>
+</html>

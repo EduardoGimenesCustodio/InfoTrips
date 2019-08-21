@@ -35,6 +35,8 @@ img{
 	--cor-letra-campo-formulario: black;
 	--cor-letra-texto: black;
 	--cor-letra-botao: white;
+	--cor-letra-cabecalho-pais: white;
+	--cor-borda-aba-pais: white;
 }
 
 /* Corpo */
@@ -66,18 +68,19 @@ body{
 	height: 34px;
 }
 
-.botao_lateral_esquerda{
-	margin-right: auto;
-}
-
 .titulo{
 	display: flex;
 	cursor: pointer;
 	height: 34px;
+	margin: 0 auto 0 auto;
 }
 
-.botao_lateral_direita{
-	margin-left: auto;
+.titulo_cabecalho{
+	width: 100%;
+}
+
+.titulo_cadastro{
+	padding-right: 34px;
 }
 
 /* Títulos */
@@ -97,10 +100,6 @@ body{
 	width: 100%;
 	margin-bottom: 2.8%;
 	font-size: 20px;
-}
-
-.titulo_campo_informacao{
-
 }
 
 /* Texto */
@@ -198,6 +197,10 @@ input[type='file']{
 	display: flex;
 }
 
+.formulario_tela_busca{
+	margin: 4% 2.8% 4% 2.8%;
+}
+
 .campo_formulario_busca{
 	border: none;
 	width: 88%;
@@ -221,6 +224,7 @@ input[type='file']{
 	background-color: var(--cor-primary-dark);
 	color: var(--cor-letra-botao);
 	display: flex;
+	cursor: pointer;
 	font-weight: bold;
 	text-transform: uppercase;
 	justify-content: center;
@@ -233,8 +237,7 @@ input[type='file']{
 
 /* Checkbox */
 
-.campo_checkbox_formulario{
-	display: flex;
+.campo_checkbox_atualizacoes{
 	width: 100%;
 	padding: 2.8%;
 }
@@ -248,7 +251,9 @@ input[type='file']{
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	width: 100%;
+}
+
+.checkbox_atualizacoes{
 	padding: 3px 0 3px 10%;
 }
 
@@ -280,6 +285,10 @@ input[type='file']{
 
 .checkmark_checklist{
 	border-radius: 100%;
+}
+
+.checkmark_favoritos{
+	position: relative;
 }
 
 /* When the checkbox is checked, add a blue background */
@@ -318,4 +327,83 @@ input[type='file']{
 	display: flex;
 	width: 180px;
 	margin: 4% auto 4% auto;
+}
+
+/* Pais */
+
+.cabecalho_pais{
+	background-color: var(--cor-primary);
+	width: 100%;
+	margin-bottom: 2.8%;
+	box-shadow: 0 0 4px 0;
+}
+
+.nome_pais{
+	color: var(--cor-letra-cabecalho-pais);
+	text-align: center;
+	font-weight: bold;
+	font-size: 28px;
+	padding: 4% 0 4% 0;
+}
+
+.abas_pais{
+	display: flex;
+	width: 100%;
+}
+
+.aba_pais{
+	border-bottom: 3px solid;
+	border-color: var(--cor-primary);
+	background-color: var(--cor-primary);
+	cursor: pointer;
+	width: 50%;
+	padding: 2.8%;
+}
+
+.aba_atual_pais{
+	border-color: var(--cor-borda-aba-pais);
+}
+
+.nome_aba_pais{
+	color: var(--cor-letra-cabecalho-pais);
+	text-align: center;
+	font-size: 18px;
+}
+
+.secao_atual{
+	display: block;
+}
+
+.secao_invisivel{
+	display: none;
+}
+
+.bloco_informacao{
+	background-color: var(--cor-primary-light);
+	display: auto;
+	cursor: pointer;
+	width: 94.4%;
+	margin: 0 auto 2.8% auto;
+	padding: 2.8%;
+	border-radius: 10px;
+}
+
+.titulo_bloco_informacao{
+	color: var(--cor-primary-dark);
+	font-size: 18px;
+}
+
+.texto_bloco_informacao{
+	width: 100%;
+	text-align: justify;
+}
+
+.bloco_informacao_checkbox{
+	display: flex;
+	align-items: center;
+}
+
+.bandeira_pais{
+	height: 25px;
+	margin-right: 2.8%;
 }

@@ -15,8 +15,8 @@
 
     <body>
         <header class="cabecalho">
-            <a href="/login" class="botao_lateral_esquerda"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
-            <a href="/"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
+            <a href="/login"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+            <a href="/" class="titulo_cabecalho titulo_cadastro"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
         </header>
 
         <form method="POST">
@@ -24,12 +24,11 @@
                 <input type="file" name="foto_usuario" accept="image/*">
                 <!-- <img src="img/roxo/icone_inserir_foto_perfil_roxo.svg" alt="Botão inserir foto de perfil" class="foto_formulario"> -->
             </div>
-            <input type="text" name="nome_usuario" class="campo_formulario" placeholder="Nome" required>
-            <input type="email" name="email_usuario" class="campo_formulario" placeholder="E-mail" required>
-            <input type="password" name="senha_usuario" class="campo_formulario" placeholder="Senha" required>
-
-            <div class="campo_checkbox_formulario">
-                <label class="checkbox texto">receber atualizações sobre países favoritos
+            <input type="text" name="nome_usuario" class="campo_formulario" placeholder="Nome" maxlength="70" required>
+            <input type="email" name="email_usuario" class="campo_formulario" placeholder="E-mail" maxlength="70" required>
+            <input type="password" name="senha_usuario" class="campo_formulario" placeholder="Senha" maxlength="20" required>
+            <div class="campo_checkbox_atualizacoes">
+                <label class="checkbox checkbox_atualizacoes texto">receber atualizações sobre países favoritos
                     <input type="checkbox" name="updatesareactive_usuario" checked="checked">
                     <span class="checkmark checkmark_atualizacoes"></span>
                 </label>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>InfoTrips</title>
+      <meta name="description" content="Site informativo para viagens internacionais">
+      <meta name="keywords" content="Viagens Internacionais, Turismo, Burocracia">
+      <meta name="robots" content="pais, follow">
+      <meta name="author" content="Eduardo Gimenes">
+      <link rel="stylesheet" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+      <link rel="icon" href="img/roxo/logo_roxa.png">
+    </head>
+
+    <body>
+      <header class="cabecalho">
+        <a href="/busca"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+        <a href="/" class="titulo_cabecalho"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
+        <a href="/login"><img src="img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
+      </header>
+
+      <div class="cabecalho_pais">
+		<h2 class="nome_pais">Agentina</h2>
+
+		<div class="abas_pais">
+			<button id="aba_informacoes" class="aba_pais aba_atual_pais" onclick="mudar_aba('aba_checklist', 'aba_informacoes', 'secao_checklist', 'secao_informacoes')">
+				<h3 class="nome_aba_pais">Informações</h3>
+			</button>
+		  	<button id="aba_checklist" class="aba_pais" onclick="mudar_aba('aba_informacoes', 'aba_checklist', 'secao_informacoes', 'secao_checklist')">
+				<h3 class="nome_aba_pais">Checklist</h3>
+			</button>
+		</div>
+	  </div>
+
+	  <section id="secao_informacoes" class="secao_atual">
+		  <p>pq deus</p>
+	  </section>
+
+	  <section id="secao_checklist" class="secao_invisivel">
+		  <p>jesus</p>
+	  </section>
+
+    </body>
+    <script type="text/javascript" src="js/main.js"></script>
+</html>

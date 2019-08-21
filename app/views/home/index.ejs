@@ -15,9 +15,9 @@
 
     <body>
       <header class="cabecalho">
-        <a href="/favoritos" class="botao_lateral_esquerda"><img src="img/branco/icone_lista_favoritos_branco.svg" alt="Botão favoritos" class="botao_cabecalho"></a>
-        <a href="/"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
-        <a href="/login" class="botao_lateral_direita"><img src="img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
+        <a href="/favoritos"><img src="img/branco/icone_lista_favoritos_branco.svg" alt="Botão favoritos" class="botao_cabecalho"></a>
+        <a href="/" class="titulo_cabecalho"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
+        <a href="/login"><img src="img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
       </header>
 
       <h1 class="titulo_principal">Informe-se antes de viajar</h1>
@@ -70,7 +70,7 @@
 
       <h2 class="titulo_busca">Saiba do que precisa anter de ir para...</h2>
       <form class="campo_formulario formulario_busca" method="POST">
-        <input type="text" name="pais_busca" class="campo_formulario campo_formulario_busca" placeholder="Pesquise um país" required>
+        <input type="search" name="pais_busca" class="campo_formulario campo_formulario_busca" placeholder="Pesquise um país" maxlength="70" required>
         <input type="image" src="img/roxo/icone_lupa_roxo.svg" class="botao_buscar">
       </form>
     </body>
