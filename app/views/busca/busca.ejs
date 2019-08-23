@@ -20,21 +20,24 @@
         <a href="/login"><img src="img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
       </header>
 
-      <form class="campo_formulario formulario_busca formulario_tela_busca" method="POST">
+      <form class="campo_formulario formulario_busca formulario_tela_busca" action="/busca" method="POST">
         <input type="search" name="pais_busca" class="campo_formulario campo_formulario_busca" placeholder="Pesquise um país" maxlength="70" required>
         <input type="image" src="img/roxo/icone_lupa_roxo.svg" class="botao_buscar">
       </form>
 
       <section>
-        <a href="/pais" class="bloco_informacao bloco_informacao_checkbox">
-          <img src="img/bandeiras/Bandeira Argentina.png" alt="Bandeira Argentina" class="bandeira_pais">
-          <p class="texto_bloco_informacao">Argentina</p>
-
-          <label class="checkbox texto">
-            <input type="checkbox" name="updatesareactive_usuario">
-            <span class="checkmark checkmark_favoritos"></span>
-          </label>
-        </a>
+        <% for (var i=0; i<pais.length; i++) { %>
+          <a href="pais?id_pais=<%=pais[i].id_pais%>" class="bloco_informacao bloco_informacao_checkbox">
+            <img src="img/bandeiras/Bandeira Argentina.png" alt="Bandeira Argentina" class="bandeira_pais">
+            <p class="texto texto_bloco_informacao"><%= pais[i].nome_pais %></p>
+  
+            <label class="checkbox texto">
+              <input type="checkbox" name="updatesareactive_usuario">
+              <span class="checkmark checkmark_favoritos"></span>
+            </label>
+          </a>
+        <% } %>
+          
       </section>
 
     </body>

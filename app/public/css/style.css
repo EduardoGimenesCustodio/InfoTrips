@@ -51,9 +51,10 @@ body{
 .cabecalho{
 	background-color: var(--cor-primary-dark);
 	display: flex;
+	position: relative;
 	width: 100%;
+	padding: 2.8%;
 	box-shadow: 0 0 4px 0;
-    padding: 2.8%;
 }
 
 .cabecalho_login{
@@ -355,26 +356,24 @@ input[type='file']{
 	border-bottom: 3px solid;
 	border-color: var(--cor-primary);
 	background-color: var(--cor-primary);
+	color: var(--cor-letra-cabecalho-pais);
+	text-align: center;
 	cursor: pointer;
 	width: 50%;
 	padding: 2.8%;
+	font-size: 18px;
 }
 
 .aba_atual_pais{
 	border-color: var(--cor-borda-aba-pais);
 }
 
-.nome_aba_pais{
-	color: var(--cor-letra-cabecalho-pais);
-	text-align: center;
-	font-size: 18px;
-}
-
-.secao_atual{
+.secao_pais{
 	display: block;
+	width: 100%;
 }
 
-.secao_invisivel{
+.secao_invisivel_pais{
 	display: none;
 }
 
@@ -390,7 +389,9 @@ input[type='file']{
 
 .titulo_bloco_informacao{
 	color: var(--cor-primary-dark);
+	font-weight: bold;
 	font-size: 18px;
+	margin-bottom: 2.8%;
 }
 
 .texto_bloco_informacao{

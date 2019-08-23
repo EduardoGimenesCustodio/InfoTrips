@@ -15,31 +15,30 @@
 
     <body>
       <header class="cabecalho">
-        <a href="/busca"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+        <a href="/"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
         <a href="/" class="titulo_cabecalho"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
         <a href="/login"><img src="img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
       </header>
 
       <div class="cabecalho_pais">
-		<h2 class="nome_pais">Agentina</h2>
+		    <h2 class="nome_pais"><%=pais[0].nome_pais %></h2>
 
-		<div class="abas_pais">
-			<button id="aba_informacoes" class="aba_pais aba_atual_pais" onclick="mudar_aba('aba_checklist', 'aba_informacoes', 'secao_checklist', 'secao_informacoes')">
-				<h3 class="nome_aba_pais">Informações</h3>
-			</button>
-		  	<button id="aba_checklist" class="aba_pais" onclick="mudar_aba('aba_informacoes', 'aba_checklist', 'secao_informacoes', 'secao_checklist')">
-				<h3 class="nome_aba_pais">Checklist</h3>
-			</button>
-		</div>
-	  </div>
+		    <div class="abas_pais">
+			    <button id="aba_informacoes" class="aba_pais aba_atual_pais" onclick="mudar_aba('aba_checklist', 'aba_informacoes', 'secao_checklist', 'secao_informacoes')">Infrmações</button>
+		  	  <button id="aba_checklist" class="aba_pais" onclick="mudar_aba('aba_informacoes', 'aba_checklist', 'secao_informacoes', 'secao_checklist')">Checklist</button>
+		    </div>
+	    </div>
 
-	  <section id="secao_informacoes" class="secao_atual">
-		  <p>pq deus</p>
-	  </section>
+	    <section id="secao_informacoes" class="secao_pais">
+        <div class="bloco_informacao">
+          <h3 class="titulo_bloco_informacao">Informações Turísticas</h3>
+          <p class="texto texto_bloco_informacao"><%=pais[0].informacoes_turisticas_pais %></p>
+        </div>
+	    </section>
 
-	  <section id="secao_checklist" class="secao_invisivel">
-		  <p>jesus</p>
-	  </section>
+	    <section id="secao_checklist" class="secao_pais secao_invisivel_pais">
+		    <p>jesus</p>
+	    </section>
 
     </body>
     <script type="text/javascript" src="js/main.js"></script>
