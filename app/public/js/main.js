@@ -25,7 +25,7 @@ function previewFotoPerfil() {
     if(foto) {
         reader.readAsDataURL(foto);
     } else {
-        preview.src = "";
+        preview.src = "img/roxo/icone_perfil_grande_roxo.svg";
     }
 
     document.getElementById('foto_usuario_cadastro').className = 'foto_perfil foto_perfil_preview';
