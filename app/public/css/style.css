@@ -170,16 +170,26 @@ body{
 
 .campo_foto_formulario{
 	display: flex;
-	/* background-image: url(C:/InfoTrips/app/public/img/roxo/icone_inserir_foto_perfil_roxo.svg); */
 	width: 180px;
 	height: 180px;
 	margin: 4% auto 4% auto;
 }
 
 input[type='file']{
+	position: absolute;
 	width: 180px;
 	height: 180px;
 	opacity: 0;
+}
+
+.foto_perfil{
+	width: 180px;
+	height: 180px;
+}
+
+.foto_perfil_preview{
+	border-radius: 100%;
+	object-fit: cover;
 }
 
 .campo_formulario{
@@ -380,7 +390,6 @@ input[type='file']{
 .bloco_informacao{
 	background-color: var(--cor-primary-light);
 	display: auto;
-	cursor: pointer;
 	width: 94.4%;
 	margin: 0 auto 2.8% auto;
 	padding: 2.8%;

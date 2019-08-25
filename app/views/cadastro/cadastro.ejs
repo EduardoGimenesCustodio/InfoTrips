@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
         <link rel="icon" href="img/roxo/logo_roxa.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -19,10 +20,10 @@
             <a href="/" class="titulo_cabecalho titulo_cadastro"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
         </header>
 
-        <form method="POST">
+        <form method="POST" action="/perfil" enctype="multipart/form-data">
             <div class="campo_foto_formulario">
-                <input type="file" name="foto_usuario" accept="image/*">
-                <!-- <img src="img/roxo/icone_inserir_foto_perfil_roxo.svg" alt="Botão inserir foto de perfil" class="foto_formulario"> -->
+                <input type="file" name="foto_usuario" accept="image/*" onchange="previewFotoPerfil()">
+                <img src="img/roxo/icone_inserir_foto_perfil_roxo.svg" alt="Botão inserir foto de perfil" id="foto_usuario_cadastro" class="foto_perfil">
             </div>
             <input type="text" name="nome_usuario" class="campo_formulario" placeholder="Nome" maxlength="70" required>
             <input type="email" name="email_usuario" class="campo_formulario" placeholder="E-mail" maxlength="70" required>

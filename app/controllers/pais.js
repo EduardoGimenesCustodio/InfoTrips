@@ -1,7 +1,6 @@
 module.exports.pais = function(app, req, res){
 
-		var connection = app.config.dbConnection(); //recebemos o app por parâmetro, então podemos
-		// recuperar o módulo dentro do app.
+		var connection = app.config.dbConnection();
 
 		var paisModel = new app.app.models.PaisDAO(connection);
 
@@ -12,8 +11,8 @@ module.exports.pais = function(app, req, res){
 			return;
 		}
 
-	 	paisModel.getPais(id_pais, function(error, result){
-	 		res.render('pais/pais', {pais: result});
-		 });
-	
+	 	paisModel.getPais(id_pais, function(error, dados_pais){
+			res.render('pais/pais', {pais: dados_pais, exigencia: {}});
+		});
+		
 }
