@@ -19,8 +19,8 @@
             <a href="javascript:window.history.go(-1)"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
             <a href="/" class="titulo_cabecalho titulo_cadastro"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
         </header>
-
-        <form method="POST" action="/perfil" enctype="multipart/form-data">
+        <!-- enctype="multipart/form-data" -->
+        <form method="POST" action="/cadastrar/usuario">
             <div class="campo_foto_formulario">
                 <input type="file" name="foto_usuario" accept="image/*" onchange="previewFotoPerfil()">
                 <img src="img/roxo/icone_inserir_foto_perfil_roxo.svg" alt="Botão inserir foto de perfil" id="foto_usuario_cadastro" class="foto_perfil">
@@ -30,7 +30,7 @@
             <input type="password" name="senha_usuario" class="campo_formulario" placeholder="Senha" maxlength="20" required>
             <div class="campo_checkbox_atualizacoes">
                 <label class="checkbox checkbox_atualizacoes texto">receber atualizações sobre países favoritos
-                    <input type="checkbox" name="updatesareactive_usuario" checked="checked">
+                    <input type="checkbox" name="updatesareactive_usuario" value="1" checked="checked">
                     <span class="checkmark checkmark_atualizacoes"></span>
                 </label>
             </div>

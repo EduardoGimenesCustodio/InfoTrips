@@ -69,6 +69,11 @@ body{
 	height: 34px;
 }
 
+.foto_perfil_cabecalho{
+	border-radius: 100%;
+	object-fit: cover;
+}
+
 .titulo{
 	display: flex;
 	cursor: pointer;
