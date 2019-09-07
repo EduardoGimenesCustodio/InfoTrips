@@ -117,10 +117,25 @@ body{
 
 /* Carrossel */
 
-.carrossel{
+#carrossel{
 	width: 100%;
 	margin: 10% 0 10% 0;
 	padding: 2.8%;
+	position: relative;
+	overflow: hidden;
+}
+
+.item_carrossel{
+	display: none;
+	animation-name: transicao;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+}
+
+
+
+.item_carrossel_atual{
+	display: block;
 }
 
 .imagem_carrossel{
@@ -137,16 +152,6 @@ body{
 	margin-top: 5%;
 	padding: 0 10% 0 10%;
 	font-size: 22px;
-}
-
-.wall{
-    display: none;
-    width: 100%;
-    height: 100%;
-}
-
-.wall:target{
-    display: block;
 }
 
 .pontos_carrossel{

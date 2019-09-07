@@ -11,6 +11,7 @@
       <link rel="stylesheet" href="css/style.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
       <link rel="icon" href="img/roxo/logo_roxa.png">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -22,7 +23,38 @@
 
       <h1 class="titulo_principal">Informe-se antes de viajar</h1>
 
-      <div class="carrossel">
+      <div id="carrossel">
+
+        <div id="item1_carrossel" class="item_carrossel item_carrossel_atual">
+          <img src="img/roxo/icone_aviao_roxo.svg" alt="Ícone avião" class="imagem_carrossel">
+          <p class="texto_carrossel">Acesse informações básicas sobre o país que deseja visitar</p>
+        </div>
+     
+        <div id="item2_carrossel" class="item_carrossel">
+          <img src="img/roxo/icone_passaporte_roxo.svg" alt="Ícone passaporte" class="imagem_carrossel">
+          <p class="texto_carrossel">Saiba quais documentos são exigidos por seu país de destino</p>
+        </div>
+      
+        <div id="item3_carrossel" class="item_carrossel">
+          <img src="img/roxo/icone_checklist_roxo.svg" alt="Ícone checklist" class="imagem_carrossel">
+          <p class="texto_carrossel">Crie checklists para não esquecer de nenhum documento ou exigência</p>
+        </div>
+      
+        <div id="item4_carrossel" class="item_carrossel">
+          <img src="img/roxo/icone_torre_eiffel_roxo.svg" alt="Ícone Torre Eiffel" class="imagem_carrossel">
+          <p class="texto_carrossel">Consulte sugestões de sites com guias turísticos e atrações locais</p>
+        </div>
+       
+        <div class="pontos_carrossel">
+          <div id="ponto_item1_carrossel" class="ponto_carrossel ponto_carrossel_atual"></div>
+          <div id="ponto_item2_carrossel" class="ponto_carrossel"></div>
+          <div id="ponto_item3_carrossel" class="ponto_carrossel"></div>
+          <div id="ponto_item4_carrossel" class="ponto_carrossel"></div>
+        </div>
+
+      </div>
+
+      <!-- <div class="carrossel">
         <div class="wall wall-1" id="wall-1">
           <img src="img/roxo/icone_aviao_roxo.svg" alt="Ícone avião" class="imagem_carrossel">
           <p class="texto_carrossel">Acesse informações básicas sobre o país que deseja visitar</p>
@@ -66,7 +98,7 @@
             <a href="#wall-4" class="ponto_carrossel ponto_carrossel_atual"></a>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <h2 class="titulo_busca">Saiba do que precisa anter de ir para...</h2>
       <form class="campo_formulario formulario_busca" action="/busca" method="POST">

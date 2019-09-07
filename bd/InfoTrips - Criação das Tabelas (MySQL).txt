@@ -5,7 +5,8 @@ create database infotrips;
 use infotrips;
 
 create table pais(id_pais int not null auto_increment, nome_pais varchar(70), 
-informacoes_turisticas_pais varchar(500), primary key(id_pais));
+informacoes_turisticas_pais varchar(500), bandeira_pais longblob, 
+primary key(id_pais));
 
 create table fusohorario(id_fusohorario int not null auto_increment, 
 descricao_fusohorario varchar(15), primary key(id_fusohorario));
@@ -71,7 +72,7 @@ create table usuario(id_usuario int not null auto_increment,
 nome_usuario varchar(70), 
 email_usuario varchar(70), 
 senha_usuario varchar(20), 
-foto_usuario blob, updatesareactive_usuario boolean, 
+foto_usuario longblob, updatesareactive_usuario boolean, 
 primary key(id_usuario));
 
 create table favorito(id_favorito int not null auto_increment, isfavorite 

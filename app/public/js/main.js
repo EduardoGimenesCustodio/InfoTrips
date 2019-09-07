@@ -1,6 +1,65 @@
 // Carrossel
 
-window.location = "#wall-1";
+var itens = ['item1_carrossel', 'item2_carrossel', 'item3_carrossel', 'item4_carrossel'];
+var itemAtual = 0;
+
+function mudar_item() {
+    document.getElementById(itens[itemAtual]).className = 'item_carrossel';
+    document.getElementById('ponto_'+ itens[itemAtual]).className = 'ponto_carrossel';
+    itemAtual = (itemAtual + 1) % itens.length;
+    document.getElementById(itens[itemAtual]).className = 'item_carrossel item_carrossel_atual';
+    document.getElementById('ponto_'+ itens[itemAtual]).className = 'ponto_carrossel ponto_carrossel_atual';
+}
+
+$('#ponto_item1_carrossel').click(function(){
+    itemAtual = 0;
+    document.getElementById('item1_carrossel').className = 'item_carrossel item_carrossel_atual';
+    document.getElementById('item2_carrossel').className = 'item_carrossel';
+    document.getElementById('item3_carrossel').className = 'item_carrossel';
+    document.getElementById('item4_carrossel').className = 'item_carrossel';
+    document.getElementById('ponto_item1_carrossel').className = 'ponto_carrossel ponto_carrossel_atual';
+    document.getElementById('ponto_item2_carrossel').className = 'ponto_carrossel';
+    document.getElementById('ponto_item3_carrossel').className = 'ponto_carrossel';
+    document.getElementById('ponto_item4_carrossel').className = 'ponto_carrossel';
+});
+
+$('#ponto_item2_carrossel').click(function(){
+    itemAtual = 1;
+    document.getElementById('item1_carrossel').className = 'item_carrossel';
+    document.getElementById('item2_carrossel').className = 'item_carrossel item_carrossel_atual';
+    document.getElementById('item3_carrossel').className = 'item_carrossel';
+    document.getElementById('item4_carrossel').className = 'item_carrossel';
+    document.getElementById('ponto_item1_carrossel').className = 'ponto_carrossel';
+    document.getElementById('ponto_item2_carrossel').className = 'ponto_carrossel ponto_carrossel_atual';
+    document.getElementById('ponto_item3_carrossel').className = 'ponto_carrossel';
+    document.getElementById('ponto_item4_carrossel').className = 'ponto_carrossel';
+});
+
+$('#ponto_item3_carrossel').click(function(){
+    itemAtual = 2;
+    document.getElementById('item1_carrossel').className = 'item_carrossel';
+    document.getElementById('item2_carrossel').className = 'item_carrossel';
+    document.getElementById('item3_carrossel').className = 'item_carrossel item_carrossel_atual';
+    document.getElementById('item4_carrossel').className = 'item_carrossel';
+    document.getElementById('ponto_item1_carrossel').className = 'ponto_carrossel';
+    document.getElementById('ponto_item2_carrossel').className = 'ponto_carrossel';
+    document.getElementById('ponto_item3_carrossel').className = 'ponto_carrossel ponto_carrossel_atual';
+    document.getElementById('ponto_item4_carrossel').className = 'ponto_carrossel';
+});
+
+$('#ponto_item4_carrossel').click(function(){
+    itemAtual = 3;
+    document.getElementById('item1_carrossel').className = 'item_carrossel';
+    document.getElementById('item2_carrossel').className = 'item_carrossel';
+    document.getElementById('item3_carrossel').className = 'item_carrossel';
+    document.getElementById('item4_carrossel').className = 'item_carrossel item_carrossel_atual';
+    document.getElementById('ponto_item1_carrossel').className = 'ponto_carrossel';
+    document.getElementById('ponto_item2_carrossel').className = 'ponto_carrossel';
+    document.getElementById('ponto_item3_carrossel').className = 'ponto_carrossel';
+    document.getElementById('ponto_item4_carrossel').className = 'ponto_carrossel ponto_carrossel_atual';
+});
+
+setInterval(mudar_item, 10000);
 
 // Transição de abas na tela País
 
