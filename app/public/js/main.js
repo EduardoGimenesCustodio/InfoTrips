@@ -1,65 +1,30 @@
 // Carrossel
 
-var itens = ['item1_carrossel', 'item2_carrossel', 'item3_carrossel', 'item4_carrossel'];
-var itemAtual = 0;
+var carrossel = ['item1_carrossel', 'item2_carrossel', 'item3_carrossel', 'item4_carrossel'];
+var itemCarrosselAtual = 0;
 
-function mudar_item() {
-    document.getElementById(itens[itemAtual]).className = 'item_carrossel';
-    document.getElementById('ponto_'+ itens[itemAtual]).className = 'ponto_carrossel';
-    itemAtual = (itemAtual + 1) % itens.length;
-    document.getElementById(itens[itemAtual]).className = 'item_carrossel item_carrossel_atual';
-    document.getElementById('ponto_'+ itens[itemAtual]).className = 'ponto_carrossel ponto_carrossel_atual';
+function mudar_item_automaticamente() {
+    document.getElementById(carrossel[itemCarrosselAtual]).className = 'item_carrossel';
+    document.getElementById('ponto_'+ carrossel[itemCarrosselAtual]).className = 'ponto_carrossel';
+    itemCarrosselAtual = (itemCarrosselAtual + 1) % carrossel.length;
+    document.getElementById(carrossel[itemCarrosselAtual]).className = 'item_carrossel item_carrossel_atual';
+    document.getElementById('ponto_'+ carrossel[itemCarrosselAtual]).className = 'ponto_carrossel ponto_carrossel_atual';
 }
 
-$('#ponto_item1_carrossel').click(function(){
-    itemAtual = 0;
-    document.getElementById('item1_carrossel').className = 'item_carrossel item_carrossel_atual';
-    document.getElementById('item2_carrossel').className = 'item_carrossel';
-    document.getElementById('item3_carrossel').className = 'item_carrossel';
-    document.getElementById('item4_carrossel').className = 'item_carrossel';
-    document.getElementById('ponto_item1_carrossel').className = 'ponto_carrossel ponto_carrossel_atual';
-    document.getElementById('ponto_item2_carrossel').className = 'ponto_carrossel';
-    document.getElementById('ponto_item3_carrossel').className = 'ponto_carrossel';
-    document.getElementById('ponto_item4_carrossel').className = 'ponto_carrossel';
-});
+function mudar_item(posicao_item_carrossel) {
+    itemCarrosselAtual = posicao_item_carrossel;
+    for(var i = 0; i < carrossel.length; i++) {
+        if(carrossel[i] === carrossel[itemCarrosselAtual]) {
+            document.getElementById(carrossel[i]).className = 'item_carrossel item_carrossel_atual';
+            document.getElementById('ponto_'+ carrossel[i]).className = 'ponto_carrossel ponto_carrossel_atual';
+        } else {
+            document.getElementById(carrossel[i]).className = 'item_carrossel';
+            document.getElementById('ponto_'+ carrossel[i]).className = 'ponto_carrossel';
+        }
+    }
+}
 
-$('#ponto_item2_carrossel').click(function(){
-    itemAtual = 1;
-    document.getElementById('item1_carrossel').className = 'item_carrossel';
-    document.getElementById('item2_carrossel').className = 'item_carrossel item_carrossel_atual';
-    document.getElementById('item3_carrossel').className = 'item_carrossel';
-    document.getElementById('item4_carrossel').className = 'item_carrossel';
-    document.getElementById('ponto_item1_carrossel').className = 'ponto_carrossel';
-    document.getElementById('ponto_item2_carrossel').className = 'ponto_carrossel ponto_carrossel_atual';
-    document.getElementById('ponto_item3_carrossel').className = 'ponto_carrossel';
-    document.getElementById('ponto_item4_carrossel').className = 'ponto_carrossel';
-});
-
-$('#ponto_item3_carrossel').click(function(){
-    itemAtual = 2;
-    document.getElementById('item1_carrossel').className = 'item_carrossel';
-    document.getElementById('item2_carrossel').className = 'item_carrossel';
-    document.getElementById('item3_carrossel').className = 'item_carrossel item_carrossel_atual';
-    document.getElementById('item4_carrossel').className = 'item_carrossel';
-    document.getElementById('ponto_item1_carrossel').className = 'ponto_carrossel';
-    document.getElementById('ponto_item2_carrossel').className = 'ponto_carrossel';
-    document.getElementById('ponto_item3_carrossel').className = 'ponto_carrossel ponto_carrossel_atual';
-    document.getElementById('ponto_item4_carrossel').className = 'ponto_carrossel';
-});
-
-$('#ponto_item4_carrossel').click(function(){
-    itemAtual = 3;
-    document.getElementById('item1_carrossel').className = 'item_carrossel';
-    document.getElementById('item2_carrossel').className = 'item_carrossel';
-    document.getElementById('item3_carrossel').className = 'item_carrossel';
-    document.getElementById('item4_carrossel').className = 'item_carrossel item_carrossel_atual';
-    document.getElementById('ponto_item1_carrossel').className = 'ponto_carrossel';
-    document.getElementById('ponto_item2_carrossel').className = 'ponto_carrossel';
-    document.getElementById('ponto_item3_carrossel').className = 'ponto_carrossel';
-    document.getElementById('ponto_item4_carrossel').className = 'ponto_carrossel ponto_carrossel_atual';
-});
-
-setInterval(mudar_item, 10000);
+setInterval(mudar_item_automaticamente, 10000);
 
 // Transição de abas na tela País
 
@@ -88,4 +53,4 @@ function previewFotoPerfil() {
     }
 
     document.getElementById('foto_usuario_cadastro').className = 'foto_perfil foto_perfil_preview';
-};
+}
