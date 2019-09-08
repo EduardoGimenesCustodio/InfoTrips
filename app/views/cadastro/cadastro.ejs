@@ -22,7 +22,7 @@
         <!-- enctype="multipart/form-data" -->
         <form method="POST" action="/cadastrar/usuario">
             <div class="campo_foto_formulario">
-                <input type="file" name="foto_usuario" accept="image/*" onchange="previewFotoPerfil()">
+                <input type="file" name="foto_usuario" class="campo_invisivel_formulario campo_foto_perfil" accept="image/*" onchange="previewFotoPerfil()">
                 <img src="img/roxo/icone_inserir_foto_perfil_roxo.svg" alt="Botão inserir foto de perfil" id="foto_usuario_cadastro" class="foto_perfil">
             </div>
             <input type="text" name="nome_usuario" class="campo_formulario" placeholder="Nome" maxlength="70" required>
@@ -31,7 +31,7 @@
             <div class="campo_checkbox_atualizacoes">
                 <label class="checkbox checkbox_atualizacoes texto">receber atualizações sobre países favoritos
                     <input type="checkbox" name="updatesareactive_usuario" value="1" checked="checked">
-                    <span class="checkmark checkmark_atualizacoes"></span>
+                    <span class="campo_checkbox checkmark checkmark_atualizacoes"></span>
                 </label>
             </div>
             <input type="submit" value="Cadastrar" class="botao">

@@ -132,8 +132,6 @@ body{
 	animation-iteration-count: infinite;
 }
 
-
-
 .item_carrossel_atual{
 	display: block;
 }
@@ -185,11 +183,14 @@ body{
 	margin: 4% auto 4% auto;
 }
 
-input[type='file']{
+.campo_invisivel_formulario{
 	position: absolute;
+	opacity: 0;
+}
+
+.campo_foto_perfil{
 	width: 180px;
 	height: 180px;
-	opacity: 0;
 }
 
 .foto_perfil{
@@ -258,6 +259,11 @@ input[type='file']{
 
 /* Checkbox */
 
+.campo_checkbox{
+	width: 25px;
+	height: 25px;
+}
+
 .campo_checkbox_atualizacoes{
 	width: 100%;
 	padding: 2.8%;
@@ -296,8 +302,6 @@ input[type='file']{
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 25px;
-	width: 25px;
 }
 
 .checkmark_atualizacoes{
