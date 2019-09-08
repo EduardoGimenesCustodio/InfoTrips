@@ -24,8 +24,6 @@ function mudar_item(posicao_item_carrossel) {
     }
 }
 
-setInterval(mudar_item_automaticamente, 10000);
-
 // Transição de abas na tela País
 
 function mudar_aba(aba_atual, aba_destino, secao_atual, secao_destino) {
@@ -48,9 +46,9 @@ function previewFotoPerfil() {
 
     if(foto) {
         reader.readAsDataURL(foto);
+        document.getElementById('foto_usuario_cadastro').className = 'foto_perfil foto_perfil_preview';
     } else {
-        preview.src = "img/roxo/icone_perfil_grande_roxo.svg";
+        preview.src = "img/roxo/icone_inserir_foto_perfil_roxo.svg";
+        document.getElementById('foto_usuario_cadastro').className = 'foto_perfil';
     }
-
-    document.getElementById('foto_usuario_cadastro').className = 'foto_perfil foto_perfil_preview';
 }

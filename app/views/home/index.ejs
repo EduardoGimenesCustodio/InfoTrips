@@ -54,57 +54,16 @@
 
       </div>
 
-      <!-- <div class="carrossel">
-        <div class="wall wall-1" id="wall-1">
-          <img src="img/roxo/icone_aviao_roxo.svg" alt="Ícone avião" class="imagem_carrossel">
-          <p class="texto_carrossel">Acesse informações básicas sobre o país que deseja visitar</p>
-          <div class="pontos_carrossel">
-            <a href="#wall-1" class="ponto_carrossel ponto_carrossel_atual"></a>
-            <a href="#wall-2" class="ponto_carrossel"></a>
-            <a href="#wall-3" class="ponto_carrossel"></a>
-            <a href="#wall-4" class="ponto_carrossel"></a>
-          </div>
-        </div>
-      
-        <div class="wall wall-2" id="wall-2">
-          <img src="img/roxo/icone_passaporte_roxo.svg" alt="Ícone passaporte" class="imagem_carrossel">
-          <p class="texto_carrossel">Saiba quais documentos são exigidos por seu país de destino</p>
-          <div class="pontos_carrossel">
-            <a href="#wall-1" class="ponto_carrossel"></a>
-            <a href="#wall-2" class="ponto_carrossel ponto_carrossel_atual"></a>
-            <a href="#wall-3" class="ponto_carrossel"></a>
-            <a href="#wall-4" class="ponto_carrossel"></a>
-          </div>
-        </div>
-      
-        <div class="wall wall-3" id="wall-3">
-          <img src="img/roxo/icone_checklist_roxo.svg" alt="Ícone checklist" class="imagem_carrossel">
-          <p class="texto_carrossel">Crie checklists para não esquecer de nenhum documento ou exigência</p>
-          <div class="pontos_carrossel">
-            <a href="#wall-1" class="ponto_carrossel"></a>
-            <a href="#wall-2" class="ponto_carrossel"></a>
-            <a href="#wall-3" class="ponto_carrossel ponto_carrossel_atual"></a>
-            <a href="#wall-4" class="ponto_carrossel"></a>
-          </div>
-        </div>
-
-        <div class="wall wall-4" id="wall-4">
-          <img src="img/roxo/icone_torre_eiffel_roxo.svg" alt="Ícone Torre Eiffel" class="imagem_carrossel">
-          <p class="texto_carrossel">Consulte sugestões de sites com guias turísticos e atrações locais</p>
-          <div class="pontos_carrossel">
-            <a href="#wall-1" class="ponto_carrossel"></a>
-            <a href="#wall-2" class="ponto_carrossel"></a>
-            <a href="#wall-3" class="ponto_carrossel"></a>
-            <a href="#wall-4" class="ponto_carrossel ponto_carrossel_atual"></a>
-          </div>
-        </div>
-      </div> -->
-
       <h2 class="titulo_busca">Saiba do que precisa anter de ir para...</h2>
       <form class="campo_formulario formulario_busca" action="/busca" method="POST">
         <input type="search" name="pais_busca" class="campo_formulario campo_formulario_busca" placeholder="Pesquise um país" maxlength="70" required>
         <input type="image" src="img/roxo/icone_lupa_roxo.svg" class="botao_buscar">
       </form>
     </body>
+
     <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+      setInterval(mudar_item_automaticamente, 10000);
+    </script>
 </html>
