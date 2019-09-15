@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>InfoTrips</title>
+      <title>Busca - InfoTrips</title>
       <meta name="description" content="Site informativo para viagens internacionais">
       <meta name="keywords" content="Viagens Internacionais, Turismo, Burocracia">
       <meta name="robots" content="busca, follow">
@@ -27,7 +27,7 @@
 
       <section>
         <% for (var i=0; i<pais.length; i++) { %>
-          <a href="pais?id_pais=<%=pais[i].id_pais%>" class="bloco_informacao bloco_informacao_checkbox">
+          <a href="pais?nome_pais=<%=pais[i].nome_pais%>" class="bloco_informacao bloco_informacao_checkbox">
             <img src="img/bandeiras/Bandeira Argentina.png" alt="Bandeira Argentina" class="bandeira_pais">
             <p class="texto texto_bloco_informacao"><%= pais[i].nome_pais %></p>
   

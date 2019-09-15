@@ -7,22 +7,13 @@ insert into pais(nome_pais) values('Reino Unido');
 insert into pais(nome_pais) values('Argentina');
 insert into pais(nome_pais) values('Brasil');
 
-update pais set informacoes_turisticas_pais='Aplicativo para planejamento de viagens:
-https://play.google.com/store/apps/details?id=com.google.android.apps.travel.onthego&hl=pt_BR
-Site sobre turismo:
-https://www.visiteosusa.com.br/?gclsrc=aw.ds&&gclid=Cj0KCQjwvo_qBRDQARIsAE-bsH98_GVjeh0hK6D2Y_LTel3z0L4m98gSp1WWEtTjj87XfQylWdX2jG8aAuG-EALw_wcB' 
+update pais set informacoes_turisticas_pais='Site para planejamento de viagens: Google Travel. Site sobre turismo: www.visiteosusa.com.br' 
 where id_pais=1;
 
-update pais set informacoes_turisticas_pais='Aplicativo para planejamento de viagens:
-https://play.google.com/store/apps/details?id=com.google.android.apps.travel.onthego&hl=pt_BR
-Site sobre turismo:
-https://www.getyourguide.pt/reino-unido-n35/'
+update pais set informacoes_turisticas_pais='Site para planejamento de viagens: Google Travel. Site sobre turismo: www.getyourguide.pt/reino-unido' 
 where id_pais=2;
 
-update pais set informacoes_turisticas_pais='Aplicativo para planejamento de viagens:
-https://play.google.com/store/apps/details?id=com.google.android.apps.travel.onthego&hl=pt_BR
-Site sobre turismo:
-https://www.mundoo.com.br/content/content.aspx?id=503&gclid=Cj0KCQjwvo_qBRDQARIsAE-bsH_pVNp6dT_oASLXtK5ZafHfWvV8Tz80s0mLl0P0rF4GnlY4XuieLkgaAgPHEALw_wcB' 
+update pais set informacoes_turisticas_pais='Site para planejamento de viagens: Google Travel. Site sobre turismo: www.mundoo.com.br' 
 where id_pais=3;
 
 /* MOEDA */
