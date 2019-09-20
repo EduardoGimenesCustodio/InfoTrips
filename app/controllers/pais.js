@@ -11,8 +11,10 @@ module.exports.pais = function(app, req, res){
 			return;
 		}
 
-		 paisModel.getPais(nome_pais, function(error, dados_pais){
-			res.render('pais/pais', {pais: dados_pais, exigencia: {}});
+		paisModel.getPais(nome_pais, function(error, dados_pais){
+			paisModel.getExigencias(nome_pais, function(error, dados_exigencia){
+				res.render('pais/pais', {pais: dados_pais, exigencias: dados_exigencia});
+			});
 		});
 		
 }

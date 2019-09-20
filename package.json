@@ -1,7 +1,6 @@
 {
   "name": "infotrips",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,12 +16,21 @@
   },
   "homepage": "https://github.com/EduardoGimenesCustodio/InfoTrips#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
     "consign": "^0.1.6",
+    "cookie-parser": "^1.4.4",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "express-session": "^1.16.2",
     "express-validator": "^5.3.1",
     "jquery": "^3.3.1",
-    "mysql": "^2.16.0"
-  }
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {},
+  "description": ""
 }

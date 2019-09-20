@@ -3,8 +3,11 @@ function PaisDAO(connection){
 }
 
 	PaisDAO.prototype.getPais = function(nome_pais, callback){
-		var dados_pais = this._connection.query('select * from pais where nome_pais = "' + nome_pais.nome_pais + '"', callback);
-		// var dados_exigencia = this._connection.query('select * from exigencia where pais_exigencia = (select id_pais from pais where nome_pais = ' + nome_pais.nome_pais + ')', callback);
+		this._connection.query('select * from pais where nome_pais = "' + nome_pais.nome_pais + '"', callback);
+	}
+
+	PaisDAO.prototype.getExigencias = function(nome_pais, callback){
+		this._connection.query('select * from exigencia where pais_exigencia = (select id_pais from pais where nome_pais = "' + nome_pais.nome_pais + '")', callback);
 	}
 
 	PaisDAO.prototype.buscarPais = function(pais_busca, callback){

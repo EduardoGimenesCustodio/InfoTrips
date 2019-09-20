@@ -52,3 +52,11 @@ function previewFotoPerfil() {
         document.getElementById('foto_usuario_cadastro').className = 'foto_perfil';
     }
 }
+
+// Autentificação
+
+function isLoggedIn(req, res, next){
+    if(req.isAuthenticated())
+        return next();
+        res.redirect('/');
+}

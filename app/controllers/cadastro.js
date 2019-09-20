@@ -11,5 +11,4 @@ module.exports.cadastrar_usuario = function(app, req, res){
 	usuarioModel.cadastrarUsuario(usuario, function(error, result){
 		res.redirect('/login');
 	});
-
 }

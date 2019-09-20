@@ -5,6 +5,6 @@ module.exports.busca = function(app, req, res){
 	var paisModel = new app.app.models.PaisDAO(connection);
 
 	paisModel.buscarPais(pais_busca, function(error, result) {
-		res.render('busca/busca', {pais: result});
+		res.render('busca/busca', {paises: result});
 	});
 }
