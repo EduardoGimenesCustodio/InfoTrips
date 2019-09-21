@@ -16,6 +16,18 @@ where id_pais=2;
 update pais set informacoes_turisticas_pais='Site para planejamento de viagens: Google Travel. Site sobre turismo: www.mundoo.com.br' 
 where id_pais=3;
 
+update pais set bandeira_pais='Bandeira_Estados_Unidos_da_America.png' 
+where id_pais=1;
+
+update pais set bandeira_pais='Bandeira_Reino_Unido.png' 
+where id_pais=2;
+
+update pais set bandeira_pais='Bandeira_Argentina.png' 
+where id_pais=3;
+
+update pais set bandeira_pais='Bandeira_Brasil.png' 
+where id_pais=4;
+
 /* MOEDA */
 
 insert into moeda(nome_moeda) values('Dólar Americano');

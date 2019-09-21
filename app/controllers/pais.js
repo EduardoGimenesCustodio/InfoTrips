@@ -12,8 +12,12 @@ module.exports.pais = function(app, req, res){
 		}
 
 		paisModel.getPais(nome_pais, function(error, dados_pais){
-			paisModel.getExigencias(nome_pais, function(error, dados_exigencia){
-				res.render('pais/pais', {pais: dados_pais, exigencias: dados_exigencia});
+			paisModel.getExigencias(nome_pais, function(error, dados_exigencias){
+				paisModel.getEmbaixadaBrasil(nome_pais, function(error, dados_embaixada_brasil){
+					paisModel.getEmbaixadaPais(nome_pais, function(error, dados_embaixada_pais){
+						res.render('pais/pais', {pais: dados_pais, exigencias: dados_exigencias, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais});
+					});
+				});
 			});
 		});
 		

@@ -41,6 +41,24 @@
             <p class="texto texto_bloco_informacao"><%=exigencias[i].descricao_exigencia %></p>
           </div>
         <% } %>
+
+        <% for (var i=0; i<embaixada_brasil.length; i++) { %>
+          <div class="bloco_informacao">
+            <h3 class="titulo_bloco_informacao">Embaixada do Brasil no país</h3>
+            <p class="texto texto_bloco_informacao">Endereço: <%=embaixada_brasil[i].endereco_embaixada %></p>
+            <p class="texto texto_bloco_informacao">Telefone: <%=embaixada_brasil[i].telefone_embaixada %></p>
+            <p class="texto texto_bloco_informacao">E-mail: <%=embaixada_brasil[i].email_embaixada %></p>
+          </div>
+        <% } %>
+
+        <% for (var i=0; i<embaixada_pais.length; i++) { %>
+            <div class="bloco_informacao">
+              <h3 class="titulo_bloco_informacao">Embaixada do país no Brasil</h3>
+              <p class="texto texto_bloco_informacao">Endereço: <%=embaixada_pais[i].endereco_embaixada %></p>
+              <p class="texto texto_bloco_informacao">Telefone: <%=embaixada_pais[i].telefone_embaixada %></p>
+              <p class="texto texto_bloco_informacao">E-mail: <%=embaixada_pais[i].email_embaixada %></p>
+            </div>
+          <% } %>
 	    </section>
 
 	    <section id="secao_checklist" class="secao_pais secao_invisivel_pais">

@@ -5,7 +5,7 @@ create database infotrips;
 use infotrips;
 
 create table pais(id_pais int not null auto_increment, nome_pais varchar(70), 
-informacoes_turisticas_pais varchar(500), bandeira_pais longblob, 
+informacoes_turisticas_pais varchar(500), bandeira_pais varchar(100), 
 primary key(id_pais));
 
 create table fusohorario(id_fusohorario int not null auto_increment, 
@@ -105,4 +105,4 @@ create table lingua_pais(id_lingua_pais int not null auto_increment,
 pais_lingua_pais int, lingua_lingua_pais int, 
 primary key(id_lingua_pais), 
 foreign key(pais_lingua_pais) references pais(id_pais), 
-foreign key(lingua_lingua_pais) references lingua(id_lingua));
+foreign key(lingua_lingua_pais) references lingua(id_lingua));    

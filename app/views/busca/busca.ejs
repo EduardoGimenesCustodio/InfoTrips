@@ -29,7 +29,7 @@
         <% if (paises.length > 0) { %>
           <% for (var i=0; i<paises.length; i++) { %>
             <a href="pais?nome_pais=<%=paises[i].nome_pais%>" class="bloco_informacao bloco_informacao_checkbox">
-              <img src="img/bandeiras/Bandeira Argentina.png" alt="Bandeira Argentina" class="bandeira_pais">
+              <img src="img/bandeiras/<%= paises[i].bandeira_pais %>" alt="Bandeira <%= paises[i].nome_pais %>" class="bandeira_pais">
               <p class="texto texto_bloco_informacao"><%= paises[i].nome_pais %></p>
       
               <label class="checkbox texto">
@@ -39,7 +39,7 @@
             </a>
           <% } %>
         <% } else { %>
-          <p class="texto mensagem_busca">Nenhum país encontrado</p>
+          <p class="texto mensagem_busca">País não encontrado</p>
         <% } %>  
       </section>
 
