@@ -36,29 +36,59 @@
         </div>
 
         <% for (var i=0; i<exigencias.length; i++) { %>
-          <div class="bloco_informacao">
-            <h3 class="titulo_bloco_informacao"><%=exigencias[i].nome_exigencia %></h3>
-            <p class="texto texto_bloco_informacao"><%=exigencias[i].descricao_exigencia %></p>
-          </div>
+          <% if (exigencias[i].nome_exigencia === 'Visto') { %>
+            <div class="bloco_informacao">
+              <h3 class="titulo_bloco_informacao"><%=exigencias[i].nome_exigencia %></h3>
+              <p class="texto texto_bloco_informacao"><%=exigencias[i].descricao_exigencia %></p>
+              <section class="secao_visto">
+                <p>Oi</p>
+              </section>
+            </div>
+          <% } else { %>
+            <div class="bloco_informacao">
+              <h3 class="titulo_bloco_informacao"><%=exigencias[i].nome_exigencia %></h3>
+              <p class="texto texto_bloco_informacao"><%=exigencias[i].descricao_exigencia %></p>
+            </div>
+          <% } %>
         <% } %>
+        
 
         <% for (var i=0; i<embaixada_brasil.length; i++) { %>
           <div class="bloco_informacao">
             <h3 class="titulo_bloco_informacao">Embaixada do Brasil no país</h3>
-            <p class="texto texto_bloco_informacao">Endereço: <%=embaixada_brasil[i].endereco_embaixada %></p>
-            <p class="texto texto_bloco_informacao">Telefone: <%=embaixada_brasil[i].telefone_embaixada %></p>
-            <p class="texto texto_bloco_informacao">E-mail: <%=embaixada_brasil[i].email_embaixada %></p>
+            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Endereço:</span> <%=embaixada_brasil[i].endereco_embaixada %></p>
+            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Telefone:</span> <%=embaixada_brasil[i].telefone_embaixada %></p>
+            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">E-mail:</span> <%=embaixada_brasil[i].email_embaixada %></p>
           </div>
         <% } %>
 
         <% for (var i=0; i<embaixada_pais.length; i++) { %>
-            <div class="bloco_informacao">
-              <h3 class="titulo_bloco_informacao">Embaixada do país no Brasil</h3>
-              <p class="texto texto_bloco_informacao">Endereço: <%=embaixada_pais[i].endereco_embaixada %></p>
-              <p class="texto texto_bloco_informacao">Telefone: <%=embaixada_pais[i].telefone_embaixada %></p>
-              <p class="texto texto_bloco_informacao">E-mail: <%=embaixada_pais[i].email_embaixada %></p>
-            </div>
-          <% } %>
+          <div class="bloco_informacao">
+            <h3 class="titulo_bloco_informacao">Embaixada do país no Brasil</h3>
+            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Endereço:</span> <%=embaixada_pais[i].endereco_embaixada %></p>
+            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Telefone:</span> <%=embaixada_pais[i].telefone_embaixada %></p>
+            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">E-mail:</span> <%=embaixada_pais[i].email_embaixada %></p>
+          </div>
+        <% } %>
+
+        <% for (var i=0; i<consulados_brasil.length; i++) { %>
+          <div class="bloco_informacao">
+            <h3 class="titulo_bloco_informacao">Consulado do Brasil no país</h3>
+            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Endereço:</span> <%=consulados_brasil[i].endereco_consulado %></p>
+            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Telefone:</span> <%=consulados_brasil[i].telefone_consulado %></p>
+            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">E-mail:</span> <%=consulados_brasil[i].email_consulado %></p>
+          </div>
+        <% } %>
+
+        <% for (var i=0; i<consulados_pais.length; i++) { %>
+          <div class="bloco_informacao">
+            <h3 class="titulo_bloco_informacao">Consulado do país no Brasil</h3>
+            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Endereço:</span> <%=consulados_pais[i].endereco_consulado %></p>
+            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Telefone:</span> <%=consulados_pais[i].telefone_consulado %></p>
+            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">E-mail:</span> <%=consulados_pais[i].email_consulado %></p>
+          </div>
+        <% } %>
+
 	    </section>
 
 	    <section id="secao_checklist" class="secao_pais secao_invisivel_pais">

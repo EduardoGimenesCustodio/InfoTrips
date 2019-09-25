@@ -409,6 +409,15 @@ body{
 	display: none;
 }
 
+.secao_visto{
+	display: none;
+	margin-top: 2.8%;
+}
+
+.secao_visivel_visto{
+	display: block;
+}
+
 .bloco_informacao{
 	background-color: var(--cor-primary-light);
 	display: auto;
@@ -428,6 +437,11 @@ body{
 .texto_bloco_informacao{
 	width: 100%;
 	text-align: justify;
+}
+
+.texto_destaque{
+	color: var(--cor-primary-dark);
+	font-weight: bold;
 }
 
 .bloco_informacao_checkbox{

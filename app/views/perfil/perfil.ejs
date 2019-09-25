@@ -26,12 +26,14 @@
             </div>
 
             <div class="dados_usuario">
-                <h1 class="titulo_principal">Maurício DelMonte</h1>
-                <h2 class="titulo_secundario">mauricio.delmonte@gmail.com</h2>
+                <h1 class="titulo_principal"><%= usuario[0].nome_usuario %></h1>
+                <h2 class="titulo_secundario"><%= usuario[0].email_usuario %></h2>
             </div>
             
             <input type="button" value="Editar perfil" class="botao">
-            <input type="button" value="Sair" class="botao">
+            <form action="/usuario/sair" method="POST">
+                <input type="submit" value="Sair" class="botao">
+            </form>
         </body>
 
     <script type="text/javascript" src="js/main.js"></script>
