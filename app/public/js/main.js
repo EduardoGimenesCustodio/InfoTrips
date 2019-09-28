@@ -86,5 +86,5 @@ function isLoggedIn(req, res, next){
 // Fechar caixa de mensagem
 
 function fechar_mensagem(mensagem) {
-    document.getElementById(mensagem).className = 'bloco_informacao bloco_mensagem bloco_mensagem_invisivel';
+    document.getElementById(mensagem).className = 'fundo_bloco_mensagem fundo_bloco_mensagem_invisivel';
 }

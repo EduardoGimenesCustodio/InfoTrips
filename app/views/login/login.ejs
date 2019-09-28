@@ -10,7 +10,7 @@
         <meta name="author" content="Eduardo Gimenes">
         <link rel="stylesheet" href="/css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-        <link rel="icon" href="img/roxo/logo_roxa.png">
+        <link rel="icon" href="/img/roxo/logo_roxa.png">
     </head>
 
     <body>
@@ -18,14 +18,16 @@
             <a href="javascript:window.history.go(-1)"><img src="/img/roxo/icone_voltar_roxo.svg" alt="Botão voltar" class="botao_cabecalho"></a>
         </header>
 
-        <img src="/img/roxo/logo_com_titulo_roxa.svg" alt="Logo InfoTrips com título" class="logo_titulo">
-
         <% if (validacao.length > 0) { %>
-            <div id="mensagem_login" class="bloco_informacao bloco_mensagem">
-                <p class="texto texto_mensagem"><%= validacao %></p>
-                <input type="button" value="OK" class="botao" onclick="fechar_mensagem('mensagem_login')">
+            <div id="mensagem_login" class="fundo_bloco_mensagem">
+                <div class="bloco_informacao bloco_mensagem">
+                    <p class="texto texto_mensagem"><%= validacao %></p>
+                    <input type="button" value="Fechar" class="botao" onclick="fechar_mensagem('mensagem_login')">
+                </div>
             </div>
         <% } %>
+
+        <img src="/img/roxo/logo_com_titulo_roxa.svg" alt="Logo InfoTrips com título" class="logo_titulo">
 
         <form method="POST" action="/usuario/login">
             <input type="email" name="email_usuario" class="campo_formulario" placeholder="E-mail" maxlength="70" required>

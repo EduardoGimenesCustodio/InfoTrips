@@ -37,6 +37,7 @@ img{
 	--cor-letra-botao: white;
 	--cor-letra-cabecalho-pais: white;
 	--cor-borda-aba-pais: white;
+	--cor-fundo-fosco: rgba(0, 0, 0, .8);
 }
 
 /* Corpo */
@@ -363,10 +364,21 @@ body{
 }
 
 .bloco_mensagem{
-	position: absolute;
+	margin: 0 auto 0 auto;
 }
 
-.bloco_mensagem_invisivel{
+.fundo_bloco_mensagem{
+	background-color: var(--cor-fundo-fosco);
+	display: flex;
+	position: fixed;
+  	align-items: center;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.fundo_bloco_mensagem_invisivel{
 	display: none;
 }
 
@@ -433,7 +445,6 @@ body{
 
 .bloco_informacao{
 	background-color: var(--cor-primary-light);
-	display: auto;
 	width: 94.4%;
 	margin: 0 auto 2.8% auto;
 	padding: 2.8%;
