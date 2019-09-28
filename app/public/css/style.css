@@ -362,6 +362,19 @@ body{
 	margin: 4% auto 4% auto;
 }
 
+.bloco_mensagem{
+	position: absolute;
+}
+
+.bloco_mensagem_invisivel{
+	display: none;
+}
+
+.texto_mensagem{
+	text-align: center;
+	font-size: 18px;
+}
+
 /* Pais */
 
 .cabecalho_pais{

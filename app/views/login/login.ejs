@@ -8,17 +8,24 @@
         <meta name="keywords" content="Viagens Internacionais, Turismo, Burocracia">
         <meta name="robots" content="login, follow">
         <meta name="author" content="Eduardo Gimenes">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="/css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
         <link rel="icon" href="img/roxo/logo_roxa.png">
     </head>
 
     <body>
         <header class="cabecalho cabecalho_login">
-            <a href="javascript:window.history.go(-1)"><img src="img/roxo/icone_voltar_roxo.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+            <a href="javascript:window.history.go(-1)"><img src="/img/roxo/icone_voltar_roxo.svg" alt="Botão voltar" class="botao_cabecalho"></a>
         </header>
 
-        <img src="img/roxo/logo_com_titulo_roxa.svg" alt="Logo InfoTrips com título" class="logo_titulo">
+        <img src="/img/roxo/logo_com_titulo_roxa.svg" alt="Logo InfoTrips com título" class="logo_titulo">
+
+        <% if (validacao.length > 0) { %>
+            <div id="mensagem_login" class="bloco_informacao bloco_mensagem">
+                <p class="texto texto_mensagem"><%= validacao %></p>
+                <input type="button" value="OK" class="botao" onclick="fechar_mensagem('mensagem_login')">
+            </div>
+        <% } %>
 
         <form method="POST" action="/usuario/login">
             <input type="email" name="email_usuario" class="campo_formulario" placeholder="E-mail" maxlength="70" required>
@@ -28,5 +35,5 @@
         <p class="texto texto_login">não possui uma conta?</p>
         <a href="/cadastro" class="botao">Cadastre-se</a>
     </body>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
 </html>

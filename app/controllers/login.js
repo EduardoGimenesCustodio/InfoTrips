@@ -1,6 +1,6 @@
 module.exports.login = function(app, req, res){
 	if (!req.session.loggedin) {
-		res.render('login/login');
+		res.render('login/login', {validacao: {}});
 	} else {
 		res.redirect('/perfil');
 	}
@@ -18,7 +18,8 @@ module.exports.login_usuario = function(app, req, res){
 				req.session.email = email;
 				res.redirect('/perfil');
 			} else {
-				res.send('E-mail ou senha incorretos');
+				var erro = 'E-mail ou senha incorretos';
+				res.render('login/login', {validacao: erro});
 			}
 			res.end();
 		});

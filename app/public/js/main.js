@@ -82,3 +82,9 @@ function isLoggedIn(req, res, next){
         return next();
         res.redirect('/');
 }
+
+// Fechar caixa de mensagem
+
+function fechar_mensagem(mensagem) {
+    document.getElementById(mensagem).className = 'bloco_informacao bloco_mensagem bloco_mensagem_invisivel';
+}
