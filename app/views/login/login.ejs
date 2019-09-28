@@ -19,10 +19,10 @@
         </header>
 
         <% if (validacao.length > 0) { %>
-            <div id="mensagem_login" class="fundo_bloco_mensagem">
-                <div class="bloco_informacao bloco_mensagem">
-                    <p class="texto texto_mensagem"><%= validacao %></p>
-                    <input type="button" value="Fechar" class="botao" onclick="fechar_mensagem('mensagem_login')">
+            <div class="fundo_bloco_detalhe">
+                <div class="bloco_informacao bloco_detalhe">
+                    <p class="texto texto_detalhe"><%= validacao %></p>
+                    <a href="/login" class="botao">Fechar</a>
                 </div>
             </div>
         <% } %>

@@ -363,11 +363,11 @@ body{
 	margin: 4% auto 4% auto;
 }
 
-.bloco_mensagem{
+.bloco_detalhe{
 	margin: 0 auto 0 auto;
 }
 
-.fundo_bloco_mensagem{
+.fundo_bloco_detalhe{
 	background-color: var(--cor-fundo-fosco);
 	display: flex;
 	position: fixed;
@@ -378,11 +378,11 @@ body{
 	left: 0;
 }
 
-.fundo_bloco_mensagem_invisivel{
+.fundo_bloco_detalhe_invisivel{
 	display: none;
 }
 
-.texto_mensagem{
+.texto_detalhe{
 	text-align: center;
 	font-size: 18px;
 }

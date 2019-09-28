@@ -83,8 +83,8 @@ function isLoggedIn(req, res, next){
         res.redirect('/');
 }
 
-// Fechar caixa de mensagem
+// Fechar bloco detalhe
 
-function fechar_mensagem(mensagem) {
-    document.getElementById(mensagem).className = 'fundo_bloco_mensagem fundo_bloco_mensagem_invisivel';
+function fechar_bloco_detalhe(bloco) {
+    document.getElementById(bloco).className = 'fundo_bloco_detalhe fundo_bloco_detalhe_invisivel';
 }
