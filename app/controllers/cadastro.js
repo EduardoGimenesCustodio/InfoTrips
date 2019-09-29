@@ -9,6 +9,6 @@ module.exports.cadastrar_usuario = function(app, req, res){
 	var usuarioModel = new app.app.models.UsuarioDAO(connection);
 		
 	usuarioModel.cadastrarUsuario(usuario, function(error, result){
-		res.redirect('/login');
+		app.app.controllers.login.login_usuario(app, req, res);
 	});
 }
