@@ -19,10 +19,11 @@
         </header>
 
         <% if (validacao.length > 0) { %>
-            <div class="fundo_bloco_detalhe">
+            <div id="mensagem_login" class="fundo_bloco_detalhe">
                 <div class="bloco_informacao bloco_detalhe">
                     <p class="texto texto_detalhe"><%= validacao %></p>
-                    <a href="/login" class="botao">Fechar</a>
+                    <a href="javascript:window.history.go(-1)"><input type="button" value="Fechar" class="botao" onclick="fechar_bloco_detalhe('mensagem_login')"></a>
+                    
                 </div>
             </div>
         <% } %>
@@ -31,7 +32,7 @@
 
         <form method="POST" action="/usuario/login">
             <input type="email" name="email_usuario" class="campo_formulario" placeholder="E-mail" maxlength="70" required>
-            <input type="password" name="senha_usuario" class="campo_formulario" placeholder="Senha" maxlength="20" required>
+            <input type="password" name="senha_usuario" class="campo_formulario" placeholder="Senha" minlength="5" maxlength="20" required>
             <input type="submit" value="Entrar" class="botao">
         </form>
         <p class="texto texto_login">não possui uma conta?</p>

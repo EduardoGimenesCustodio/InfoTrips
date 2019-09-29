@@ -83,7 +83,11 @@ function isLoggedIn(req, res, next){
         res.redirect('/');
 }
 
-// Fechar bloco detalhe
+// Abir e fechar bloco detalhe
+
+function abrir_bloco_detalhe(bloco) {
+    document.getElementById(bloco).className = 'fundo_bloco_detalhe';
+}
 
 function fechar_bloco_detalhe(bloco) {
     document.getElementById(bloco).className = 'fundo_bloco_detalhe fundo_bloco_detalhe_invisivel';
