@@ -8,22 +8,32 @@
             <meta name="keywords" content="Viagens Internacionais, Turismo, Burocracia">
             <meta name="robots" content="cadastro, follow">
             <meta name="author" content="Eduardo Gimenes">
-            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="/css/style.css">
             <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-            <link rel="icon" href="img/roxo/logo_roxa.png">
+            <link rel="icon" href="/img/roxo/logo_roxa.png">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         </head>
 
         <body>
             <header class="cabecalho">
-                <a href="javascript:window.history.go(-1)"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
-                <a href="/" class="titulo_cabecalho titulo_cadastro"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
+                <a href="javascript:window.history.go(-1)"><img src="/img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+                <a href="/" class="titulo_cabecalho titulo_cadastro"><img src="/img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
             </header>
+
+            <% if (validacao.length > 0) { %>
+                <div id="mensagem_login" class="fundo_bloco_detalhe">
+                    <div class="bloco_informacao bloco_detalhe">
+                        <p class="texto texto_detalhe"><%= validacao %></p>
+                        <a href="javascript:window.history.go(-1)" class="botao" onclick="fechar_bloco_detalhe('mensagem_login')">Fechar</a>
+                    </div>
+                </div>
+            <% } %>
+
             <!-- enctype="multipart/form-data" -->
             <form method="POST" action="/cadastrar/usuario">
                 <div class="campo_foto_formulario">
                     <input type="file" name="foto_usuario" class="campo_invisivel_formulario campo_foto_perfil" accept="image/*" onchange="previewFotoPerfil()">
-                    <img src="img/roxo/icone_inserir_foto_perfil_roxo.svg" alt="Botão inserir foto de perfil" id="foto_usuario_cadastro" class="foto_perfil">
+                    <img src="/img/roxo/icone_inserir_foto_perfil_roxo.svg" alt="Botão inserir foto de perfil" id="foto_usuario_cadastro" class="foto_perfil">
                 </div>
                 <input type="text" name="nome_usuario" class="campo_formulario" placeholder="Nome" minlength="10" maxlength="70" required>
                 <input type="email" name="email_usuario" class="campo_formulario" placeholder="E-mail" maxlength="70" required>
@@ -37,5 +47,5 @@
                 <input type="submit" value="Cadastrar" class="botao">
             </form>
         </body>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
 </html>

@@ -6,6 +6,10 @@ function UsuarioDAO(connection){
 		this._connection.query('select * from usuario where email_usuario = ?', email, callback);
 	}
 
+	UsuarioDAO.prototype.getEmailsUsuarios = function(callback){
+		this._connection.query('select email_usuario from usuario', callback);
+	}
+
 	UsuarioDAO.prototype.cadastrarUsuario = function(usuario, callback){
 		this._connection.query('insert into usuario set ?', usuario, callback);
 	}

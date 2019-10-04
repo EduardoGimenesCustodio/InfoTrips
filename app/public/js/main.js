@@ -57,21 +57,44 @@ function mudar_aba(aba_atual, aba_destino, secao_atual, secao_destino) {
 
 // Preview da foto de perfil
 
+// function previewFotoPerfil() {
+//     var foto = document.querySelector('input[name=foto_usuario]').files[0];
+//     var preview = document.querySelector('#foto_usuario_cadastro');
+//     var reader = new FileReader();
+
+//     reader.onloadend = function() {
+//         preview.src = reader.result;
+//     }
+
+//     if(foto) {
+//         reader.readAsDataURL(foto);
+//         document.getElementById('foto_usuario_cadastro').className = 'foto_perfil foto_perfil_preview';
+//     } else {
+//         preview.src = "img/roxo/icone_inserir_foto_perfil_roxo.svg";
+//         document.getElementById('foto_usuario_cadastro').className = 'foto_perfil';
+//     }
+// }
+
 function previewFotoPerfil() {
     var foto = document.querySelector('input[name=foto_usuario]').files[0];
+    var foto_anterior = document.querySelector('input[name=foto_usuario]').files[0];
     var preview = document.querySelector('#foto_usuario_cadastro');
-    var reader = new FileReader();
-
-    reader.onloadend = function() {
-        preview.src = reader.result;
-    }
+    
 
     if(foto) {
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            preview.src = reader.result;
+        }
         reader.readAsDataURL(foto);
         document.getElementById('foto_usuario_cadastro').className = 'foto_perfil foto_perfil_preview';
     } else {
-        preview.src = "img/roxo/icone_inserir_foto_perfil_roxo.svg";
-        document.getElementById('foto_usuario_cadastro').className = 'foto_perfil';
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            preview.src = reader.result;
+        }
+        reader.readAsDataURL(foto_anterior);
+        document.getElementById('foto_usuario_cadastro').className = 'foto_perfil foto_perfil_preview';
     }
 }
 
