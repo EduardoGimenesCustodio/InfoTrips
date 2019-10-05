@@ -17,7 +17,9 @@ module.exports.pais = function(app, req, res){
 					paisModel.getEmbaixadaPais(nome_pais, function(error, dados_embaixada_pais){
 						paisModel.getConsuladosBrasil(nome_pais, function(error, dados_consulados_brasil){
 							paisModel.getConsuladosPais(nome_pais, function(error, dados_consulados_pais){
-								res.render('pais/pais', {pais: dados_pais, exigencias: dados_exigencias, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais});
+								paisModel.getVistosPais(nome_pais, function(error, dados_vistos_pais){
+									res.render('pais/pais', {pais: dados_pais, exigencias: dados_exigencias, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais});
+								});
 							});
 						});
 					});

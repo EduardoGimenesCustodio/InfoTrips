@@ -453,6 +453,10 @@ body{
 	border-radius: 10px;
 }
 
+.bloco_informacao_invisivel{
+	display: none;
+}
+
 .titulo_bloco_informacao{
 	color: var(--cor-primary-dark);
 	font-weight: bold;
@@ -478,6 +482,24 @@ body{
 .bandeira_pais{
 	width: 35px;
 	margin-right: 2.8%;
+}
+
+#bloco_informacao_visto{
+	cursor: pointer;
+}
+
+.cabecalho_bloco_informacao_visto{
+	display: flex;
+	align-items: center;
+}
+
+.titulo_bloco_informacao_visto{
+	margin: 0 auto 0 0;
+}
+
+.dados_visto{
+	border-bottom: 2px solid;
+	border-color: var(--cor-primary-dark);
 }
 
 /* Perfil */

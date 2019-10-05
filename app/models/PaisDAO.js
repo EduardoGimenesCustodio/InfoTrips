@@ -26,6 +26,10 @@ function PaisDAO(connection){
 		this._connection.query('select * from consulado where pais_representado_consulado = (select id_pais from pais where nome_pais = "' + nome_pais.nome_pais + '")', callback);
 	}
 
+	PaisDAO.prototype.getVistosPais = function(nome_pais, callback){
+		this._connection.query('select * from visto where pais_visto = (select id_pais from pais where nome_pais = "' + nome_pais.nome_pais + '")', callback);
+	}
+
 	PaisDAO.prototype.buscarPais = function(pais_busca, callback){
 		this._connection.query('select id_pais, nome_pais, bandeira_pais from pais where nome_pais like ?', '%' + pais_busca + '%', callback);
 	}

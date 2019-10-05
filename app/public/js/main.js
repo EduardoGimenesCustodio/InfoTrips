@@ -98,15 +98,7 @@ function previewFotoPerfil() {
     }
 }
 
-// Autentificação
-
-function isLoggedIn(req, res, next){
-    if(req.isAuthenticated())
-        return next();
-        res.redirect('/');
-}
-
-// Abir e fechar bloco detalhe
+// Abrir e fechar bloco detalhe
 
 function abrir_bloco_detalhe(bloco) {
     document.getElementById(bloco).className = 'fundo_bloco_detalhe';
@@ -114,4 +106,16 @@ function abrir_bloco_detalhe(bloco) {
 
 function fechar_bloco_detalhe(bloco) {
     document.getElementById(bloco).className = 'fundo_bloco_detalhe fundo_bloco_detalhe_invisivel';
+}
+
+// Abrir e fechar seção visto
+
+function abrir_secao_visto() {
+    document.getElementById('bloco_informacao_visto').className = 'bloco_informacao bloco_informacao_invisivel';
+    document.getElementById('secao_visto').className = 'bloco_informacao';
+}
+
+function fechar_secao_visto() {
+    document.getElementById('bloco_informacao_visto').className = 'bloco_informacao';
+    document.getElementById('secao_visto').className = 'bloco_informacao bloco_informacao_invisivel';
 }
