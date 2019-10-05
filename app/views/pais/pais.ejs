@@ -53,7 +53,11 @@
               </div>
               <% for (var i=0; i<vistos_pais.length; i++) { %>
                 <div class="dados_visto">
-                  <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Nome:</span> <%=vistos_pais[i].nome_visto %></p>
+                  <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Nome do visto:</span> <%=vistos_pais[i].nome_visto %></p>
+                  <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Finalidade do visto:</span> <%=vistos_pais[i].finalidade_visto %></p>
+                  <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Tempo de permanência:</span> <%=vistos_pais[i].tempo_permanencia_visto %></p>
+                  <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Taxa de solicitação:</span> <%=vistos_pais[i].taxa_solicitacao_visto %></p>
+                  <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Taxa adicional:</span> <%=vistos_pais[i].taxa_adicional_visto %></p>
                 </div>
               <% } %>
             </div>

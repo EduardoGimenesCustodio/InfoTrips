@@ -500,6 +500,7 @@ body{
 .dados_visto{
 	border-bottom: 2px solid;
 	border-color: var(--cor-primary-dark);
+	padding: 2.8% 0 2.8% 0;
 }
 
 /* Perfil */
