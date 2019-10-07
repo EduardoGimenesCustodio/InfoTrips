@@ -35,6 +35,20 @@
           <p class="texto texto_bloco_informacao"><%=pais[0].informacoes_turisticas_pais %></p>
         </div>
 
+        <div class="bloco_informacao">
+          <h3 class="titulo_bloco_informacao">Língua(s)</h3>
+          <% for (var i=0; i<linguas_pais.length; i++) { %>
+            <p class="texto texto_bloco_informacao"><%=linguas_pais[i].nome_lingua %></p>
+          <% } %>
+        </div>
+
+        <div class="bloco_informacao">
+          <h3 class="titulo_bloco_informacao">Moeda(s)</h3>
+          <% for (var i=0; i<moedas_pais.length; i++) { %>
+            <p class="texto texto_bloco_informacao"><%=moedas_pais[i].nome_moeda %></p>
+          <% } %>
+        </div>
+
         <% for (var i=0; i<exigencias.length; i++) { %>
           <% if (exigencias[i].nome_exigencia === 'Visto' && vistos_pais.length > 0) { %>
             <div id="bloco_informacao_visto" class="bloco_informacao" onclick="abrir_secao_visto()">

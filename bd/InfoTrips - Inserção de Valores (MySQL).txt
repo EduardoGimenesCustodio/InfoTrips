@@ -372,23 +372,23 @@ values('Avenida Córdoba, 278 - Centro - Puerto Iguazú - Misiones - Argentina - C
 /* ALERTA */
 
 insert into alerta(titulo_alerta, data_alerta, descricao_alerta) 
-values('Internações por Gripe', 22/01/2018, 
+values('Internações por Gripe', 2018/01/22, 
 'Hospitais da Califórnia regitram um alto índice de internações em decorrência da gripe influenza');
 
 insert into alerta(titulo_alerta, data_alerta, descricao_alerta) 
-values('Nevasca no Hemisfério Norte', 10/01/2018, 
+values('Nevasca no Hemisfério Norte', '2018/01/10', 
 'Durante o inverno no Hemisfério Norte, podem ocorrer atrasos ou cancelamentos de vôos, por causa de neblinas e tempestades de neve');
 
 insert into alerta(titulo_alerta, data_alerta, descricao_alerta) 
-values('Incêncios em Los Angeles', 07/12/2017, 
+values('Incêncios em Los Angeles', '2017/12/07', 
 'Incêndios em regiões de mata aproximam-se da cidade');
 
 insert into alerta(titulo_alerta, data_alerta, descricao_alerta) 
-values('Ataque a Tiros em Las Vegas', 02/10/2017, 
+values('Ataque a Tiros em Las Vegas', '2017/10/02', 
 'Ataque a tiros em Las Vegas na madrugada de 01 de outubro de 2017');
 
 insert into alerta(titulo_alerta, data_alerta, descricao_alerta) 
-values('Furacão Irma', 08/09/2017, 
+values('Furacão Irma', '2017/09/08', 
 'Furacão deve passar pelos estados da Geórgia e Carolina do Sul');
 
 insert into alerta_pais(alerta_alerta_pais, pais_alerta_pais) 
@@ -407,19 +407,19 @@ insert into alerta_pais(alerta_alerta_pais, pais_alerta_pais)
 values(5, 1);
 
 insert into alerta(titulo_alerta, data_alerta, descricao_alerta) 
-values('Greve Geral', 18/12/2017, 
+values('Greve Geral', '2017/12/18', 
 'Greve Geral provoca cancelamento de vôos');
 
 insert into alerta(titulo_alerta, data_alerta, descricao_alerta) 
-values('Tarifas para Montanhistas', 29/11/2017, 
+values('Tarifas para Montanhistas', '2017/11/29', 
 'O Parque Provincial Aconcágua anunciou tarifas a serem cobradas de montanhistas pela utilização do parque e de serviços de resgate e evacuação médica');
 
 insert into alerta(titulo_alerta, data_alerta, descricao_alerta) 
-values('Brasileiros Retidos', 18/07/2017, 
+values('Brasileiros Retidos', '2017/07/18', 
 'Brasileiros ficaram retidos no Aeroporto de Bariloche');
 
 insert into alerta(titulo_alerta, data_alerta, descricao_alerta) 
-values('Cuidados em Expedições', 14/04/2016, 
+values('Cuidados em Expedições', '2016/04/14', 
 'Recomenda-se cautela em expedições ao Monte Aconcágua');
 
 insert into alerta_pais(alerta_alerta_pais, pais_alerta_pais) 
