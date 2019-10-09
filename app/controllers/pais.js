@@ -20,7 +20,7 @@ module.exports.pais = function(app, req, res){
 								paisModel.getVistosPais(nome_pais, function(error, dados_vistos_pais){
 									paisModel.getMoedasPais(nome_pais, function(error, dados_moedas_pais){
 										paisModel.getLinguasPais(nome_pais, function(error, dados_linguas_pais){
-											res.render('pais/pais', {pais: dados_pais, exigencias: dados_exigencias, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais});
+											res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais});
 										});
 									});
 								});

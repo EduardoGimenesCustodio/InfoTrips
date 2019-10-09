@@ -76,6 +76,7 @@ foto_usuario longblob, updatesareactive_usuario boolean,
 primary key(id_usuario));
 
 create table historico(id_historico int not null auto_increment, 
+data_historico datetime, 
 pais_historico int, usuario_historico int, 
 primary key(id_historico), 
 foreign key(pais_historico) references pais(id_pais), 

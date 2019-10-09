@@ -49,24 +49,24 @@
           <% } %>
         </div>
 
-        <% for (var i=0; i<exigencias.length; i++) { %>
-          <% if (exigencias[i].nome_exigencia === 'Visto' && vistos_pais.length > 0) { %>
-            <div id="bloco_informacao_visto" class="bloco_informacao" onclick="abrir_secao_visto()">
-              <div class="cabecalho_bloco_informacao_visto">
-                <h3 class="titulo_bloco_informacao titulo_bloco_informacao_visto"><%=exigencias[i].nome_exigencia %></h3>
+        <% for (var i=0; i<exigencias_pais.length; i++) { %>
+          <% if (exigencias_pais[i].nome_exigencia === 'Visto' && vistos_pais.length > 0) { %>
+            <div id="bloco_informacao_visto" class="bloco_informacao bloco_informacao_expansivel" onclick="abrir_secao_informacao('bloco_informacao_visto', 'secao_visto')">
+              <div class="cabecalho_bloco_informacao_expansivel">
+                <h3 class="titulo_bloco_informacao titulo_bloco_informacao_expansivel"><%=exigencias_pais[i].nome_exigencia %></h3>
                 <img src="img/roxo/icone_expandir_roxo.svg" alt="Botão expandir" class="botao_cabecalho">
               </div>
-              <p class="texto texto_bloco_informacao"><%=exigencias[i].descricao_exigencia %></p>
+              <p class="texto texto_bloco_informacao"><%=exigencias_pais[i].descricao_exigencia %></p>
               <p class="texto texto_bloco_informacao">Clique para conhecer o(s) visto(s) desse país</p>
             </div>
 
-            <div id="secao_visto" class="bloco_informacao bloco_informacao_invisivel">
-              <div class="cabecalho_bloco_informacao_visto">
-                <h3 class="titulo_bloco_informacao titulo_bloco_informacao_visto">Visto(s)</h3>
-                <img src="img/roxo/icone_desfazer_expansao_roxo.svg" alt="Botão desfazer expansão" class="botao_cabecalho" onclick="fechar_secao_visto()">
+            <div id="secao_visto" class="bloco_informacao bloco_informacao_invisivel secao_expansivel">
+              <div class="cabecalho_bloco_informacao_expansivel">
+                <h3 class="titulo_bloco_informacao titulo_bloco_informacao_expansivel">Visto(s)</h3>
+                <img src="img/roxo/icone_desfazer_expansao_roxo.svg" alt="Botão desfazer expansão" class="botao_cabecalho" onclick="fechar_secao_informacao('bloco_informacao_visto', 'secao_visto')">
               </div>
               <% for (var i=0; i<vistos_pais.length; i++) { %>
-                <div class="dados_visto">
+                <div class="dados_expandidos">
                   <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Nome do visto:</span> <%=vistos_pais[i].nome_visto %></p>
                   <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Finalidade do visto:</span> <%=vistos_pais[i].finalidade_visto %></p>
                   <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Tempo de permanência:</span> <%=vistos_pais[i].tempo_permanencia_visto %></p>
@@ -77,49 +77,73 @@
             </div>
           <% } else { %>
             <div class="bloco_informacao">
-              <h3 class="titulo_bloco_informacao"><%=exigencias[i].nome_exigencia %></h3>
-              <p class="texto texto_bloco_informacao"><%=exigencias[i].descricao_exigencia %></p>
+              <h3 class="titulo_bloco_informacao"><%=exigencias_pais[i].nome_exigencia %></h3>
+              <p class="texto texto_bloco_informacao"><%=exigencias_pais[i].descricao_exigencia %></p>
             </div>
           <% } %>
         <% } %>
-        
 
         <% for (var i=0; i<embaixada_brasil.length; i++) { %>
-          <div class="bloco_informacao">
-            <h3 class="titulo_bloco_informacao">Embaixada do Brasil no país</h3>
-            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Endereço:</span> <%=embaixada_brasil[i].endereco_embaixada %></p>
-            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Telefone:</span> <%=embaixada_brasil[i].telefone_embaixada %></p>
-            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">E-mail:</span> <%=embaixada_brasil[i].email_embaixada %></p>
+            <div class="bloco_informacao">
+              <h3 class="titulo_bloco_informacao">Embaixada do Brasil no país</h3>
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Endereço:</span> <%=embaixada_brasil[i].endereco_embaixada %></p>
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Telefone:</span> <%=embaixada_brasil[i].telefone_embaixada %></p>
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">E-mail:</span> <%=embaixada_brasil[i].email_embaixada %></p>
+            </div>
+          <% } %>
+  
+          <% for (var i=0; i<embaixada_pais.length; i++) { %>
+            <div class="bloco_informacao">
+              <h3 class="titulo_bloco_informacao">Embaixada do país no Brasil</h3>
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Endereço:</span> <%=embaixada_pais[i].endereco_embaixada %></p>
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Telefone:</span> <%=embaixada_pais[i].telefone_embaixada %></p>
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">E-mail:</span> <%=embaixada_pais[i].email_embaixada %></p>
+            </div>
+          <% } %>
+        
+        <div id="bloco_informacao_consulados_brasil" class="bloco_informacao bloco_informacao_expansivel" onclick="abrir_secao_informacao('bloco_informacao_consulados_brasil', 'secao_consulados_brasil')">
+          <div class="cabecalho_bloco_informacao_expansivel">
+            <h3 class="titulo_bloco_informacao titulo_bloco_informacao_expansivel">Consulados do Brasil no país</h3>
+            <img src="img/roxo/icone_expandir_roxo.svg" alt="Botão expandir" class="botao_cabecalho">
           </div>
-        <% } %>
+          <p class="texto texto_bloco_informacao">Clique para conhecer o(s) consulado(s) do Brasil nesse país</p>
+        </div>
 
-        <% for (var i=0; i<embaixada_pais.length; i++) { %>
-          <div class="bloco_informacao">
-            <h3 class="titulo_bloco_informacao">Embaixada do país no Brasil</h3>
-            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Endereço:</span> <%=embaixada_pais[i].endereco_embaixada %></p>
-            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Telefone:</span> <%=embaixada_pais[i].telefone_embaixada %></p>
-            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">E-mail:</span> <%=embaixada_pais[i].email_embaixada %></p>
+        <div id="secao_consulados_brasil" class="bloco_informacao bloco_informacao_invisivel secao_expansivel">
+          <div class="cabecalho_bloco_informacao_expansivel">
+            <h3 class="titulo_bloco_informacao titulo_bloco_informacao_expansivel">Consulados do Brasil no país</h3>
+            <img src="img/roxo/icone_desfazer_expansao_roxo.svg" alt="Botão desfazer expansão" class="botao_cabecalho" onclick="fechar_secao_informacao('bloco_informacao_consulados_brasil', 'secao_consulados_brasil')">
           </div>
-        <% } %>
+          <% for (var i=0; i<consulados_brasil.length; i++) { %>
+            <div class="dados_expandidos">
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Endereço:</span> <%=consulados_brasil[i].endereco_consulado %></p>
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Telefone:</span> <%=consulados_brasil[i].telefone_consulado %></p>
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">E-mail:</span> <%=consulados_brasil[i].email_consulado %></p>
+            </div>
+          <% } %>
+        </div>
 
-        <% for (var i=0; i<consulados_brasil.length; i++) { %>
-          <div class="bloco_informacao">
-            <h3 class="titulo_bloco_informacao">Consulado do Brasil no país</h3>
-            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Endereço:</span> <%=consulados_brasil[i].endereco_consulado %></p>
-            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Telefone:</span> <%=consulados_brasil[i].telefone_consulado %></p>
-            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">E-mail:</span> <%=consulados_brasil[i].email_consulado %></p>
+        <div id="bloco_informacao_consulados_pais" class="bloco_informacao bloco_informacao_expansivel" onclick="abrir_secao_informacao('bloco_informacao_consulados_pais', 'secao_consulados_pais')">
+            <div class="cabecalho_bloco_informacao_expansivel">
+              <h3 class="titulo_bloco_informacao titulo_bloco_informacao_expansivel">Consulados do país no Brasil</h3>
+              <img src="img/roxo/icone_expandir_roxo.svg" alt="Botão expandir" class="botao_cabecalho">
+            </div>
+            <p class="texto texto_bloco_informacao">Clique para conhecer o(s) consulado(s) desse país no Brasil</p>
           </div>
-        <% } %>
 
-        <% for (var i=0; i<consulados_pais.length; i++) { %>
-          <div class="bloco_informacao">
-            <h3 class="titulo_bloco_informacao">Consulado do país no Brasil</h3>
-            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Endereço:</span> <%=consulados_pais[i].endereco_consulado %></p>
-            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Telefone:</span> <%=consulados_pais[i].telefone_consulado %></p>
-            <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">E-mail:</span> <%=consulados_pais[i].email_consulado %></p>
+        <div id="secao_consulados_pais" class="bloco_informacao bloco_informacao_invisivel secao_expansivel">
+          <div class="cabecalho_bloco_informacao_expansivel">
+            <h3 class="titulo_bloco_informacao titulo_bloco_informacao_expansivel">Consulados do país no Brasil</h3>
+            <img src="img/roxo/icone_desfazer_expansao_roxo.svg" alt="Botão desfazer expansão" class="botao_cabecalho" onclick="fechar_secao_informacao('bloco_informacao_consulados_pais', 'secao_consulados_pais')">
           </div>
-        <% } %>
-
+          <% for (var i=0; i<consulados_pais.length; i++) { %>
+            <div class="dados_expandidos">
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Endereço:</span> <%=consulados_pais[i].endereco_consulado %></p>
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Telefone:</span> <%=consulados_pais[i].telefone_consulado %></p>
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">E-mail:</span> <%=consulados_pais[i].email_consulado %></p>
+            </div>
+          <% } %>
+        </div> 
 	    </section>
 
 	    <section id="secao_checklist" class="secao_pais secao_invisivel_pais">

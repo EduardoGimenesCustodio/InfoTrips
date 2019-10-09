@@ -108,14 +108,14 @@ function fechar_bloco_detalhe(bloco) {
     document.getElementById(bloco).className = 'fundo_bloco_detalhe fundo_bloco_detalhe_invisivel';
 }
 
-// Abrir e fechar seção visto
+// Abrir e fechar seção de informação
 
-function abrir_secao_visto() {
-    document.getElementById('bloco_informacao_visto').className = 'bloco_informacao bloco_informacao_invisivel';
-    document.getElementById('secao_visto').className = 'bloco_informacao';
+function abrir_secao_informacao(secao_visivel, secao_invisivel) {
+    document.getElementById(secao_visivel).className = 'bloco_informacao bloco_informacao_invisivel bloco_informacao_expansivel';
+    document.getElementById(secao_invisivel).className = 'bloco_informacao secao_expansivel';
 }
 
-function fechar_secao_visto() {
-    document.getElementById('bloco_informacao_visto').className = 'bloco_informacao';
-    document.getElementById('secao_visto').className = 'bloco_informacao bloco_informacao_invisivel';
+function fechar_secao_informacao(secao_invisivel, secao_visivel) {
+    document.getElementById(secao_invisivel).className = 'bloco_informacao bloco_informacao_expansivel';
+    document.getElementById(secao_visivel).className = 'bloco_informacao bloco_informacao_invisivel secao_expansivel';
 }
