@@ -124,12 +124,12 @@
         </div>
 
         <div id="bloco_informacao_consulados_pais" class="bloco_informacao bloco_informacao_expansivel" onclick="abrir_secao_informacao('bloco_informacao_consulados_pais', 'secao_consulados_pais')">
-            <div class="cabecalho_bloco_informacao_expansivel">
-              <h3 class="titulo_bloco_informacao titulo_bloco_informacao_expansivel">Consulados do país no Brasil</h3>
-              <img src="img/roxo/icone_expandir_roxo.svg" alt="Botão expandir" class="botao_cabecalho">
-            </div>
-            <p class="texto texto_bloco_informacao">Clique para conhecer o(s) consulado(s) desse país no Brasil</p>
+          <div class="cabecalho_bloco_informacao_expansivel">
+            <h3 class="titulo_bloco_informacao titulo_bloco_informacao_expansivel">Consulados do país no Brasil</h3>
+            <img src="img/roxo/icone_expandir_roxo.svg" alt="Botão expandir" class="botao_cabecalho">
           </div>
+          <p class="texto texto_bloco_informacao">Clique para conhecer o(s) consulado(s) desse país no Brasil</p>
+        </div>
 
         <div id="secao_consulados_pais" class="bloco_informacao bloco_informacao_invisivel secao_expansivel">
           <div class="cabecalho_bloco_informacao_expansivel">
@@ -143,7 +143,36 @@
               <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">E-mail:</span> <%=consulados_pais[i].email_consulado %></p>
             </div>
           <% } %>
-        </div> 
+        </div>
+
+        <% if (alertas_pais.length > 0) { %>
+          <div id="bloco_informacao_alertas_pais" class="bloco_informacao bloco_informacao_expansivel" onclick="abrir_secao_informacao('bloco_informacao_alertas_pais', 'secao_alertas_pais')">
+            <div class="cabecalho_bloco_informacao_expansivel">
+              <h3 class="titulo_bloco_informacao titulo_bloco_informacao_expansivel">Alertas para esse país</h3>
+              <img src="img/roxo/icone_expandir_roxo.svg" alt="Botão expandir" class="botao_cabecalho">
+            </div>
+            <p class="texto texto_bloco_informacao">Clique para conhecer o(s) alerta(s) para esse país</p>
+          </div>
+      
+          <div id="secao_alertas_pais" class="bloco_informacao bloco_informacao_invisivel secao_expansivel">
+            <div class="cabecalho_bloco_informacao_expansivel">
+              <h3 class="titulo_bloco_informacao titulo_bloco_informacao_expansivel">Alertas para esse país</h3>
+              <img src="img/roxo/icone_desfazer_expansao_roxo.svg" alt="Botão desfazer expansão" class="botao_cabecalho" onclick="fechar_secao_informacao('bloco_informacao_alertas_pais', 'secao_alertas_pais')">
+            </div>
+            <% for (var i=0; i<alertas_pais.length; i++) { %>
+              <div class="dados_expandidos">
+                <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Título:</span> <%=alertas_pais[i].titulo_alerta %></p>
+                <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Data:</span> <%=alertas_pais[i].data_alerta %></p>
+                <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Descrição:</span> <%=alertas_pais[i].descricao_alerta %></p>
+              </div>
+            <% } %>
+          </div>
+        <% } else { %>
+          <div class="bloco_informacao">
+            <h3 class="titulo_bloco_informacao">Alertas para esse país</h3>
+            <p class="texto texto_bloco_informacao">Não há alertas para esse país</p>
+          </div>
+        <% } %>
 	    </section>
 
 	    <section id="secao_checklist" class="secao_pais secao_invisivel_pais">
