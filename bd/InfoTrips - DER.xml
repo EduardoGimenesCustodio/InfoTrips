@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <MER>
 	<Informacoes>
-		<Posicao Left="966" Top="522"/>
+		<Posicao Left="1358" Top="522"/>
 		<TotalItens Valor="322"/>
 		<Tipo Valor="CONCEITUAL"/>
 		<Versao Valor="2.0.0"/>
@@ -1961,10 +1961,10 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="endereco_foto" id="907">
+        <Atributo nome="nome_foto" id="907">
           <Left Valor="1753"/>
-          <Top Valor="781"/>
-          <Width Valor="110"/>
+          <Top Valor="780"/>
+          <Width Valor="89"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
           <Atributos/>
@@ -1977,7 +1977,7 @@
           <MaxCard Valor="1"/>
           <MinCard Valor="1"/>
           <Composto Valor="0"/>
-          <Identificador Valor="0"/>
+          <Identificador Valor="-1"/>
           <Tipo Valor="varchar(100)"/>
           <Multivalorado Valor="0"/>
           <Orientacao Valor="3"/>

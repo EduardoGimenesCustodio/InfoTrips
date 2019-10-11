@@ -4,8 +4,10 @@ module.exports.perfil = function(app, req, res){
 	    var connection = app.config.dbConnection();
 	    var usuarioModel = new app.app.models.UsuarioDAO(connection);
 
-	    usuarioModel.getUsuario(email, function(error, result) {
-		    res.render('perfil/perfil', {usuario: result});
+	    usuarioModel.getUsuario(email, function(error, usuario) {
+			usuarioModel.getFotoUsuario(email, function(error, foto_usuario) {
+				res.render('perfil/perfil', {usuario: usuario, foto_usuario: foto_usuario});
+			});
 	    });
 	} else {
 		res.redirect('/login');

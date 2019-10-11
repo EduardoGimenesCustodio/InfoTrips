@@ -22,11 +22,14 @@
             </header>
           
             <div class="campo_foto_formulario">
-                <img src="img/roxo/icone_perfil_grande_roxo.svg" alt="Botão inserir foto de perfil" id="foto_usuario_cadastro" class="foto_perfil foto_perfil_preview">
+                <% if (foto_usuario.length > 0) { %>
+                    <img src="uploads/<%= foto_usuario[0].nome_foto %>" alt="Foto de perfil" id="foto_usuario_cadastro" class="foto_perfil foto_perfil_preview">
+                <% } else { %>
+                    <img src="img/roxo/icone_perfil_grande_roxo.svg" alt="Foto de perfil" id="foto_usuario_cadastro" class="foto_perfil foto_perfil_preview">
+                <% } %>
             </div>
 
             <div class="dados_usuario">
-                <p><%= usuario[0].foto_usuario %></p>
                 <h1 class="titulo_principal"><%= usuario[0].nome_usuario %></h1>
                 <h2 class="titulo_secundario"><%= usuario[0].email_usuario %></h2>
             </div>

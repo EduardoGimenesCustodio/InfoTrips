@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <MER>
 	<Informacoes>
-		<Posicao Left="795" Top="825"/>
+		<Posicao Left="1481" Top="825"/>
 		<TotalItens Valor="193"/>
 		<Tipo Valor="LÓGICO"/>
 		<Versao Valor="2.0.0"/>
@@ -44,7 +44,7 @@
       <Campos>
         <Campo nome="id_moeda_pais" id="19">
           <Left Valor="1545"/>
-          <Top Valor="1357"/>
+          <Top Valor="1339"/>
           <Width Valor="175"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -65,7 +65,7 @@
         </Campo>
         <Campo nome="id_pais" id="69">
           <Left Valor="1545"/>
-          <Top Valor="1375"/>
+          <Top Valor="1357"/>
           <Width Valor="175"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -86,7 +86,7 @@
         </Campo>
         <Campo nome="id_moeda" id="77">
           <Left Valor="1545"/>
-          <Top Valor="1393"/>
+          <Top Valor="1375"/>
           <Width Valor="175"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -204,7 +204,7 @@
       <Campos>
         <Campo nome="id_alerta" id="21">
           <Left Valor="1017"/>
-          <Top Valor="1306"/>
+          <Top Valor="1288"/>
           <Width Valor="210"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -225,7 +225,7 @@
         </Campo>
         <Campo nome="titulo_alerta" id="22">
           <Left Valor="1017"/>
-          <Top Valor="1324"/>
+          <Top Valor="1306"/>
           <Width Valor="210"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -246,7 +246,7 @@
         </Campo>
         <Campo nome="data_alerta" id="23">
           <Left Valor="1017"/>
-          <Top Valor="1342"/>
+          <Top Valor="1324"/>
           <Width Valor="210"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -267,7 +267,7 @@
         </Campo>
         <Campo nome="descricao_alerta" id="24">
           <Left Valor="1017"/>
-          <Top Valor="1360"/>
+          <Top Valor="1342"/>
           <Width Valor="210"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -528,7 +528,7 @@
       <Campos>
         <Campo nome="id_consulado" id="33">
           <Left Valor="2469"/>
-          <Top Valor="995"/>
+          <Top Valor="977"/>
           <Width Valor="227"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -549,7 +549,7 @@
         </Campo>
         <Campo nome="endereco_consulado" id="34">
           <Left Valor="2469"/>
-          <Top Valor="1013"/>
+          <Top Valor="995"/>
           <Width Valor="227"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -570,7 +570,7 @@
         </Campo>
         <Campo nome="telefone_consulado" id="35">
           <Left Valor="2469"/>
-          <Top Valor="1031"/>
+          <Top Valor="1013"/>
           <Width Valor="227"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -591,7 +591,7 @@
         </Campo>
         <Campo nome="email_consulado" id="36">
           <Left Valor="2469"/>
-          <Top Valor="1049"/>
+          <Top Valor="1031"/>
           <Width Valor="227"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -612,7 +612,7 @@
         </Campo>
         <Campo nome="id_pais" id="93">
           <Left Valor="2469"/>
-          <Top Valor="1067"/>
+          <Top Valor="1049"/>
           <Width Valor="227"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -633,7 +633,7 @@
         </Campo>
         <Campo nome="id_pais" id="125">
           <Left Valor="2469"/>
-          <Top Valor="1085"/>
+          <Top Valor="1067"/>
           <Width Valor="227"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -671,7 +671,7 @@
       <Campos>
         <Campo nome="id_embaixada" id="37">
           <Left Valor="2268"/>
-          <Top Valor="848"/>
+          <Top Valor="830"/>
           <Width Valor="234"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -692,7 +692,7 @@
         </Campo>
         <Campo nome="endereco_embaixada" id="38">
           <Left Valor="2268"/>
-          <Top Valor="866"/>
+          <Top Valor="848"/>
           <Width Valor="234"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -713,7 +713,7 @@
         </Campo>
         <Campo nome="telefone_embaixada" id="39">
           <Left Valor="2268"/>
-          <Top Valor="884"/>
+          <Top Valor="866"/>
           <Width Valor="234"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -734,7 +734,7 @@
         </Campo>
         <Campo nome="email_embaixada" id="40">
           <Left Valor="2268"/>
-          <Top Valor="902"/>
+          <Top Valor="884"/>
           <Width Valor="234"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -755,7 +755,7 @@
         </Campo>
         <Campo nome="id_pais" id="85">
           <Left Valor="2268"/>
-          <Top Valor="920"/>
+          <Top Valor="902"/>
           <Width Valor="234"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -776,7 +776,7 @@
         </Campo>
         <Campo nome="id_pais" id="129">
           <Left Valor="2268"/>
-          <Top Valor="938"/>
+          <Top Valor="920"/>
           <Width Valor="234"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1159,7 +1159,7 @@
       <Campos>
         <Campo nome="id_checklist" id="52">
           <Left Valor="1234"/>
-          <Top Valor="620"/>
+          <Top Valor="602"/>
           <Width Valor="178"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1180,7 +1180,7 @@
         </Campo>
         <Campo nome="isdone_checklist" id="53">
           <Left Valor="1234"/>
-          <Top Valor="638"/>
+          <Top Valor="620"/>
           <Width Valor="178"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1201,7 +1201,7 @@
         </Campo>
         <Campo nome="id_exigencia" id="113">
           <Left Valor="1234"/>
-          <Top Valor="656"/>
+          <Top Valor="638"/>
           <Width Valor="178"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1222,7 +1222,7 @@
         </Campo>
         <Campo nome="id_usuario" id="117">
           <Left Valor="1234"/>
-          <Top Valor="674"/>
+          <Top Valor="656"/>
           <Width Valor="178"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1260,7 +1260,7 @@
       <Campos>
         <Campo nome="id_usuario" id="54">
           <Left Valor="1544"/>
-          <Top Valor="571"/>
+          <Top Valor="553"/>
           <Width Valor="240"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1281,7 +1281,7 @@
         </Campo>
         <Campo nome="nome_usuario" id="55">
           <Left Valor="1544"/>
-          <Top Valor="589"/>
+          <Top Valor="571"/>
           <Width Valor="240"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1302,7 +1302,7 @@
         </Campo>
         <Campo nome="email_usuario" id="56">
           <Left Valor="1544"/>
-          <Top Valor="607"/>
+          <Top Valor="589"/>
           <Width Valor="240"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1323,7 +1323,7 @@
         </Campo>
         <Campo nome="senha_usuario" id="57">
           <Left Valor="1544"/>
-          <Top Valor="625"/>
+          <Top Valor="607"/>
           <Width Valor="240"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1344,7 +1344,7 @@
         </Campo>
         <Campo nome="updatesareactive_usuario" id="58">
           <Left Valor="1544"/>
-          <Top Valor="643"/>
+          <Top Valor="625"/>
           <Width Valor="240"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1542,7 +1542,7 @@
       <Campos>
         <Campo nome="id_lingua" id="63">
           <Left Valor="2152"/>
-          <Top Valor="1327"/>
+          <Top Valor="1309"/>
           <Width Valor="179"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1563,7 +1563,7 @@
         </Campo>
         <Campo nome="nome_lingua" id="64">
           <Left Valor="2152"/>
-          <Top Valor="1345"/>
+          <Top Valor="1327"/>
           <Width Valor="179"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1601,7 +1601,7 @@
       <Campos>
         <Campo nome="id_lingua_pais" id="65">
           <Left Valor="2061"/>
-          <Top Valor="1073"/>
+          <Top Valor="1055"/>
           <Width Valor="163"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1622,7 +1622,7 @@
         </Campo>
         <Campo nome="id_pais" id="133">
           <Left Valor="2061"/>
-          <Top Valor="1091"/>
+          <Top Valor="1073"/>
           <Width Valor="163"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1643,7 +1643,7 @@
         </Campo>
         <Campo nome="id_lingua" id="137">
           <Left Valor="2061"/>
-          <Top Valor="1109"/>
+          <Top Valor="1091"/>
           <Width Valor="163"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -1780,7 +1780,7 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="endereco_foto" id="68">
+        <Campo nome="nome_foto" id="68">
           <Left Valor="1728"/>
           <Top Valor="846"/>
           <Width Valor="193"/>
@@ -2138,7 +2138,7 @@
           <Cardinalidades Cardinalidade="3">
             <Cardinalidade nome="" id="88">
               <Left Valor="2230"/>
-              <Top Valor="860"/>
+              <Top Valor="906"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2272,7 +2272,7 @@
           <Cardinalidades Cardinalidade="3">
             <Cardinalidade nome="" id="96">
               <Left Valor="2431"/>
-              <Top Valor="1007"/>
+              <Top Valor="1053"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2808,7 +2808,7 @@
           <Cardinalidades Cardinalidade="3">
             <Cardinalidade nome="" id="128">
               <Left Valor="2431"/>
-              <Top Valor="1053"/>
+              <Top Valor="1007"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2875,7 +2875,7 @@
           <Cardinalidades Cardinalidade="3">
             <Cardinalidade nome="" id="132">
               <Left Valor="2230"/>
-              <Top Valor="906"/>
+              <Top Valor="860"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
