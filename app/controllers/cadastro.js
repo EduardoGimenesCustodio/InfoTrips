@@ -25,7 +25,7 @@ module.exports.cadastrar_usuario = function(app, req, res, nome_foto_usuario){
 			res.render('cadastro/cadastro', {validacao: erro});
 		} else {
 			usuarioModel.cadastrarUsuario(usuario, function(error, result){
-				if (foto_usuario.length > 0) {
+				if (foto_usuario) {
 					usuarioModel.getUsuario(usuario.email_usuario, function(error, result){
 						var usuario_cadastrado = result;
 						usuarioModel.cadastrarFotoUsuario(usuario_cadastrado, foto_usuario, function(error, result){
@@ -33,7 +33,6 @@ module.exports.cadastrar_usuario = function(app, req, res, nome_foto_usuario){
 						});
 					});
 				} else {
-					console.log('n deu');
 					app.app.controllers.login.login_usuario(app, req, res);
 				}
 			});

@@ -24,5 +24,6 @@ module.exports = function(app){
 
 	app.post('/cadastrar/usuario', upload.single('foto_usuario'), function(req,res){
 		app.app.controllers.cadastro.cadastrar_usuario(app, req, res, nome_foto_usuario);
+		nome_foto_usuario = '';
 	});
 }
