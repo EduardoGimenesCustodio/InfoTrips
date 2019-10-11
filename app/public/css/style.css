@@ -53,6 +53,7 @@ body{
 	background-color: var(--cor-primary-dark);
 	display: flex;
 	position: relative;
+	align-items: center;
 	width: 100%;
 	padding: 2.8%;
 	box-shadow: 0 0 4px 0;
@@ -79,11 +80,10 @@ body{
 	display: flex;
 	cursor: pointer;
 	height: 34px;
-	margin: 0 auto 0 auto;
 }
 
 .titulo_cabecalho{
-	width: 100%;
+	margin: 0 auto 0 auto;
 }
 
 .titulo_cadastro{

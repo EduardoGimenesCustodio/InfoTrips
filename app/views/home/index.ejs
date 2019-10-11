@@ -18,7 +18,11 @@
       <header class="cabecalho">
         <a href="/favoritos"><img src="img/branco/icone_lista_favoritos_branco.svg" alt="Botão favoritos" class="botao_cabecalho"></a>
         <a href="/" class="titulo_cabecalho"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
-        <a href="/login"><img src="img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
+        <% if (foto_usuario.length > 0) { %>
+          <a href="/perfil"><img src="uploads/<%= foto_usuario[0].nome_foto %>" alt="Botão perfil" class="botao_cabecalho foto_perfil_cabecalho"></a>
+        <% } else { %>
+          <a href="perfil"><img src="img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
+        <% } %>
       </header>
 
       <h1 class="titulo_principal">Informe-se antes de viajar</h1>
