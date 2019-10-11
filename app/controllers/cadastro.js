@@ -2,8 +2,9 @@ module.exports.cadastro = function(app, req, res){
 	res.render('cadastro/cadastro', {validacao: {}});
 }
 
-module.exports.cadastrar_usuario = function(app, req, res){
+module.exports.cadastrar_usuario = function(app, req, res, nome_foto_usuario){
 	var usuario = req.body;
+	var foto_usuario = nome_foto_usuario;
 
 	var connection = app.config.dbConnection();
 	var usuarioModel = new app.app.models.UsuarioDAO(connection);
@@ -24,7 +25,17 @@ module.exports.cadastrar_usuario = function(app, req, res){
 			res.render('cadastro/cadastro', {validacao: erro});
 		} else {
 			usuarioModel.cadastrarUsuario(usuario, function(error, result){
-				app.app.controllers.login.login_usuario(app, req, res);
+				if (foto_usuario.length > 0) {
+					usuarioModel.getUsuario(usuario.email_usuario, function(error, result){
+						var usuario_cadastrado = result;
+						usuarioModel.cadastrarFotoUsuario(usuario_cadastrado, foto_usuario, function(error, result){
+							app.app.controllers.login.login_usuario(app, req, res);
+						});
+					});
+				} else {
+					console.log('n deu');
+					app.app.controllers.login.login_usuario(app, req, res);
+				}
 			});
 		}
 	});

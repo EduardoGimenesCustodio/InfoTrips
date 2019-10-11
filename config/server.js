@@ -3,6 +3,8 @@ var session = require('express-session');
 var consign = require('consign');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator'); // importação do método expressValidator
+var multer = require('multer');
+var path = require('path');
 
 var app = express();
 app.set('view engine', 'ejs');
@@ -23,6 +25,10 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(expressValidator());
 // aqui colocamos em execução o expressValidator
+
+// app.use(multer);
+
+// app.use(path);
 
 consign()
 

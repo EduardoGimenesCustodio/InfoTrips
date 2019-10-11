@@ -3,28 +3,6 @@
 var carrossel = ['item1_carrossel', 'item2_carrossel', 'item3_carrossel', 'item4_carrossel'];
 var itemCarrosselAtual = 0;
 
-// function mudar_item_automaticamente() {
-//     document.getElementById(carrossel[itemCarrosselAtual]).className = 'item_carrossel';
-//     document.getElementById('ponto_'+ carrossel[itemCarrosselAtual]).className = 'ponto_carrossel';
-//     itemCarrosselAtual = (itemCarrosselAtual + 1) % carrossel.length;
-//     document.getElementById(carrossel[itemCarrosselAtual]).className = 'item_carrossel item_carrossel_atual';
-//     document.getElementById('ponto_'+ carrossel[itemCarrosselAtual]).className = 'ponto_carrossel ponto_carrossel_atual';
-// }
-
-// function mudar_item_manualmente() {
-//     for(var i = 0; i < carrossel.length; i++) {
-//         document.getElementById(carrossel[i]).className = 'item_carrossel';
-//         document.getElementById('ponto_'+ carrossel[i]).className = 'ponto_carrossel';
-//     }
-//     document.getElementById(carrossel[itemCarrosselAtual]).className = 'item_carrossel item_carrossel_atual';
-//     document.getElementById('ponto_'+ carrossel[itemCarrosselAtual]).className = 'ponto_carrossel ponto_carrossel_atual';
-// }
-
-// function mudar_item(posicao_item_carrossel) {
-//     itemCarrosselAtual = posicao_item_carrossel;
-//     setInterval(mudar_item_manualmente, 10000);
-// }
-
 function mudar_item_automaticamente() {
     document.getElementById(carrossel[itemCarrosselAtual]).className = 'item_carrossel';
     document.getElementById('ponto_'+ carrossel[itemCarrosselAtual]).className = 'ponto_carrossel';
@@ -57,44 +35,21 @@ function mudar_aba(aba_atual, aba_destino, secao_atual, secao_destino) {
 
 // Preview da foto de perfil
 
-// function previewFotoPerfil() {
-//     var foto = document.querySelector('input[name=foto_usuario]').files[0];
-//     var preview = document.querySelector('#foto_usuario_cadastro');
-//     var reader = new FileReader();
-
-//     reader.onloadend = function() {
-//         preview.src = reader.result;
-//     }
-
-//     if(foto) {
-//         reader.readAsDataURL(foto);
-//         document.getElementById('foto_usuario_cadastro').className = 'foto_perfil foto_perfil_preview';
-//     } else {
-//         preview.src = "img/roxo/icone_inserir_foto_perfil_roxo.svg";
-//         document.getElementById('foto_usuario_cadastro').className = 'foto_perfil';
-//     }
-// }
-
 function previewFotoPerfil() {
     var foto = document.querySelector('input[name=foto_usuario]').files[0];
-    var foto_anterior = document.querySelector('input[name=foto_usuario]').files[0];
     var preview = document.querySelector('#foto_usuario_cadastro');
-    
+    var reader = new FileReader();
+
+    reader.onloadend = function() {
+        preview.src = reader.result;
+    }
 
     if(foto) {
-        var reader = new FileReader();
-        reader.onloadend = function() {
-            preview.src = reader.result;
-        }
         reader.readAsDataURL(foto);
         document.getElementById('foto_usuario_cadastro').className = 'foto_perfil foto_perfil_preview';
     } else {
-        var reader = new FileReader();
-        reader.onloadend = function() {
-            preview.src = reader.result;
-        }
-        reader.readAsDataURL(foto_anterior);
-        document.getElementById('foto_usuario_cadastro').className = 'foto_perfil foto_perfil_preview';
+        preview.src = "img/roxo/icone_inserir_foto_perfil_roxo.svg";
+        document.getElementById('foto_usuario_cadastro').className = 'foto_perfil';
     }
 }
 

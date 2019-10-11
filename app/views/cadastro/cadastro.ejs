@@ -30,7 +30,7 @@
             <% } %>
 
             <!-- enctype="multipart/form-data" -->
-            <form method="POST" action="/cadastrar/usuario">
+            <form method="POST" action="/cadastrar/usuario" encType="multipart/form-data">
                 <div class="campo_foto_formulario">
                     <input type="file" name="foto_usuario" class="campo_invisivel_formulario campo_foto_perfil" accept="image/*" onchange="previewFotoPerfil()">
                     <img src="/img/roxo/icone_inserir_foto_perfil_roxo.svg" alt="Botão inserir foto de perfil" id="foto_usuario_cadastro" class="foto_perfil">

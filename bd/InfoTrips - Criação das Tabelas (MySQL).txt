@@ -72,7 +72,7 @@ create table usuario(id_usuario int not null auto_increment,
 nome_usuario varchar(70), 
 email_usuario varchar(70), 
 senha_usuario varchar(20), 
-foto_usuario longblob, updatesareactive_usuario boolean, 
+updatesareactive_usuario boolean, 
 primary key(id_usuario));
 
 create table historico(id_historico int not null auto_increment, 
@@ -106,4 +106,10 @@ create table lingua_pais(id_lingua_pais int not null auto_increment,
 pais_lingua_pais int, lingua_lingua_pais int, 
 primary key(id_lingua_pais), 
 foreign key(pais_lingua_pais) references pais(id_pais), 
-foreign key(lingua_lingua_pais) references lingua(id_lingua));    
+foreign key(lingua_lingua_pais) references lingua(id_lingua));
+
+create table foto(id_foto int not null auto_increment, 
+endereco_foto varchar(100), 
+usuario_foto int, 
+primary key(id_foto), 
+foreign key(usuario_foto) references usuario(id_usuario));

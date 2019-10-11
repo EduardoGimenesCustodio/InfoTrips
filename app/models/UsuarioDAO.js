@@ -14,6 +14,10 @@ function UsuarioDAO(connection){
 		this._connection.query('insert into usuario set ?', usuario, callback);
 	}
 
+	UsuarioDAO.prototype.cadastrarFotoUsuario = function(usuario_cadastrado, foto_usuario, callback){
+		this._connection.query('insert into foto(endereco_foto, usuario_foto) values("./uploads/' + foto_usuario + '", ' + usuario_cadastrado[0].id_usuario + ')', callback);
+	}
+
 	UsuarioDAO.prototype.loginUsuario = function(email, senha, callback) {
 		this._connection.query('select * from usuario where email_usuario = ? AND senha_usuario = ?', [email, senha], callback);
 	}

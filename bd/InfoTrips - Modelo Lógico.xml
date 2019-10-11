@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <MER>
 	<Informacoes>
-		<Posicao Left="1630" Top="937"/>
-		<TotalItens Valor="185"/>
+		<Posicao Left="795" Top="825"/>
+		<TotalItens Valor="193"/>
 		<Tipo Valor="LÓGICO"/>
 		<Versao Valor="2.0.0"/>
 		<Autor Valor=""/>
@@ -28,9 +28,9 @@
 	</Informacoes>
 	<Tabelas>
     <Tabela nome="MOEDA_PAIS" id="1">
-      <Left Valor="1558"/>
-      <Top Valor="1369"/>
-      <Width Valor="171"/>
+      <Left Valor="1545"/>
+      <Top Valor="1338"/>
+      <Width Valor="177"/>
       <Height Valor="82"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
@@ -42,10 +42,10 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="id_moeda_pais" id="18">
-          <Left Valor="1558"/>
-          <Top Valor="1388"/>
-          <Width Valor="169"/>
+        <Campo nome="id_moeda_pais" id="19">
+          <Left Valor="1545"/>
+          <Top Valor="1357"/>
+          <Width Valor="175"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -63,10 +63,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_pais" id="67">
-          <Left Valor="1558"/>
-          <Top Valor="1406"/>
-          <Width Valor="169"/>
+        <Campo nome="id_pais" id="69">
+          <Left Valor="1545"/>
+          <Top Valor="1375"/>
+          <Width Valor="175"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -79,15 +79,15 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="8"/>
-          <CampoOrigem Valor="40"/>
+          <CampoOrigem Valor="41"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_moeda" id="75">
-          <Left Valor="1558"/>
-          <Top Valor="1424"/>
-          <Width Valor="169"/>
+        <Campo nome="id_moeda" id="77">
+          <Left Valor="1545"/>
+          <Top Valor="1393"/>
+          <Width Valor="175"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -100,7 +100,7 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="4"/>
-          <CampoOrigem Valor="24"/>
+          <CampoOrigem Valor="25"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -108,10 +108,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="ALERTA_PAIS" id="2">
-      <Left Valor="1362"/>
-      <Top Valor="1196"/>
-      <Width Valor="165"/>
-      <Height Valor="83"/>
+      <Left Valor="1381"/>
+      <Top Valor="1200"/>
+      <Width Valor="163"/>
+      <Height Valor="82"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -122,10 +122,10 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="id_alerta_pais" id="19">
-          <Left Valor="1362"/>
-          <Top Valor="1215"/>
-          <Width Valor="163"/>
+        <Campo nome="id_alerta_pais" id="20">
+          <Left Valor="1381"/>
+          <Top Valor="1219"/>
+          <Width Valor="161"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -143,10 +143,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_alerta" id="71">
-          <Left Valor="1362"/>
-          <Top Valor="1233"/>
-          <Width Valor="163"/>
+        <Campo nome="id_alerta" id="73">
+          <Left Valor="1381"/>
+          <Top Valor="1237"/>
+          <Width Valor="161"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -159,15 +159,15 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="3"/>
-          <CampoOrigem Valor="20"/>
+          <CampoOrigem Valor="21"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_pais" id="79">
-          <Left Valor="1362"/>
-          <Top Valor="1251"/>
-          <Width Valor="163"/>
+        <Campo nome="id_pais" id="81">
+          <Left Valor="1381"/>
+          <Top Valor="1255"/>
+          <Width Valor="161"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -180,7 +180,7 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="8"/>
-          <CampoOrigem Valor="40"/>
+          <CampoOrigem Valor="41"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -188,10 +188,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="ALERTA" id="3">
-      <Left Valor="989"/>
-      <Top Valor="1243"/>
-      <Width Valor="211"/>
-      <Height Valor="101"/>
+      <Left Valor="1017"/>
+      <Top Valor="1287"/>
+      <Width Valor="212"/>
+      <Height Valor="100"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -202,10 +202,10 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="id_alerta" id="20">
-          <Left Valor="989"/>
-          <Top Valor="1262"/>
-          <Width Valor="209"/>
+        <Campo nome="id_alerta" id="21">
+          <Left Valor="1017"/>
+          <Top Valor="1306"/>
+          <Width Valor="210"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -223,10 +223,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="titulo_alerta" id="21">
-          <Left Valor="989"/>
-          <Top Valor="1280"/>
-          <Width Valor="209"/>
+        <Campo nome="titulo_alerta" id="22">
+          <Left Valor="1017"/>
+          <Top Valor="1324"/>
+          <Width Valor="210"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -244,10 +244,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="data_alerta" id="22">
-          <Left Valor="989"/>
-          <Top Valor="1298"/>
-          <Width Valor="209"/>
+        <Campo nome="data_alerta" id="23">
+          <Left Valor="1017"/>
+          <Top Valor="1342"/>
+          <Width Valor="210"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -265,10 +265,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="descricao_alerta" id="23">
-          <Left Valor="989"/>
-          <Top Valor="1316"/>
-          <Width Valor="209"/>
+        <Campo nome="descricao_alerta" id="24">
+          <Left Valor="1017"/>
+          <Top Valor="1360"/>
+          <Width Valor="210"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -289,10 +289,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="MOEDA" id="4">
-      <Left Valor="1826"/>
-      <Top Valor="1322"/>
-      <Width Valor="192"/>
-      <Height Valor="64"/>
+      <Left Valor="1653"/>
+      <Top Valor="1224"/>
+      <Width Valor="184"/>
+      <Height Valor="67"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -303,10 +303,10 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="id_moeda" id="24">
-          <Left Valor="1826"/>
-          <Top Valor="1341"/>
-          <Width Valor="190"/>
+        <Campo nome="id_moeda" id="25">
+          <Left Valor="1653"/>
+          <Top Valor="1243"/>
+          <Width Valor="182"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -324,10 +324,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="nome_moeda" id="25">
-          <Left Valor="1826"/>
-          <Top Valor="1359"/>
-          <Width Valor="190"/>
+        <Campo nome="nome_moeda" id="26">
+          <Left Valor="1653"/>
+          <Top Valor="1261"/>
+          <Width Valor="182"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -348,9 +348,9 @@
       </Campos>
     </Tabela>
     <Tabela nome="VISTO" id="5">
-      <Left Valor="1813"/>
-      <Top Valor="1156"/>
-      <Width Valor="264"/>
+      <Left Valor="1849"/>
+      <Top Valor="1139"/>
+      <Width Valor="267"/>
       <Height Valor="154"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
@@ -362,10 +362,10 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="id_visto" id="26">
-          <Left Valor="1813"/>
-          <Top Valor="1175"/>
-          <Width Valor="262"/>
+        <Campo nome="id_visto" id="27">
+          <Left Valor="1849"/>
+          <Top Valor="1158"/>
+          <Width Valor="265"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -383,10 +383,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="nome_visto" id="27">
-          <Left Valor="1813"/>
-          <Top Valor="1193"/>
-          <Width Valor="262"/>
+        <Campo nome="nome_visto" id="28">
+          <Left Valor="1849"/>
+          <Top Valor="1176"/>
+          <Width Valor="265"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -404,10 +404,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="finalidade_visto" id="28">
-          <Left Valor="1813"/>
-          <Top Valor="1211"/>
-          <Width Valor="262"/>
+        <Campo nome="finalidade_visto" id="29">
+          <Left Valor="1849"/>
+          <Top Valor="1194"/>
+          <Width Valor="265"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -425,10 +425,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="tempo_permanencia_visto" id="29">
-          <Left Valor="1813"/>
-          <Top Valor="1229"/>
-          <Width Valor="262"/>
+        <Campo nome="tempo_permanencia_visto" id="30">
+          <Left Valor="1849"/>
+          <Top Valor="1212"/>
+          <Width Valor="265"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -446,10 +446,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="taxa_solicitacao_visto" id="30">
-          <Left Valor="1813"/>
-          <Top Valor="1247"/>
-          <Width Valor="262"/>
+        <Campo nome="taxa_solicitacao_visto" id="31">
+          <Left Valor="1849"/>
+          <Top Valor="1230"/>
+          <Width Valor="265"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -467,10 +467,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="taxa_adicional_visto" id="31">
-          <Left Valor="1813"/>
-          <Top Valor="1265"/>
-          <Width Valor="262"/>
+        <Campo nome="taxa_adicional_visto" id="32">
+          <Left Valor="1849"/>
+          <Top Valor="1248"/>
+          <Width Valor="265"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -488,10 +488,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_pais" id="87">
-          <Left Valor="1813"/>
-          <Top Valor="1283"/>
-          <Width Valor="262"/>
+        <Campo nome="id_pais" id="89">
+          <Left Valor="1849"/>
+          <Top Valor="1266"/>
+          <Width Valor="265"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -504,7 +504,7 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="8"/>
-          <CampoOrigem Valor="40"/>
+          <CampoOrigem Valor="41"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -512,10 +512,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="CONSULADO" id="6">
-      <Left Valor="2402"/>
-      <Top Valor="1044"/>
-      <Width Valor="230"/>
-      <Height Valor="137"/>
+      <Left Valor="2469"/>
+      <Top Valor="976"/>
+      <Width Valor="229"/>
+      <Height Valor="138"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -526,10 +526,10 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="id_consulado" id="32">
-          <Left Valor="2402"/>
-          <Top Valor="1063"/>
-          <Width Valor="228"/>
+        <Campo nome="id_consulado" id="33">
+          <Left Valor="2469"/>
+          <Top Valor="995"/>
+          <Width Valor="227"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -547,10 +547,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="endereco_consulado" id="33">
-          <Left Valor="2402"/>
-          <Top Valor="1081"/>
-          <Width Valor="228"/>
+        <Campo nome="endereco_consulado" id="34">
+          <Left Valor="2469"/>
+          <Top Valor="1013"/>
+          <Width Valor="227"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -568,10 +568,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="telefone_consulado" id="34">
-          <Left Valor="2402"/>
-          <Top Valor="1099"/>
-          <Width Valor="228"/>
+        <Campo nome="telefone_consulado" id="35">
+          <Left Valor="2469"/>
+          <Top Valor="1031"/>
+          <Width Valor="227"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -589,10 +589,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="email_consulado" id="35">
-          <Left Valor="2402"/>
-          <Top Valor="1117"/>
-          <Width Valor="228"/>
+        <Campo nome="email_consulado" id="36">
+          <Left Valor="2469"/>
+          <Top Valor="1049"/>
+          <Width Valor="227"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -610,10 +610,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_pais" id="91">
-          <Left Valor="2402"/>
-          <Top Valor="1135"/>
-          <Width Valor="228"/>
+        <Campo nome="id_pais" id="93">
+          <Left Valor="2469"/>
+          <Top Valor="1067"/>
+          <Width Valor="227"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -626,15 +626,15 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="8"/>
-          <CampoOrigem Valor="40"/>
+          <CampoOrigem Valor="41"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_pais" id="123">
-          <Left Valor="2402"/>
-          <Top Valor="1153"/>
-          <Width Valor="228"/>
+        <Campo nome="id_pais" id="125">
+          <Left Valor="2469"/>
+          <Top Valor="1085"/>
+          <Width Valor="227"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -647,7 +647,7 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="8"/>
-          <CampoOrigem Valor="40"/>
+          <CampoOrigem Valor="41"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -655,8 +655,8 @@
       </Campos>
     </Tabela>
     <Tabela nome="EMBAIXADA" id="7">
-      <Left Valor="2046"/>
-      <Top Valor="887"/>
+      <Left Valor="2268"/>
+      <Top Valor="829"/>
       <Width Valor="236"/>
       <Height Valor="138"/>
       <Fonte default="-1"/>
@@ -669,9 +669,9 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="id_embaixada" id="36">
-          <Left Valor="2046"/>
-          <Top Valor="906"/>
+        <Campo nome="id_embaixada" id="37">
+          <Left Valor="2268"/>
+          <Top Valor="848"/>
           <Width Valor="234"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -690,9 +690,9 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="endereco_embaixada" id="37">
-          <Left Valor="2046"/>
-          <Top Valor="924"/>
+        <Campo nome="endereco_embaixada" id="38">
+          <Left Valor="2268"/>
+          <Top Valor="866"/>
           <Width Valor="234"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -711,9 +711,9 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="telefone_embaixada" id="38">
-          <Left Valor="2046"/>
-          <Top Valor="942"/>
+        <Campo nome="telefone_embaixada" id="39">
+          <Left Valor="2268"/>
+          <Top Valor="884"/>
           <Width Valor="234"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -732,9 +732,9 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="email_embaixada" id="39">
-          <Left Valor="2046"/>
-          <Top Valor="960"/>
+        <Campo nome="email_embaixada" id="40">
+          <Left Valor="2268"/>
+          <Top Valor="902"/>
           <Width Valor="234"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -753,9 +753,9 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_pais" id="83">
-          <Left Valor="2046"/>
-          <Top Valor="978"/>
+        <Campo nome="id_pais" id="85">
+          <Left Valor="2268"/>
+          <Top Valor="920"/>
           <Width Valor="234"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -769,14 +769,14 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="8"/>
-          <CampoOrigem Valor="40"/>
+          <CampoOrigem Valor="41"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_pais" id="127">
-          <Left Valor="2046"/>
-          <Top Valor="996"/>
+        <Campo nome="id_pais" id="129">
+          <Left Valor="2268"/>
+          <Top Valor="938"/>
           <Width Valor="234"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
@@ -790,7 +790,7 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="8"/>
-          <CampoOrigem Valor="40"/>
+          <CampoOrigem Valor="41"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -798,10 +798,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="PAIS" id="8">
-      <Left Valor="1410"/>
-      <Top Valor="970"/>
-      <Width Valor="271"/>
-      <Height Valor="104"/>
+      <Left Valor="1365"/>
+      <Top Valor="980"/>
+      <Width Valor="287"/>
+      <Height Valor="100"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -812,10 +812,10 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="id_pais" id="40">
-          <Left Valor="1410"/>
-          <Top Valor="989"/>
-          <Width Valor="269"/>
+        <Campo nome="id_pais" id="41">
+          <Left Valor="1365"/>
+          <Top Valor="999"/>
+          <Width Valor="285"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -833,10 +833,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="nome_pais" id="41">
-          <Left Valor="1410"/>
-          <Top Valor="1007"/>
-          <Width Valor="269"/>
+        <Campo nome="nome_pais" id="42">
+          <Left Valor="1365"/>
+          <Top Valor="1017"/>
+          <Width Valor="285"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -854,10 +854,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="informacoes_turisticas_pais" id="42">
-          <Left Valor="1410"/>
-          <Top Valor="1025"/>
-          <Width Valor="269"/>
+        <Campo nome="informacoes_turisticas_pais" id="43">
+          <Left Valor="1365"/>
+          <Top Valor="1035"/>
+          <Width Valor="285"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -875,10 +875,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="bandeira_pais" id="43">
-          <Left Valor="1410"/>
-          <Top Valor="1043"/>
-          <Width Valor="269"/>
+        <Campo nome="bandeira_pais" id="44">
+          <Left Valor="1365"/>
+          <Top Valor="1053"/>
+          <Width Valor="285"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -899,10 +899,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="FUSOHORARIO_PAIS" id="9">
-      <Left Valor="992"/>
-      <Top Valor="965"/>
-      <Width Valor="259"/>
-      <Height Valor="100"/>
+      <Left Valor="995"/>
+      <Top Valor="946"/>
+      <Width Valor="253"/>
+      <Height Valor="105"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -913,10 +913,10 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="id_fusohorario_pais" id="44">
-          <Left Valor="992"/>
-          <Top Valor="984"/>
-          <Width Valor="257"/>
+        <Campo nome="id_fusohorario_pais" id="45">
+          <Left Valor="995"/>
+          <Top Valor="965"/>
+          <Width Valor="251"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -934,10 +934,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="regiao_fusohorario_pais" id="45">
-          <Left Valor="992"/>
-          <Top Valor="1002"/>
-          <Width Valor="257"/>
+        <Campo nome="regiao_fusohorario_pais" id="46">
+          <Left Valor="995"/>
+          <Top Valor="983"/>
+          <Width Valor="251"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -955,10 +955,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_pais" id="95">
-          <Left Valor="992"/>
-          <Top Valor="1020"/>
-          <Width Valor="257"/>
+        <Campo nome="id_pais" id="97">
+          <Left Valor="995"/>
+          <Top Valor="1001"/>
+          <Width Valor="251"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -971,15 +971,15 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="8"/>
-          <CampoOrigem Valor="40"/>
+          <CampoOrigem Valor="41"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_fusohorario" id="99">
-          <Left Valor="992"/>
-          <Top Valor="1038"/>
-          <Width Valor="257"/>
+        <Campo nome="id_fusohorario" id="101">
+          <Left Valor="995"/>
+          <Top Valor="1019"/>
+          <Width Valor="251"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1000,10 +1000,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="EXIGENCIA" id="10">
-      <Left Valor="1038"/>
-      <Top Valor="790"/>
-      <Width Valor="231"/>
-      <Height Valor="136"/>
+      <Left Valor="1054"/>
+      <Top Valor="795"/>
+      <Width Valor="230"/>
+      <Height Valor="139"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -1014,10 +1014,10 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="id_exigencia" id="46">
-          <Left Valor="1038"/>
-          <Top Valor="809"/>
-          <Width Valor="229"/>
+        <Campo nome="id_exigencia" id="47">
+          <Left Valor="1054"/>
+          <Top Valor="814"/>
+          <Width Valor="228"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1035,10 +1035,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="nome_exigencia" id="47">
-          <Left Valor="1038"/>
-          <Top Valor="827"/>
-          <Width Valor="229"/>
+        <Campo nome="nome_exigencia" id="48">
+          <Left Valor="1054"/>
+          <Top Valor="832"/>
+          <Width Valor="228"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1056,10 +1056,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="descricao_exigencia" id="48">
-          <Left Valor="1038"/>
-          <Top Valor="845"/>
-          <Width Valor="229"/>
+        <Campo nome="descricao_exigencia" id="49">
+          <Left Valor="1054"/>
+          <Top Valor="850"/>
+          <Width Valor="228"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1077,10 +1077,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="isrequired_exigencia" id="49">
-          <Left Valor="1038"/>
-          <Top Valor="863"/>
-          <Width Valor="229"/>
+        <Campo nome="isrequired_exigencia" id="50">
+          <Left Valor="1054"/>
+          <Top Valor="868"/>
+          <Width Valor="228"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1098,10 +1098,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="isactive_exigencia" id="50">
-          <Left Valor="1038"/>
-          <Top Valor="881"/>
-          <Width Valor="229"/>
+        <Campo nome="isactive_exigencia" id="51">
+          <Left Valor="1054"/>
+          <Top Valor="886"/>
+          <Width Valor="228"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1119,10 +1119,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_pais" id="103">
-          <Left Valor="1038"/>
-          <Top Valor="899"/>
-          <Width Valor="229"/>
+        <Campo nome="id_pais" id="105">
+          <Left Valor="1054"/>
+          <Top Valor="904"/>
+          <Width Valor="228"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1135,7 +1135,7 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="8"/>
-          <CampoOrigem Valor="40"/>
+          <CampoOrigem Valor="41"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -1143,10 +1143,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="CHECKLIST" id="11">
-      <Left Valor="1185"/>
-      <Top Valor="611"/>
-      <Width Valor="181"/>
-      <Height Valor="101"/>
+      <Left Valor="1234"/>
+      <Top Valor="601"/>
+      <Width Valor="180"/>
+      <Height Valor="103"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -1157,10 +1157,10 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="id_checklist" id="51">
-          <Left Valor="1185"/>
-          <Top Valor="630"/>
-          <Width Valor="179"/>
+        <Campo nome="id_checklist" id="52">
+          <Left Valor="1234"/>
+          <Top Valor="620"/>
+          <Width Valor="178"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1178,10 +1178,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="isdone_checklist" id="52">
-          <Left Valor="1185"/>
-          <Top Valor="648"/>
-          <Width Valor="179"/>
+        <Campo nome="isdone_checklist" id="53">
+          <Left Valor="1234"/>
+          <Top Valor="638"/>
+          <Width Valor="178"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1199,10 +1199,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_exigencia" id="111">
-          <Left Valor="1185"/>
-          <Top Valor="666"/>
-          <Width Valor="179"/>
+        <Campo nome="id_exigencia" id="113">
+          <Left Valor="1234"/>
+          <Top Valor="656"/>
+          <Width Valor="178"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1215,15 +1215,15 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="10"/>
-          <CampoOrigem Valor="46"/>
+          <CampoOrigem Valor="47"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_usuario" id="115">
-          <Left Valor="1185"/>
-          <Top Valor="684"/>
-          <Width Valor="179"/>
+        <Campo nome="id_usuario" id="117">
+          <Left Valor="1234"/>
+          <Top Valor="674"/>
+          <Width Valor="178"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1236,7 +1236,7 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="12"/>
-          <CampoOrigem Valor="53"/>
+          <CampoOrigem Valor="54"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -1244,10 +1244,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="USUARIO" id="12">
-      <Left Valor="1553"/>
-      <Top Valor="588"/>
-      <Width Valor="236"/>
-      <Height Valor="138"/>
+      <Left Valor="1544"/>
+      <Top Valor="552"/>
+      <Width Valor="242"/>
+      <Height Valor="120"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -1258,10 +1258,10 @@
       <Complemento Valor=""/>
       <cOrdem Valor="0"/>
       <Campos>
-        <Campo nome="id_usuario" id="53">
-          <Left Valor="1553"/>
-          <Top Valor="607"/>
-          <Width Valor="234"/>
+        <Campo nome="id_usuario" id="54">
+          <Left Valor="1544"/>
+          <Top Valor="571"/>
+          <Width Valor="240"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1279,52 +1279,52 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="nome_usuario" id="54">
-          <Left Valor="1553"/>
+        <Campo nome="nome_usuario" id="55">
+          <Left Valor="1544"/>
+          <Top Valor="589"/>
+          <Width Valor="240"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar(70)"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="email_usuario" id="56">
+          <Left Valor="1544"/>
+          <Top Valor="607"/>
+          <Width Valor="240"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar(70)"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="senha_usuario" id="57">
+          <Left Valor="1544"/>
           <Top Valor="625"/>
-          <Width Valor="234"/>
-          <Height Valor="19"/>
-          <Fonte default="-1"/>
-          <Dicionario></Dicionario>
-          <Nula Valor="-1"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <ApenasSeparador Valor="0"/>
-          <IsKey Valor="0"/>
-          <IsFKey Valor="0"/>
-          <Tipo Valor="varchar(70)"/>
-          <TabOrigem Valor="0"/>
-          <CampoOrigem Valor="0"/>
-          <Complemento Valor=""/>
-          <OnUpdate Valor="0"/>
-          <OnDelete Valor="0"/>
-        </Campo>
-        <Campo nome="email_usuario" id="55">
-          <Left Valor="1553"/>
-          <Top Valor="643"/>
-          <Width Valor="234"/>
-          <Height Valor="19"/>
-          <Fonte default="-1"/>
-          <Dicionario></Dicionario>
-          <Nula Valor="-1"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <ApenasSeparador Valor="0"/>
-          <IsKey Valor="0"/>
-          <IsFKey Valor="0"/>
-          <Tipo Valor="varchar(70)"/>
-          <TabOrigem Valor="0"/>
-          <CampoOrigem Valor="0"/>
-          <Complemento Valor=""/>
-          <OnUpdate Valor="0"/>
-          <OnDelete Valor="0"/>
-        </Campo>
-        <Campo nome="senha_usuario" id="56">
-          <Left Valor="1553"/>
-          <Top Valor="661"/>
-          <Width Valor="234"/>
+          <Width Valor="240"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1342,31 +1342,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="foto_usuario" id="57">
-          <Left Valor="1553"/>
-          <Top Valor="679"/>
-          <Width Valor="234"/>
-          <Height Valor="19"/>
-          <Fonte default="-1"/>
-          <Dicionario></Dicionario>
-          <Nula Valor="-1"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <ApenasSeparador Valor="0"/>
-          <IsKey Valor="0"/>
-          <IsFKey Valor="0"/>
-          <Tipo Valor="longblob"/>
-          <TabOrigem Valor="0"/>
-          <CampoOrigem Valor="0"/>
-          <Complemento Valor=""/>
-          <OnUpdate Valor="0"/>
-          <OnDelete Valor="0"/>
-        </Campo>
         <Campo nome="updatesareactive_usuario" id="58">
-          <Left Valor="1553"/>
-          <Top Valor="697"/>
-          <Width Valor="234"/>
+          <Left Valor="1544"/>
+          <Top Valor="643"/>
+          <Width Valor="240"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1387,9 +1366,9 @@
       </Campos>
     </Tabela>
     <Tabela nome="FAVORITO" id="13">
-      <Left Valor="1835"/>
-      <Top Valor="780"/>
-      <Width Valor="189"/>
+      <Left Valor="1958"/>
+      <Top Valor="746"/>
+      <Width Valor="191"/>
       <Height Valor="101"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
@@ -1402,9 +1381,9 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="isfavorite_favorito" id="59">
-          <Left Valor="1835"/>
-          <Top Valor="799"/>
-          <Width Valor="187"/>
+          <Left Valor="1958"/>
+          <Top Valor="765"/>
+          <Width Valor="189"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1423,9 +1402,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="id_favorito" id="60">
-          <Left Valor="1835"/>
-          <Top Valor="817"/>
-          <Width Valor="187"/>
+          <Left Valor="1958"/>
+          <Top Valor="783"/>
+          <Width Valor="189"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1443,10 +1422,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_pais" id="107">
-          <Left Valor="1835"/>
-          <Top Valor="835"/>
-          <Width Valor="187"/>
+        <Campo nome="id_pais" id="109">
+          <Left Valor="1958"/>
+          <Top Valor="801"/>
+          <Width Valor="189"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1459,15 +1438,15 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="8"/>
-          <CampoOrigem Valor="40"/>
+          <CampoOrigem Valor="41"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_usuario" id="119">
-          <Left Valor="1835"/>
-          <Top Valor="853"/>
-          <Width Valor="187"/>
+        <Campo nome="id_usuario" id="121">
+          <Left Valor="1958"/>
+          <Top Valor="819"/>
+          <Width Valor="189"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1480,7 +1459,7 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="12"/>
-          <CampoOrigem Valor="53"/>
+          <CampoOrigem Valor="54"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -1488,10 +1467,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="FUSOHORARIO" id="14">
-      <Left Valor="783"/>
-      <Top Valor="1139"/>
-      <Width Valor="232"/>
-      <Height Valor="66"/>
+      <Left Valor="760"/>
+      <Top Valor="1158"/>
+      <Width Valor="233"/>
+      <Height Valor="65"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -1503,9 +1482,9 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="id_fusohorario" id="61">
-          <Left Valor="783"/>
-          <Top Valor="1158"/>
-          <Width Valor="230"/>
+          <Left Valor="760"/>
+          <Top Valor="1177"/>
+          <Width Valor="231"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1524,9 +1503,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="descricao_fusohorario" id="62">
-          <Left Valor="783"/>
-          <Top Valor="1176"/>
-          <Width Valor="230"/>
+          <Left Valor="760"/>
+          <Top Valor="1195"/>
+          <Width Valor="231"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1547,10 +1526,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="LINGUA" id="15">
-      <Left Valor="2139"/>
-      <Top Valor="1219"/>
-      <Width Valor="177"/>
-      <Height Valor="66"/>
+      <Left Valor="2152"/>
+      <Top Valor="1308"/>
+      <Width Valor="181"/>
+      <Height Valor="65"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -1562,9 +1541,9 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="id_lingua" id="63">
-          <Left Valor="2139"/>
-          <Top Valor="1238"/>
-          <Width Valor="175"/>
+          <Left Valor="2152"/>
+          <Top Valor="1327"/>
+          <Width Valor="179"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1583,9 +1562,9 @@
           <OnDelete Valor="0"/>
         </Campo>
         <Campo nome="nome_lingua" id="64">
-          <Left Valor="2139"/>
-          <Top Valor="1256"/>
-          <Width Valor="175"/>
+          <Left Valor="2152"/>
+          <Top Valor="1345"/>
+          <Width Valor="179"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1606,10 +1585,10 @@
       </Campos>
     </Tabela>
     <Tabela nome="LINGUA_PAIS" id="16">
-      <Left Valor="2006"/>
-      <Top Valor="1062"/>
-      <Width Valor="163"/>
-      <Height Valor="83"/>
+      <Left Valor="2061"/>
+      <Top Valor="1054"/>
+      <Width Valor="165"/>
+      <Height Valor="82"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
       <Nula Valor="0"/>
@@ -1621,9 +1600,9 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="id_lingua_pais" id="65">
-          <Left Valor="2006"/>
-          <Top Valor="1081"/>
-          <Width Valor="161"/>
+          <Left Valor="2061"/>
+          <Top Valor="1073"/>
+          <Width Valor="163"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1641,10 +1620,10 @@
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_pais" id="131">
-          <Left Valor="2006"/>
-          <Top Valor="1099"/>
-          <Width Valor="161"/>
+        <Campo nome="id_pais" id="133">
+          <Left Valor="2061"/>
+          <Top Valor="1091"/>
+          <Width Valor="163"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1657,15 +1636,15 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="8"/>
-          <CampoOrigem Valor="40"/>
+          <CampoOrigem Valor="41"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_lingua" id="135">
-          <Left Valor="2006"/>
-          <Top Valor="1117"/>
-          <Width Valor="161"/>
+        <Campo nome="id_lingua" id="137">
+          <Left Valor="2061"/>
+          <Top Valor="1109"/>
+          <Width Valor="163"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1686,9 +1665,9 @@
       </Campos>
     </Tabela>
     <Tabela nome="HISTORICO" id="17">
-      <Left Valor="1413"/>
-      <Top Valor="802"/>
-      <Width Valor="161"/>
+      <Left Valor="1523"/>
+      <Top Valor="839"/>
+      <Width Valor="156"/>
       <Height Valor="82"/>
       <Fonte default="-1"/>
       <Dicionario></Dicionario>
@@ -1701,9 +1680,9 @@
       <cOrdem Valor="0"/>
       <Campos>
         <Campo nome="id_historico" id="66">
-          <Left Valor="1413"/>
-          <Top Valor="821"/>
-          <Width Valor="159"/>
+          <Left Valor="1523"/>
+          <Top Valor="858"/>
+          <Width Valor="154"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1714,17 +1693,17 @@
           <ApenasSeparador Valor="0"/>
           <IsKey Valor="-1"/>
           <IsFKey Valor="0"/>
-          <Tipo Valor="Texto(1)"/>
+          <Tipo Valor="integer"/>
           <TabOrigem Valor="0"/>
           <CampoOrigem Valor="0"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_pais" id="139">
-          <Left Valor="1413"/>
-          <Top Valor="839"/>
-          <Width Valor="159"/>
+        <Campo nome="id_pais" id="141">
+          <Left Valor="1523"/>
+          <Top Valor="876"/>
+          <Width Valor="154"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1737,15 +1716,15 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="8"/>
-          <CampoOrigem Valor="40"/>
+          <CampoOrigem Valor="41"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
         </Campo>
-        <Campo nome="id_usuario" id="143">
-          <Left Valor="1413"/>
-          <Top Valor="857"/>
-          <Width Valor="159"/>
+        <Campo nome="id_usuario" id="145">
+          <Left Valor="1523"/>
+          <Top Valor="894"/>
+          <Width Valor="154"/>
           <Height Valor="19"/>
           <Fonte default="-1"/>
           <Dicionario></Dicionario>
@@ -1758,7 +1737,87 @@
           <IsFKey Valor="-1"/>
           <Tipo Valor="integer"/>
           <TabOrigem Valor="12"/>
-          <CampoOrigem Valor="53"/>
+          <CampoOrigem Valor="54"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+      </Campos>
+    </Tabela>
+    <Tabela nome="FOTO" id="18">
+      <Left Valor="1728"/>
+      <Top Valor="809"/>
+      <Width Valor="195"/>
+      <Height Valor="83"/>
+      <Fonte default="-1"/>
+      <Dicionario></Dicionario>
+      <Nula Valor="0"/>
+      <Observacao></Observacao>
+      <Futuro></Futuro>
+      <Anexos/>
+      <Color Valor="12639424"/>
+      <Complemento Valor=""/>
+      <cOrdem Valor="0"/>
+      <Campos>
+        <Campo nome="id_foto" id="67">
+          <Left Valor="1728"/>
+          <Top Valor="828"/>
+          <Width Valor="193"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="-1"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="integer"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="endereco_foto" id="68">
+          <Left Valor="1728"/>
+          <Top Valor="846"/>
+          <Width Valor="193"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="0"/>
+          <Tipo Valor="varchar(100)"/>
+          <TabOrigem Valor="0"/>
+          <CampoOrigem Valor="0"/>
+          <Complemento Valor=""/>
+          <OnUpdate Valor="0"/>
+          <OnDelete Valor="0"/>
+        </Campo>
+        <Campo nome="id_usuario" id="149">
+          <Left Valor="1728"/>
+          <Top Valor="864"/>
+          <Width Valor="193"/>
+          <Height Valor="19"/>
+          <Fonte default="-1"/>
+          <Dicionario></Dicionario>
+          <Nula Valor="-1"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <ApenasSeparador Valor="0"/>
+          <IsKey Valor="0"/>
+          <IsFKey Valor="-1"/>
+          <Tipo Valor="integer"/>
+          <TabOrigem Valor="12"/>
+          <CampoOrigem Valor="54"/>
           <Complemento Valor=""/>
           <OnUpdate Valor="0"/>
           <OnDelete Valor="0"/>
@@ -1767,7 +1826,7 @@
     </Tabela>
   </Tabelas>
 	<LigacaoEntreTabelas>
-    <LigaTabela nome="PAIS_MOEDA_PAIS_1" id="68">
+    <LigaTabela nome="PAIS_MOEDA_PAIS_1" id="70">
       <Left Valor="1597"/>
       <Top Valor="1163"/>
       <Width Valor="15"/>
@@ -1781,11 +1840,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="8">
-          <MostraCardinalidade Valor="-1" Card_id="69"/>
+          <MostraCardinalidade Valor="-1" Card_id="71"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="69">
-              <Left Valor="1544"/>
-              <Top Valor="1075"/>
+            <Cardinalidade nome="" id="71">
+              <Left Valor="1507"/>
+              <Top Valor="1081"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1807,11 +1866,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="1">
-          <MostraCardinalidade Valor="-1" Card_id="70"/>
+          <MostraCardinalidade Valor="-1" Card_id="72"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="70">
-              <Left Valor="1615"/>
-              <Top Valor="1354"/>
+            <Cardinalidade nome="" id="72">
+              <Left Valor="1604"/>
+              <Top Valor="1323"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1834,7 +1893,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="ALERTA_ALERTA_PAIS_1" id="72">
+    <LigaTabela nome="ALERTA_ALERTA_PAIS_1" id="74">
       <Left Valor="1337"/>
       <Top Valor="1230"/>
       <Width Valor="15"/>
@@ -1848,11 +1907,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="3">
-          <MostraCardinalidade Valor="-1" Card_id="73"/>
+          <MostraCardinalidade Valor="-1" Card_id="75"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="73">
-              <Left Valor="1200"/>
-              <Top Valor="1278"/>
+            <Cardinalidade nome="" id="75">
+              <Left Valor="1229"/>
+              <Top Valor="1322"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1874,11 +1933,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="2">
-          <MostraCardinalidade Valor="-1" Card_id="74"/>
+          <MostraCardinalidade Valor="-1" Card_id="76"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="74">
-              <Left Valor="1324"/>
-              <Top Valor="1222"/>
+            <Cardinalidade nome="" id="76">
+              <Left Valor="1343"/>
+              <Top Valor="1226"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1901,7 +1960,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="MOEDA_MOEDA_PAIS_1" id="76">
+    <LigaTabela nome="MOEDA_MOEDA_PAIS_1" id="78">
       <Left Valor="1745"/>
       <Top Valor="1310"/>
       <Width Valor="15"/>
@@ -1915,11 +1974,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="4">
-          <MostraCardinalidade Valor="-1" Card_id="77"/>
+          <MostraCardinalidade Valor="-1" Card_id="79"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="77">
-              <Left Valor="1788"/>
-              <Top Valor="1339"/>
+            <Cardinalidade nome="" id="79">
+              <Left Valor="1745"/>
+              <Top Valor="1292"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1941,11 +2000,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="1">
-          <MostraCardinalidade Valor="-1" Card_id="78"/>
+          <MostraCardinalidade Valor="-1" Card_id="80"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="78">
-              <Left Valor="1672"/>
-              <Top Valor="1354"/>
+            <Cardinalidade nome="" id="80">
+              <Left Valor="1663"/>
+              <Top Valor="1323"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -1968,7 +2027,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="PAIS_ALERTA_PAIS_1" id="80">
+    <LigaTabela nome="PAIS_ALERTA_PAIS_1" id="82">
       <Left Valor="1516"/>
       <Top Valor="1119"/>
       <Width Valor="15"/>
@@ -1982,11 +2041,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="8">
-          <MostraCardinalidade Valor="-1" Card_id="81"/>
+          <MostraCardinalidade Valor="-1" Card_id="83"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="81">
-              <Left Valor="1477"/>
-              <Top Valor="1075"/>
+            <Cardinalidade nome="" id="83">
+              <Left Valor="1436"/>
+              <Top Valor="1081"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2008,11 +2067,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="2">
-          <MostraCardinalidade Valor="-1" Card_id="82"/>
+          <MostraCardinalidade Valor="-1" Card_id="84"/>
           <Cardinalidades Cardinalidade="4">
-            <Cardinalidade nome="" id="82">
-              <Left Valor="1444"/>
-              <Top Valor="1181"/>
+            <Cardinalidade nome="" id="84">
+              <Left Valor="1462"/>
+              <Top Valor="1185"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2035,7 +2094,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="PAIS_EMBAIXADA_1" id="84">
+    <LigaTabela nome="PAIS_EMBAIXADA_1" id="86">
       <Left Valor="1842"/>
       <Top Valor="964"/>
       <Width Valor="15"/>
@@ -2049,11 +2108,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="8">
-          <MostraCardinalidade Valor="-1" Card_id="85"/>
+          <MostraCardinalidade Valor="-1" Card_id="87"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="85">
-              <Left Valor="1681"/>
-              <Top Valor="997"/>
+            <Cardinalidade nome="" id="87">
+              <Left Valor="1652"/>
+              <Top Valor="1001"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2075,11 +2134,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="7">
-          <MostraCardinalidade Valor="-1" Card_id="86"/>
+          <MostraCardinalidade Valor="-1" Card_id="88"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="86">
-              <Left Valor="2008"/>
-              <Top Valor="964"/>
+            <Cardinalidade nome="" id="88">
+              <Left Valor="2230"/>
+              <Top Valor="860"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2102,7 +2161,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="PAIS_VISTO_1" id="88">
+    <LigaTabela nome="PAIS_VISTO_1" id="90">
       <Left Valor="1786"/>
       <Top Valor="1087"/>
       <Width Valor="15"/>
@@ -2116,11 +2175,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="8">
-          <MostraCardinalidade Valor="-1" Card_id="89"/>
+          <MostraCardinalidade Valor="-1" Card_id="91"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="89">
-              <Left Valor="1611"/>
-              <Top Valor="1075"/>
+            <Cardinalidade nome="" id="91">
+              <Left Valor="1578"/>
+              <Top Valor="1081"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2142,11 +2201,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="5">
-          <MostraCardinalidade Valor="-1" Card_id="90"/>
+          <MostraCardinalidade Valor="-1" Card_id="92"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="90">
-              <Left Valor="1945"/>
-              <Top Valor="1141"/>
+            <Cardinalidade nome="" id="92">
+              <Left Valor="1811"/>
+              <Top Valor="1201"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2169,7 +2228,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="PAIS_CONSULADO_1" id="92">
+    <LigaTabela nome="PAIS_CONSULADO_1" id="94">
       <Left Valor="1984"/>
       <Top Valor="1039"/>
       <Width Valor="15"/>
@@ -2183,10 +2242,10 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="8">
-          <MostraCardinalidade Valor="-1" Card_id="93"/>
+          <MostraCardinalidade Valor="-1" Card_id="95"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="93">
-              <Left Valor="1681"/>
+            <Cardinalidade nome="" id="95">
+              <Left Valor="1652"/>
               <Top Valor="1025"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
@@ -2209,51 +2268,10 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="6">
-          <MostraCardinalidade Valor="-1" Card_id="94"/>
+          <MostraCardinalidade Valor="-1" Card_id="96"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="94">
-              <Left Valor="2364"/>
-              <Top Valor="1119"/>
-              <Width Valor="40"/>
-              <Height Valor="20"/>
-              <Fonte default="-1"/>
-              <Dicionario></Dicionario>
-              <Nula Valor="0"/>
-              <Observacao></Observacao>
-              <Futuro></Futuro>
-              <Anexos/>
-              <Cor Valor="15780518"/>
-              <TamAuto Valor="-1"/>
-              <Tipo Valor="0"/>
-              <TextAlin Valor="0"/>
-              <Card Valor="3"/>
-              <Fixa Valor="0"/>
-              <Ligacoes/>
-            </Cardinalidade>
-          </Cardinalidades>
-          <Orientacao Valor="0"/>
-          <Fraca Valor="0"/>
-        </Ligacao>
-      </Ligacoes>
-    </LigaTabela>
-    <LigaTabela nome="PAIS_FUSOHORARIO_PAIS_1" id="96">
-      <Left Valor="1384"/>
-      <Top Valor="1020"/>
-      <Width Valor="15"/>
-      <Height Valor="15"/>
-      <Fonte default="-1"/>
-      <Dicionario></Dicionario>
-      <Nula Valor="0"/>
-      <Observacao></Observacao>
-      <Futuro></Futuro>
-      <Anexos/>
-      <SetaDirecao Valor="0"/>
-      <Ligacoes>
-        <Ligacao Destino_ID="8">
-          <MostraCardinalidade Valor="-1" Card_id="97"/>
-          <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="97">
-              <Left Valor="1372"/>
+            <Cardinalidade nome="" id="96">
+              <Left Valor="2431"/>
               <Top Valor="1007"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
@@ -2267,6 +2285,47 @@
               <TamAuto Valor="-1"/>
               <Tipo Valor="0"/>
               <TextAlin Valor="0"/>
+              <Card Valor="3"/>
+              <Fixa Valor="0"/>
+              <Ligacoes/>
+            </Cardinalidade>
+          </Cardinalidades>
+          <Orientacao Valor="0"/>
+          <Fraca Valor="0"/>
+        </Ligacao>
+      </Ligacoes>
+    </LigaTabela>
+    <LigaTabela nome="PAIS_FUSOHORARIO_PAIS_1" id="98">
+      <Left Valor="1384"/>
+      <Top Valor="1020"/>
+      <Width Valor="15"/>
+      <Height Valor="15"/>
+      <Fonte default="-1"/>
+      <Dicionario></Dicionario>
+      <Nula Valor="0"/>
+      <Observacao></Observacao>
+      <Futuro></Futuro>
+      <Anexos/>
+      <SetaDirecao Valor="0"/>
+      <Ligacoes>
+        <Ligacao Destino_ID="8">
+          <MostraCardinalidade Valor="-1" Card_id="99"/>
+          <Cardinalidades Cardinalidade="1">
+            <Cardinalidade nome="" id="99">
+              <Left Valor="1652"/>
+              <Top Valor="1013"/>
+              <Width Valor="40"/>
+              <Height Valor="20"/>
+              <Fonte default="-1"/>
+              <Dicionario></Dicionario>
+              <Nula Valor="0"/>
+              <Observacao></Observacao>
+              <Futuro></Futuro>
+              <Anexos/>
+              <Cor Valor="15780518"/>
+              <TamAuto Valor="-1"/>
+              <Tipo Valor="0"/>
+              <TextAlin Valor="0"/>
               <Card Valor="1"/>
               <Fixa Valor="0"/>
               <Ligacoes/>
@@ -2276,11 +2335,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="9">
-          <MostraCardinalidade Valor="-1" Card_id="98"/>
+          <MostraCardinalidade Valor="-1" Card_id="100"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="98">
-              <Left Valor="1251"/>
-              <Top Valor="1000"/>
+            <Cardinalidade nome="" id="100">
+              <Left Valor="1248"/>
+              <Top Valor="983"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2303,7 +2362,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="FUSOHORARIO_FUSOHORARIO_PAIS_1" id="100">
+    <LigaTabela nome="FUSOHORARIO_FUSOHORARIO_PAIS_1" id="102">
       <Left Valor="1114"/>
       <Top Valor="1071"/>
       <Width Valor="15"/>
@@ -2317,11 +2376,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="14">
-          <MostraCardinalidade Valor="-1" Card_id="101"/>
+          <MostraCardinalidade Valor="-1" Card_id="103"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="101">
-              <Left Valor="1015"/>
-              <Top Valor="1157"/>
+            <Cardinalidade nome="" id="103">
+              <Left Valor="993"/>
+              <Top Valor="1175"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2343,11 +2402,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="9">
-          <MostraCardinalidade Valor="-1" Card_id="102"/>
+          <MostraCardinalidade Valor="-1" Card_id="104"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="102">
+            <Cardinalidade nome="" id="104">
               <Left Valor="1121"/>
-              <Top Valor="1066"/>
+              <Top Valor="1052"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2370,7 +2429,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="PAIS_EXIGENCIA_1" id="104">
+    <LigaTabela nome="PAIS_EXIGENCIA_1" id="106">
       <Left Valor="1461"/>
       <Top Valor="922"/>
       <Width Valor="15"/>
@@ -2384,11 +2443,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="8">
-          <MostraCardinalidade Valor="-1" Card_id="105"/>
+          <MostraCardinalidade Valor="-1" Card_id="107"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="105">
-              <Left Valor="1500"/>
-              <Top Valor="955"/>
+            <Cardinalidade nome="" id="107">
+              <Left Valor="1460"/>
+              <Top Valor="965"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2410,11 +2469,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="10">
-          <MostraCardinalidade Valor="-1" Card_id="106"/>
+          <MostraCardinalidade Valor="-1" Card_id="108"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="106">
-              <Left Valor="1269"/>
-              <Top Valor="865"/>
+            <Cardinalidade nome="" id="108">
+              <Left Valor="1284"/>
+              <Top Valor="872"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2437,7 +2496,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="PAIS_FAVORITO_1" id="108">
+    <LigaTabela nome="PAIS_FAVORITO_1" id="110">
       <Left Valor="1737"/>
       <Top Valor="919"/>
       <Width Valor="15"/>
@@ -2451,11 +2510,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="8">
-          <MostraCardinalidade Valor="-1" Card_id="109"/>
+          <MostraCardinalidade Valor="-1" Card_id="111"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="109">
-              <Left Valor="1681"/>
-              <Top Valor="969"/>
+            <Cardinalidade nome="" id="111">
+              <Left Valor="1652"/>
+              <Top Valor="977"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2477,11 +2536,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="13">
-          <MostraCardinalidade Valor="-1" Card_id="110"/>
+          <MostraCardinalidade Valor="-1" Card_id="112"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="110">
-              <Left Valor="1929"/>
-              <Top Valor="882"/>
+            <Cardinalidade nome="" id="112">
+              <Left Valor="2053"/>
+              <Top Valor="848"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2504,7 +2563,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="EXIGENCIA_CHECKLIST_1" id="112">
+    <LigaTabela nome="EXIGENCIA_CHECKLIST_1" id="114">
       <Left Valor="1344"/>
       <Top Valor="796"/>
       <Width Valor="15"/>
@@ -2518,11 +2577,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="10">
-          <MostraCardinalidade Valor="-1" Card_id="113"/>
+          <MostraCardinalidade Valor="-1" Card_id="115"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="113">
-              <Left Valor="1269"/>
-              <Top Valor="820"/>
+            <Cardinalidade nome="" id="115">
+              <Left Valor="1284"/>
+              <Top Valor="826"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2544,11 +2603,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="11">
-          <MostraCardinalidade Valor="-1" Card_id="114"/>
+          <MostraCardinalidade Valor="-1" Card_id="116"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="114">
-              <Left Valor="1245"/>
-              <Top Valor="713"/>
+            <Cardinalidade nome="" id="116">
+              <Left Valor="1294"/>
+              <Top Valor="705"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2571,9 +2630,9 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="USUARIO_CHECKLIST_1" id="116">
+    <LigaTabela nome="USUARIO_CHECKLIST_1" id="118">
       <Left Valor="1469"/>
-      <Top Valor="739"/>
+      <Top Valor="730"/>
       <Width Valor="15"/>
       <Height Valor="15"/>
       <Fonte default="-1"/>
@@ -2585,11 +2644,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="12">
-          <MostraCardinalidade Valor="-1" Card_id="117"/>
+          <MostraCardinalidade Valor="-1" Card_id="119"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="117">
-              <Left Valor="1612"/>
-              <Top Valor="727"/>
+            <Cardinalidade nome="" id="119">
+              <Left Valor="1592"/>
+              <Top Valor="673"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2611,11 +2670,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="11">
-          <MostraCardinalidade Valor="-1" Card_id="118"/>
+          <MostraCardinalidade Valor="-1" Card_id="120"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="118">
-              <Left Valor="1305"/>
-              <Top Valor="713"/>
+            <Cardinalidade nome="" id="120">
+              <Left Valor="1354"/>
+              <Top Valor="705"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2638,9 +2697,9 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="USUARIO_FAVORITO_1" id="120">
+    <LigaTabela nome="USUARIO_FAVORITO_1" id="122">
       <Left Valor="1744"/>
-      <Top Valor="793"/>
+      <Top Valor="784"/>
       <Width Valor="15"/>
       <Height Valor="15"/>
       <Fonte default="-1"/>
@@ -2652,11 +2711,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="12">
-          <MostraCardinalidade Valor="-1" Card_id="121"/>
+          <MostraCardinalidade Valor="-1" Card_id="123"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="121">
-              <Left Valor="1730"/>
-              <Top Valor="727"/>
+            <Cardinalidade nome="" id="123">
+              <Left Valor="1736"/>
+              <Top Valor="673"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2678,11 +2737,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="13">
-          <MostraCardinalidade Valor="-1" Card_id="122"/>
+          <MostraCardinalidade Valor="-1" Card_id="124"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="122">
-              <Left Valor="1797"/>
-              <Top Valor="815"/>
+            <Cardinalidade nome="" id="124">
+              <Left Valor="1920"/>
+              <Top Valor="781"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2705,7 +2764,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="PAIS_CONSULADO_2" id="124">
+    <LigaTabela nome="PAIS_CONSULADO_2" id="126">
       <Left Valor="1984"/>
       <Top Valor="1039"/>
       <Width Valor="15"/>
@@ -2719,11 +2778,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="8">
-          <MostraCardinalidade Valor="-1" Card_id="125"/>
+          <MostraCardinalidade Valor="-1" Card_id="127"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="125">
-              <Left Valor="1681"/>
-              <Top Valor="1011"/>
+            <Cardinalidade nome="" id="127">
+              <Left Valor="1652"/>
+              <Top Valor="1037"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2745,11 +2804,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="6">
-          <MostraCardinalidade Valor="-1" Card_id="126"/>
+          <MostraCardinalidade Valor="-1" Card_id="128"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="126">
-              <Left Valor="2364"/>
-              <Top Valor="1074"/>
+            <Cardinalidade nome="" id="128">
+              <Left Valor="2431"/>
+              <Top Valor="1053"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2772,7 +2831,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="PAIS_EMBAIXADA_2" id="128">
+    <LigaTabela nome="PAIS_EMBAIXADA_2" id="130">
       <Left Valor="1842"/>
       <Top Valor="964"/>
       <Width Valor="15"/>
@@ -2786,11 +2845,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="8">
-          <MostraCardinalidade Valor="-1" Card_id="129"/>
+          <MostraCardinalidade Valor="-1" Card_id="131"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="129">
-              <Left Valor="1681"/>
-              <Top Valor="983"/>
+            <Cardinalidade nome="" id="131">
+              <Left Valor="1652"/>
+              <Top Valor="989"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2812,11 +2871,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="7">
-          <MostraCardinalidade Valor="-1" Card_id="130"/>
+          <MostraCardinalidade Valor="-1" Card_id="132"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="130">
-              <Left Valor="2008"/>
-              <Top Valor="918"/>
+            <Cardinalidade nome="" id="132">
+              <Left Valor="2230"/>
+              <Top Valor="906"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2839,7 +2898,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="PAIS_LINGUA_PAIS_1" id="132">
+    <LigaTabela nome="PAIS_LINGUA_PAIS_1" id="134">
       <Left Valor="1842"/>
       <Top Valor="1063"/>
       <Width Valor="15"/>
@@ -2853,11 +2912,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="8">
-          <MostraCardinalidade Valor="-1" Card_id="133"/>
+          <MostraCardinalidade Valor="-1" Card_id="135"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="133">
-              <Left Valor="1681"/>
-              <Top Valor="1039"/>
+            <Cardinalidade nome="" id="135">
+              <Left Valor="1652"/>
+              <Top Valor="1049"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2879,11 +2938,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="16">
-          <MostraCardinalidade Valor="-1" Card_id="134"/>
+          <MostraCardinalidade Valor="-1" Card_id="136"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="134">
-              <Left Valor="1968"/>
-              <Top Valor="1088"/>
+            <Cardinalidade nome="" id="136">
+              <Left Valor="2023"/>
+              <Top Valor="1080"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2906,7 +2965,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="LINGUA_LINGUA_PAIS_1" id="136">
+    <LigaTabela nome="LINGUA_LINGUA_PAIS_1" id="138">
       <Left Valor="2199"/>
       <Top Valor="1174"/>
       <Width Valor="15"/>
@@ -2920,11 +2979,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="15">
-          <MostraCardinalidade Valor="-1" Card_id="137"/>
+          <MostraCardinalidade Valor="-1" Card_id="139"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="137">
-              <Left Valor="2227"/>
-              <Top Valor="1204"/>
+            <Cardinalidade nome="" id="139">
+              <Left Valor="2242"/>
+              <Top Valor="1293"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2946,11 +3005,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="16">
-          <MostraCardinalidade Valor="-1" Card_id="138"/>
+          <MostraCardinalidade Valor="-1" Card_id="140"/>
           <Cardinalidades Cardinalidade="3">
-            <Cardinalidade nome="" id="138">
-              <Left Valor="2087"/>
-              <Top Valor="1146"/>
+            <Cardinalidade nome="" id="140">
+              <Left Valor="2143"/>
+              <Top Valor="1137"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -2973,7 +3032,7 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="PAIS_HISTORICO_1" id="140">
+    <LigaTabela nome="PAIS_HISTORICO_1" id="142">
       <Left Valor="1594"/>
       <Top Valor="927"/>
       <Width Valor="15"/>
@@ -2987,11 +3046,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="8">
-          <MostraCardinalidade Valor="-1" Card_id="141"/>
+          <MostraCardinalidade Valor="-1" Card_id="143"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="141">
-              <Left Valor="1590"/>
-              <Top Valor="955"/>
+            <Cardinalidade nome="" id="143">
+              <Left Valor="1555"/>
+              <Top Valor="965"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -3013,11 +3072,11 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="17">
-          <MostraCardinalidade Valor="-1" Card_id="142"/>
+          <MostraCardinalidade Valor="-1" Card_id="144"/>
           <Cardinalidades Cardinalidade="4">
-            <Cardinalidade nome="" id="142">
-              <Left Valor="1493"/>
-              <Top Valor="885"/>
+            <Cardinalidade nome="" id="144">
+              <Left Valor="1601"/>
+              <Top Valor="922"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -3040,9 +3099,9 @@
         </Ligacao>
       </Ligacoes>
     </LigaTabela>
-    <LigaTabela nome="USUARIO_HISTORICO_1" id="144">
+    <LigaTabela nome="USUARIO_HISTORICO_1" id="146">
       <Left Valor="1602"/>
-      <Top Valor="801"/>
+      <Top Valor="792"/>
       <Width Valor="15"/>
       <Height Valor="15"/>
       <Fonte default="-1"/>
@@ -3054,11 +3113,11 @@
       <SetaDirecao Valor="0"/>
       <Ligacoes>
         <Ligacao Destino_ID="12">
-          <MostraCardinalidade Valor="-1" Card_id="145"/>
+          <MostraCardinalidade Valor="-1" Card_id="147"/>
           <Cardinalidades Cardinalidade="1">
-            <Cardinalidade nome="" id="145">
-              <Left Valor="1671"/>
-              <Top Valor="727"/>
+            <Cardinalidade nome="" id="147">
+              <Left Valor="1640"/>
+              <Top Valor="673"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
@@ -3080,11 +3139,78 @@
           <Fraca Valor="0"/>
         </Ligacao>
         <Ligacao Destino_ID="17">
-          <MostraCardinalidade Valor="-1" Card_id="146"/>
+          <MostraCardinalidade Valor="-1" Card_id="148"/>
           <Cardinalidades Cardinalidade="4">
-            <Cardinalidade nome="" id="146">
-              <Left Valor="1574"/>
-              <Top Valor="828"/>
+            <Cardinalidade nome="" id="148">
+              <Left Valor="1601"/>
+              <Top Valor="824"/>
+              <Width Valor="40"/>
+              <Height Valor="20"/>
+              <Fonte default="-1"/>
+              <Dicionario></Dicionario>
+              <Nula Valor="0"/>
+              <Observacao></Observacao>
+              <Futuro></Futuro>
+              <Anexos/>
+              <Cor Valor="15780518"/>
+              <TamAuto Valor="-1"/>
+              <Tipo Valor="0"/>
+              <TextAlin Valor="0"/>
+              <Card Valor="4"/>
+              <Fixa Valor="0"/>
+              <Ligacoes/>
+            </Cardinalidade>
+          </Cardinalidades>
+          <Orientacao Valor="0"/>
+          <Fraca Valor="0"/>
+        </Ligacao>
+      </Ligacoes>
+    </LigaTabela>
+    <LigaTabela nome="USUARIO_FOTO_1" id="150">
+      <Left Valor="1691"/>
+      <Top Valor="742"/>
+      <Width Valor="15"/>
+      <Height Valor="15"/>
+      <Fonte default="-1"/>
+      <Dicionario></Dicionario>
+      <Nula Valor="0"/>
+      <Observacao></Observacao>
+      <Futuro></Futuro>
+      <Anexos/>
+      <SetaDirecao Valor="0"/>
+      <Ligacoes>
+        <Ligacao Destino_ID="12">
+          <MostraCardinalidade Valor="-1" Card_id="151"/>
+          <Cardinalidades Cardinalidade="1">
+            <Cardinalidade nome="" id="151">
+              <Left Valor="1688"/>
+              <Top Valor="673"/>
+              <Width Valor="40"/>
+              <Height Valor="20"/>
+              <Fonte default="-1"/>
+              <Dicionario></Dicionario>
+              <Nula Valor="0"/>
+              <Observacao></Observacao>
+              <Futuro></Futuro>
+              <Anexos/>
+              <Cor Valor="15780518"/>
+              <TamAuto Valor="-1"/>
+              <Tipo Valor="0"/>
+              <TextAlin Valor="0"/>
+              <Card Valor="1"/>
+              <Fixa Valor="0"/>
+              <Ligacoes/>
+            </Cardinalidade>
+          </Cardinalidades>
+          <Orientacao Valor="0"/>
+          <Fraca Valor="0"/>
+        </Ligacao>
+        <Ligacao Destino_ID="18">
+          <MostraCardinalidade Valor="-1" Card_id="152"/>
+          <Cardinalidades Cardinalidade="4">
+            <Cardinalidade nome="" id="152">
+              <Left Valor="1690"/>
+              <Top Valor="835"/>
               <Width Valor="40"/>
               <Height Valor="20"/>
               <Fonte default="-1"/>
