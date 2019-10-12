@@ -26,7 +26,7 @@
                     <% if (foto_usuario.length > 0) { %>
                         <img src="/uploads/<%= foto_usuario[0].nome_foto %>" alt="Foto de perfil" id="foto_usuario_editar_cadastro" class="foto_perfil foto_perfil_preview">
                     <% } else { %>
-                        <img src="/img/roxo/icone_perfil_grande_roxo.svg" alt="Foto de perfil" id="foto_usuario_editar_cadastro" class="foto_perfil foto_perfil_preview">
+                        <img src="/img/roxo/icone_inserir_foto_perfil_roxo.svg" alt="Foto de perfil" id="foto_usuario_editar_cadastro" class="foto_perfil">
                     <% } %>
                 </div>
                 <input type="text" name="nome_usuario" class="campo_formulario" value="<%= usuario[0].nome_usuario %>" placeholder="Nome" minlength="10" maxlength="70" required>

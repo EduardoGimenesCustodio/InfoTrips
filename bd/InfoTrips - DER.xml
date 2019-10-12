@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <MER>
 	<Informacoes>
-		<Posicao Left="1358" Top="522"/>
+		<Posicao Left="1043" Top="522"/>
 		<TotalItens Valor="322"/>
 		<Tipo Valor="CONCEITUAL"/>
 		<Versao Valor="2.0.0"/>
@@ -1134,7 +1134,7 @@
       </Fonte>
       <Atributos>
         <Atributo nome="id_exigencia" id="156">
-          <Left Valor="1334"/>
+          <Left Valor="1332"/>
           <Top Valor="863"/>
           <Width Valor="98"/>
           <Height Valor="16"/>
@@ -1166,7 +1166,7 @@
           </Ligacoes>
         </Atributo>
         <Atributo nome="nome_exigencia" id="159">
-          <Left Valor="1324"/>
+          <Left Valor="1320"/>
           <Top Valor="879"/>
           <Width Valor="120"/>
           <Height Valor="16"/>
@@ -1198,7 +1198,7 @@
           </Ligacoes>
         </Atributo>
         <Atributo nome="descricao_exigencia" id="162">
-          <Left Valor="1314"/>
+          <Left Valor="1308"/>
           <Top Valor="895"/>
           <Width Valor="142"/>
           <Height Valor="16"/>
@@ -1230,7 +1230,7 @@
           </Ligacoes>
         </Atributo>
         <Atributo nome="isrequired_exigencia" id="425">
-          <Left Valor="1304"/>
+          <Left Valor="1296"/>
           <Top Valor="911"/>
           <Width Valor="145"/>
           <Height Valor="16"/>
@@ -1261,38 +1261,6 @@
             </Ligacao>
           </Ligacoes>
         </Atributo>
-        <Atributo nome="isactive_exigencia" id="527">
-          <Left Valor="1294"/>
-          <Top Valor="927"/>
-          <Width Valor="132"/>
-          <Height Valor="16"/>
-          <Fonte default="-1"/>
-          <Atributos/>
-          <AtributosOcultos/>
-          <Dicionario></Dicionario>
-          <Nula Valor="0"/>
-          <Observacao></Observacao>
-          <Futuro></Futuro>
-          <Anexos/>
-          <MaxCard Valor="1"/>
-          <MinCard Valor="1"/>
-          <Composto Valor="0"/>
-          <Identificador Valor="0"/>
-          <Tipo Valor="boolean"/>
-          <Multivalorado Valor="0"/>
-          <Orientacao Valor="3"/>
-          <TamAuto Valor="-1"/>
-          <Desvio Valor="10"/>
-          <BarraID Valor="528"/>
-          <Ligacoes>
-            <Ligacao Destino_ID="2">
-              <MostraCardinalidade Valor="0" Card_id="529"/>
-              <Cardinalidades Cardinalidade="4"/>
-              <Orientacao Valor="0"/>
-              <Fraca Valor="0"/>
-            </Ligacao>
-          </Ligacoes>
-        </Atributo>
       </Atributos>
       <AtributosOcultos/>
       <Dicionario></Dicionario>
@@ -1316,8 +1284,8 @@
       </Fonte>
       <Atributos>
         <Atributo nome="id_checklist" id="165">
-          <Left Valor="1308"/>
-          <Top Valor="645"/>
+          <Left Valor="1302"/>
+          <Top Valor="629"/>
           <Width Valor="94"/>
           <Height Valor="16"/>
           <Fonte default="-1"/>
@@ -1348,7 +1316,7 @@
           </Ligacoes>
         </Atributo>
         <Atributo nome="isdone_checklist" id="168">
-          <Left Valor="1332"/>
+          <Left Valor="1338"/>
           <Top Valor="661"/>
           <Width Valor="121"/>
           <Height Valor="16"/>
@@ -1373,6 +1341,38 @@
           <Ligacoes>
             <Ligacao Destino_ID="14">
               <MostraCardinalidade Valor="0" Card_id="170"/>
+              <Cardinalidades Cardinalidade="4"/>
+              <Orientacao Valor="0"/>
+              <Fraca Valor="0"/>
+            </Ligacao>
+          </Ligacoes>
+        </Atributo>
+        <Atributo nome="isactive_checklist" id="973">
+          <Left Valor="1320"/>
+          <Top Valor="645"/>
+          <Width Valor="128"/>
+          <Height Valor="16"/>
+          <Fonte default="-1"/>
+          <Atributos/>
+          <AtributosOcultos/>
+          <Dicionario></Dicionario>
+          <Nula Valor="0"/>
+          <Observacao></Observacao>
+          <Futuro></Futuro>
+          <Anexos/>
+          <MaxCard Valor="1"/>
+          <MinCard Valor="1"/>
+          <Composto Valor="0"/>
+          <Identificador Valor="0"/>
+          <Tipo Valor="boolean"/>
+          <Multivalorado Valor="0"/>
+          <Orientacao Valor="3"/>
+          <TamAuto Valor="-1"/>
+          <Desvio Valor="10"/>
+          <BarraID Valor="974"/>
+          <Ligacoes>
+            <Ligacao Destino_ID="14">
+              <MostraCardinalidade Valor="0" Card_id="975"/>
               <Cardinalidades Cardinalidade="4"/>
               <Orientacao Valor="0"/>
               <Fraca Valor="0"/>

@@ -30,8 +30,16 @@ module.exports.editar_usuario = function(app, req, res, nome_foto_usuario){
 		if (foto_usuario) {
 			usuarioModel.getUsuario(usuario.email_usuario, function(error, result){
 				var usuario_cadastrado = result;
-				usuarioModel.editarFotoUsuario(usuario_cadastrado, foto_usuario, function(error, result){
-					res.redirect('/perfil');
+				usuarioModel.getFotoUsuario(usuario_cadastrado.email_usuario, function(error, foto_usuario_cadastrado) {
+					if (foto_usuario_cadastrado) {
+						usuarioModel.editarFotoUsuario(usuario_cadastrado, foto_usuario, function(error, result){
+							res.redirect('/perfil');
+						});
+					} else {
+						usuarioModel.cadastrarFotoUsuario(usuario_cadastrado, foto_usuario, function(error, result){
+							res.redirect('/perfil');
+						});
+					}
 				});
 			});
 		} else {

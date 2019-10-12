@@ -25,16 +25,26 @@ module.exports.cadastrar_usuario = function(app, req, res, nome_foto_usuario){
 			res.render('cadastro/cadastro', {validacao: erro});
 		} else {
 			usuarioModel.cadastrarUsuario(usuario, function(error, result){
-				if (foto_usuario) {
-					usuarioModel.getUsuario(usuario.email_usuario, function(error, result){
-						var usuario_cadastrado = result;
+				// for para as exigencia e inserir com user e id exigencia
+				usuarioModel.getUsuario(usuario.email_usuario, function(error, result){
+					var usuario_cadastrado = result;
+					var exigenciaModel = new app.app.models.ExigenciaDAO(connection);
+
+					if (foto_usuario) {
 						usuarioModel.cadastrarFotoUsuario(usuario_cadastrado, foto_usuario, function(error, result){
 							app.app.controllers.login.login_usuario(app, req, res);
-						});
-					});
-				} else {
-					app.app.controllers.login.login_usuario(app, req, res);
-				}
+						});		
+					} else {
+						app.app.controllers.login.login_usuario(app, req, res);
+					}
+
+					// exigenciaModel.getExigencias(function(error, exigencias){
+					// 	for (var i=0; i<exigencias.length; i++) {
+
+					// 	}
+					// });
+
+				});
 			});
 		}
 	});
