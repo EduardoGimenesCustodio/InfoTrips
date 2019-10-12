@@ -3,7 +3,7 @@
         <head>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Cadastro - InfoTrips</title>
+            <title>Editar Perfil - InfoTrips</title>
             <meta name="description" content="Site informativo para viagens internacionais">
             <meta name="keywords" content="Viagens Internacionais, Turismo, Burocracia">
             <meta name="robots" content="cadastro, follow">
@@ -20,30 +20,25 @@
                 <a href="/" class="titulo_cabecalho titulo_cadastro"><img src="/img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
             </header>
 
-            <% if (validacao.length > 0) { %>
-                <div id="mensagem_login" class="fundo_bloco_detalhe">
-                    <div class="bloco_informacao bloco_detalhe">
-                        <p class="texto texto_detalhe"><%= validacao %></p>
-                        <a href="javascript:window.history.go(-1)" class="botao" onclick="fechar_bloco_detalhe('mensagem_login')">Fechar</a>
-                    </div>
-                </div>
-            <% } %>
-
-            <form method="POST" action="/cadastrar/usuario" encType="multipart/form-data">
+            <form method="POST" action="/editar/usuario" encType="multipart/form-data">
                 <div class="campo_foto_formulario">
-                    <input type="file" name="foto_usuario" class="campo_invisivel_formulario campo_foto_perfil" accept="image/*" onchange="previewFotoPerfil('foto_usuario_cadastro')">
-                    <img src="/img/roxo/icone_inserir_foto_perfil_roxo.svg" alt="Botão inserir foto de perfil" id="foto_usuario_cadastro" class="foto_perfil">
+                    <input type="file" name="foto_usuario" class="campo_invisivel_formulario campo_foto_perfil" accept="image/*" onchange="previewFotoPerfil('foto_usuario_editar_cadastro')">
+                    <% if (foto_usuario.length > 0) { %>
+                        <img src="/uploads/<%= foto_usuario[0].nome_foto %>" alt="Foto de perfil" id="foto_usuario_editar_cadastro" class="foto_perfil foto_perfil_preview">
+                    <% } else { %>
+                        <img src="/img/roxo/icone_perfil_grande_roxo.svg" alt="Foto de perfil" id="foto_usuario_editar_cadastro" class="foto_perfil foto_perfil_preview">
+                    <% } %>
                 </div>
-                <input type="text" name="nome_usuario" class="campo_formulario" placeholder="Nome" minlength="10" maxlength="70" required>
-                <input type="email" name="email_usuario" class="campo_formulario" placeholder="E-mail" maxlength="70" required>
-                <input type="password" name="senha_usuario" class="campo_formulario" placeholder="Senha" minlength="5" maxlength="20" required>
+                <input type="text" name="nome_usuario" class="campo_formulario" value="<%= usuario[0].nome_usuario %>" placeholder="Nome" minlength="10" maxlength="70" required>
+                <input type="email" name="email_usuario" class="campo_formulario campo_formulario_invisivel" value="<%= usuario[0].email_usuario %>" placeholder="E-mail" maxlength="70" readonly required>
+                <input type="password" name="senha_usuario" class="campo_formulario" value="<%= usuario[0].senha_usuario %>"  placeholder="Senha" minlength="5" maxlength="20" required>
                 <div class="campo_checkbox_atualizacoes">
                     <label class="checkbox checkbox_atualizacoes texto">receber atualizações sobre países favoritos
-                        <input type="checkbox" name="updatesareactive_usuario" value="1" checked="checked">
+                        <input type="checkbox" name="updatesareactive_usuario" value="<%= usuario[0].updatesareactive_usuario %>" checked="checked">
                         <span class="campo_checkbox checkmark checkmark_atualizacoes"></span>
                     </label>
                 </div>
-                <input type="submit" value="Cadastrar" class="botao">
+                <input type="submit" value="Salvar" class="botao">
             </form>
         </body>
     <script type="text/javascript" src="/js/main.js"></script>

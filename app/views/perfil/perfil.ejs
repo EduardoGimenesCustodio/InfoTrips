@@ -8,24 +8,24 @@
             <meta name="keywords" content="Viagens Internacionais, Turismo, Burocracia">
             <meta name="robots" content="perfil, follow">
             <meta name="author" content="Eduardo Gimenes">
-            <link rel="stylesheet" href="css/style.css">
+            <link rel="stylesheet" href="/css/style.css">
             <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-            <link rel="icon" href="img/roxo/logo_roxa.png">
+            <link rel="icon" href="/img/roxo/logo_roxa.png">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         </head>
 
         <body>
             <header class="cabecalho">
-                <a href="javascript:window.history.go(-1)"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
-                <a href="/" class="titulo_cabecalho"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>    
-                <a href="/favoritos"><img src="img/branco/icone_lista_favoritos_branco.svg" alt="Botão favoritos" class="botao_cabecalho"></a>        
+                <a href="javascript:window.history.go(-1)"><img src="/img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+                <a href="/" class="titulo_cabecalho"><img src="/img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>    
+                <a href="/favoritos"><img src="/img/branco/icone_lista_favoritos_branco.svg" alt="Botão favoritos" class="botao_cabecalho"></a>        
             </header>
           
             <div class="campo_foto_formulario">
                 <% if (foto_usuario.length > 0) { %>
-                    <img src="uploads/<%= foto_usuario[0].nome_foto %>" alt="Foto de perfil" id="foto_usuario_cadastro" class="foto_perfil foto_perfil_preview">
+                    <img src="/uploads/<%= foto_usuario[0].nome_foto %>" alt="Foto de perfil" id="foto_usuario_cadastro" class="foto_perfil foto_perfil_preview">
                 <% } else { %>
-                    <img src="img/roxo/icone_perfil_grande_roxo.svg" alt="Foto de perfil" id="foto_usuario_cadastro" class="foto_perfil foto_perfil_preview">
+                    <img src="/img/roxo/icone_perfil_grande_roxo.svg" alt="Foto de perfil" id="foto_usuario_cadastro" class="foto_perfil foto_perfil_preview">
                 <% } %>
             </div>
 
@@ -34,12 +34,12 @@
                 <h2 class="titulo_secundario"><%= usuario[0].email_usuario %></h2>
             </div>
             
-            <input type="button" value="Editar perfil" class="botao">
+            <a href="editar_perfil?email_usuario=<%=usuario[0].email_usuario%>" class="botao">Editar perfil</a>
             <form action="/usuario/sair" method="POST">
                 <input type="submit" value="Sair" class="botao">
             </form>
         </body>
 
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
 
 </html>

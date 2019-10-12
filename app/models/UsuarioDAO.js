@@ -18,8 +18,16 @@ function UsuarioDAO(connection){
 		this._connection.query('insert into usuario set ?', usuario, callback);
 	}
 
+	UsuarioDAO.prototype.editarUsuario = function(usuario, callback){
+		this._connection.query('update usuario set nome_usuario = "'+ usuario.nome_usuario +'", senha_usuario = "'+ usuario.senha_usuario +'", updatesareactive_usuario = '+ usuario.updatesareactive_usuario +' where email_usuario = "'+ usuario.email_usuario +'"', callback);
+	}
+
 	UsuarioDAO.prototype.cadastrarFotoUsuario = function(usuario_cadastrado, foto_usuario, callback){
-		this._connection.query('insert into foto(nome_foto, usuario_foto) values("' + foto_usuario + '", ' + usuario_cadastrado[0].id_usuario + ')', callback);
+		this._connection.query('insert into foto(nome_foto, usuario_foto) values("' + foto_usuario + '", '+ usuario_cadastrado[0].id_usuario +')', callback);
+	}
+
+	UsuarioDAO.prototype.editarFotoUsuario = function(usuario_cadastrado, foto_usuario, callback){
+		this._connection.query('update foto set nome_foto = "' + foto_usuario + '" where usuario_foto = ' + usuario_cadastrado[0].id_usuario, callback);
 	}
 
 	UsuarioDAO.prototype.loginUsuario = function(email, senha, callback) {

@@ -222,6 +222,10 @@ body{
 	font-size: 18px;
 }
 
+.campo_formulario_invisivel{
+	display: none;
+}
+
 .formulario_busca{
 	display: flex;
 }
@@ -403,7 +407,7 @@ body{
 	text-align: center;
 	font-weight: bold;
 	font-size: 28px;
-	padding: 4% 0 4% 0;
+	padding: 4%;
 }
 
 .abas_pais{
