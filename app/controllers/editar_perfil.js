@@ -1,6 +1,11 @@
 module.exports.editar_perfil = function(app, req, res){
 	if (req.session.loggedin) {
-		var email = req.query.email_usuario;
+		if (req.query.email_usuario) {
+			var email = req.query.email_usuario;
+		} else {
+			res.redirect('/perfil');
+			return;
+		}
         var connection = app.config.dbConnection();
 		var usuarioModel = new app.app.models.UsuarioDAO(connection);
         
