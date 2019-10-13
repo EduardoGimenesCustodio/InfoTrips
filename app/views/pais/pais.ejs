@@ -8,44 +8,42 @@
       <meta name="keywords" content="Viagens Internacionais, Turismo, Burocracia">
       <meta name="robots" content="pais, follow">
       <meta name="author" content="Eduardo Gimenes">
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="/css/style.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
-      <link rel="icon" href="img/roxo/logo_roxa.png">
+      <link rel="icon" href="/img/roxo/logo_roxa.png">
     </head>
 
     <body>
       <header class="cabecalho">
-        <a href="javascript:window.history.go(-1)"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
-        <a href="/" class="titulo_cabecalho"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
+        <a href="javascript:window.history.go(-1)"><img src="/img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+        <a href="/" class="titulo_cabecalho"><img src="/img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
         <% if (foto_usuario.length > 0) { %>
-          <a href="/perfil"><img src="uploads/<%= foto_usuario[0].nome_foto %>" alt="Botão perfil" class="botao_cabecalho foto_perfil_cabecalho"></a>
+          <a href="/perfil"><img src="/uploads/<%= foto_usuario[0].nome_foto %>" alt="Botão perfil" class="botao_cabecalho foto_perfil_cabecalho"></a>
         <% } else { %>
-          <a href="perfil"><img src="img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
+          <a href="/perfil"><img src="/img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
         <% } %>
       </header>
 
-      <div id="mensagem_checklist_fazer_login" class="fundo_bloco_detalhe fundo_bloco_detalhe_invisivel">
-        <div class="bloco_informacao bloco_detalhe">
-            <p class="texto texto_detalhe">Faça o login para acessar sua checklist desse país</p>
-            <a href="/login" class="botao">Login</a>
-            <button class="botao" onclick="fechar_bloco_detalhe('mensagem_checklist_fazer_login')">Fechar</button>
+      <% if (validacao.length > 0) { %>
+        <div id="mensagem_checklist_fazer_login" class="fundo_bloco_detalhe">
+            <div class="bloco_informacao bloco_detalhe">
+                <p class="texto texto_detalhe"><%= validacao %></p>
+                <a href="/login" class="botao">Login</a>
+                <a href="javascript:window.history.go(-1)" class="botao" onclick="fechar_bloco_detalhe('mensagem_checklist_fazer_login')">Fechar</a>
+            </div>
         </div>
-      </div>
+      <% } %>
 
       <div class="cabecalho_pais">
 		    <h2 class="nome_pais"><%=pais[0].nome_pais %></h2>
 
 		    <div class="abas_pais">
-          <button id="aba_informacoes" class="aba_pais aba_atual_pais" onclick="mudar_aba('aba_checklist', 'aba_informacoes', 'secao_checklist', 'secao_informacoes')">Informações</button>
-          <% if (usuario.length > 0) { %>
-            <button id="aba_checklist" class="aba_pais" onclick="mudar_aba('aba_informacoes', 'aba_checklist', 'secao_informacoes', 'secao_checklist')">Checklist</button>
-          <% } else { %>
-            <button id="aba_checklist" class="aba_pais" onclick="abrir_bloco_detalhe('mensagem_checklist_fazer_login')">Checklist</button>
-          <% } %>
+          <a href="pais?nome_pais=<%=pais[0].nome_pais%>" class="aba_pais aba_atual_pais">Informações</a>
+          <a href="checklist?nome_pais=<%=pais[0].nome_pais%>" class="aba_pais">Checklist</a>
 		    </div>
 	    </div>
 
-	    <section id="secao_informacoes" class="secao_pais">
+	    <section class="secao_pais">
         <div class="bloco_informacao">
           <h3 class="titulo_bloco_informacao">Informações Turísticas</h3>
           <p class="texto texto_bloco_informacao"><%=pais[0].informacoes_turisticas_pais %></p>
@@ -190,22 +188,6 @@
           </div>
         <% } %>
 	    </section>
-
-	    <section id="secao_checklist" class="secao_pais secao_invisivel_pais">
-        <% if (checklist.length > 0) { %>
-          <% for (var i=0; i<checklist.length; i++) { %>
-            <div class="bloco_informacao bloco_informacao_checkbox">
-              <label class="checkbox texto checkbox_checklist">
-                <input type="checkbox" name="">
-                <span class="campo_checkbox checkmark checkmark_checklist"></span>
-              </label>
-
-              <p class="texto texto_bloco_informacao"><%= checklist[i].nome_exigencia %></p> 
-            </div>
-          <% } %>
-        <% } %>
-	    </section>
-
     </body>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
 </html>

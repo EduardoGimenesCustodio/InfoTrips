@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Checklist - InfoTrips</title>
+      <meta name="description" content="Site informativo para viagens internacionais">
+      <meta name="keywords" content="Viagens Internacionais, Turismo, Burocracia">
+      <meta name="robots" content="pais, follow">
+      <meta name="author" content="Eduardo Gimenes">
+      <link rel="stylesheet" href="/css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+      <link rel="icon" href="/img/roxo/logo_roxa.png">
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <a href="javascript:window.history.go(-1)"><img src="/img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+            <a href="/" class="titulo_cabecalho"><img src="/img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
+            <% if (foto_usuario.length > 0) { %>
+                <a href="/perfil"><img src="/uploads/<%= foto_usuario[0].nome_foto %>" alt="Botão perfil" class="botao_cabecalho foto_perfil_cabecalho"></a>
+            <% } else { %>
+                <a href="/perfil"><img src="/img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
+            <% } %>
+        </header>
+
+        <div class="cabecalho_pais">
+            <h2 class="nome_pais"><%=pais[0].nome_pais %></h2>
+    
+            <div class="abas_pais">
+                <a href="pais?nome_pais=<%=pais[0].nome_pais%>" class="aba_pais">Informações</a>
+                <a href="checklist?nome_pais=<%=pais[0].nome_pais%>" class="aba_pais aba_atual_pais">Checklist</a>
+            </div>
+        </div>
+        
+        <section class="secao_pais">
+            <% for (var i=0; i<checklist.length; i++) { %>
+                <div class="bloco_informacao bloco_informacao_checkbox">
+                    <label class="checkbox texto checkbox_checklist">
+                        <input type="checkbox" name="">
+                        <span class="campo_checkbox checkmark checkmark_checklist"></span>
+                    </label>
+    
+                    <p class="texto texto_bloco_informacao"><%= checklist[i].nome_exigencia %></p> 
+                </div>
+            <% } %>    
+        </section>
+        
+    </body>
+    <script type="text/javascript" src="/js/main.js"></script>
+</html>

@@ -7,7 +7,7 @@ function ChecklistDAO(connection){
 	}
 
 	ChecklistDAO.prototype.getChecklistPais = function(email, nome_pais, callback){
-		this._connection.query('select nome_exigencia, isdone_checklist, isactive_checklist, isrequired_exigencia, nome_pais from checklist inner join exigencia on exigencia_checklist = id_exigencia inner join usuario on usuario_checklist = id_usuario inner join pais on pais_exigencia = id_pais where email_usuario = "'+ email +'" AND id_pais = (select id_pais from pais where nome_pais = "'+ nome_pais.nome_pais +'")', callback);
+		this._connection.query('select nome_exigencia, isdone_checklist, isactive_checklist, isrequired_exigencia from checklist inner join exigencia on exigencia_checklist = id_exigencia inner join usuario on usuario_checklist = id_usuario inner join pais on pais_exigencia = id_pais where email_usuario = "'+ email +'" AND id_pais = (select id_pais from pais where nome_pais = "'+ nome_pais.nome_pais +'")', callback);
 	}
 
 	ChecklistDAO.prototype.registrarChecklistUsuario = function(id_usuario, id_exigencia, callback){

@@ -24,15 +24,6 @@ function mudar_item(posicao_item_carrossel) {
     }
 }
 
-// Transição de abas na tela País
-
-function mudar_aba(aba_atual, aba_destino, secao_atual, secao_destino) {
-    document.getElementById(aba_atual).className = "aba_pais";
-    document.getElementById(aba_destino).className = "aba_pais aba_atual_pais";
-    document.getElementById(secao_atual).className = "secao_pais secao_invisivel_pais";
-    document.getElementById(secao_destino).className = "secao_pais";
-}
-
 // Preview da foto de perfil
 
 function previewFotoPerfil(imagem_preview) {
