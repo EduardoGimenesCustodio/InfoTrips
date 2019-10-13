@@ -24,11 +24,11 @@
         <% } %>
       </header>
 
-      <div id="mensagem_fazer_login" class="fundo_bloco_detalhe fundo_bloco_detalhe_invisivel">
+      <div id="mensagem_checklist_fazer_login" class="fundo_bloco_detalhe fundo_bloco_detalhe_invisivel">
         <div class="bloco_informacao bloco_detalhe">
             <p class="texto texto_detalhe">Faça o login para acessar sua checklist desse país</p>
             <a href="/login" class="botao">Login</a>
-            <button class="botao" onclick="fechar_bloco_detalhe('mensagem_fazer_login')">Fechar</button>
+            <button class="botao" onclick="fechar_bloco_detalhe('mensagem_checklist_fazer_login')">Fechar</button>
         </div>
       </div>
 
@@ -40,7 +40,7 @@
           <% if (usuario.length > 0) { %>
             <button id="aba_checklist" class="aba_pais" onclick="mudar_aba('aba_informacoes', 'aba_checklist', 'secao_informacoes', 'secao_checklist')">Checklist</button>
           <% } else { %>
-            <button id="aba_checklist" class="aba_pais" onclick="abrir_bloco_detalhe('mensagem_fazer_login')">Checklist</button>
+            <button id="aba_checklist" class="aba_pais" onclick="abrir_bloco_detalhe('mensagem_checklist_fazer_login')">Checklist</button>
           <% } %>
 		    </div>
 	    </div>

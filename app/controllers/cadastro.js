@@ -28,22 +28,31 @@ module.exports.cadastrar_usuario = function(app, req, res, nome_foto_usuario){
 				// for para as exigencia e inserir com user e id exigencia
 				usuarioModel.getUsuario(usuario.email_usuario, function(error, result){
 					var usuario_cadastrado = result;
-					var exigenciaModel = new app.app.models.ExigenciaDAO(connection);
+					var checklistModel = new app.app.models.ChecklistDAO(connection);
 
 					if (foto_usuario) {
 						usuarioModel.cadastrarFotoUsuario(usuario_cadastrado, foto_usuario, function(error, result){
-							app.app.controllers.login.login_usuario(app, req, res);
+
+							checklistModel.getExigenciasPaises(function(error, exigencias_paises){
+								var id_usuario = usuario_cadastrado[0].id_usuario;
+								for (var i=0; i<exigencias_paises.length; i++) {
+									var id_exigencia = exigencias_paises[i].id_exigencia;
+									checklistModel.registrarChecklistUsuario(id_usuario, id_exigencia, function(error, result){});
+								}
+								app.app.controllers.login.login_usuario(app, req, res);
+							});
 						});		
 					} else {
-						app.app.controllers.login.login_usuario(app, req, res);
+
+						checklistModel.getExigenciasPaises(function(error, exigencias_paises){
+							var id_usuario = usuario_cadastrado[0].id_usuario;
+							for (var i=0; i<exigencias_paises.length; i++) {
+								var id_exigencia = exigencias_paises[i].id_exigencia;
+								checklistModel.registrarChecklistUsuario(id_usuario, id_exigencia, function(error, result){});
+							}
+							app.app.controllers.login.login_usuario(app, req, res);
+						});
 					}
-
-					// exigenciaModel.getExigencias(function(error, exigencias){
-					// 	for (var i=0; i<exigencias.length; i++) {
-
-					// 	}
-					// });
-
 				});
 			});
 		}

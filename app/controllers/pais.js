@@ -12,7 +12,7 @@ module.exports.pais = function(app, req, res){
 	}
 
 	paisModel.getPais(nome_pais, function(error, dados_pais){
-		paisModel.getExigencias(nome_pais, function(error, dados_exigencias){
+		paisModel.getExigenciasPais(nome_pais, function(error, dados_exigencias_pais){
 			paisModel.getEmbaixadaBrasil(nome_pais, function(error, dados_embaixada_brasil){
 				paisModel.getEmbaixadaPais(nome_pais, function(error, dados_embaixada_pais){
 					paisModel.getConsuladosBrasil(nome_pais, function(error, dados_consulados_brasil){
@@ -26,11 +26,11 @@ module.exports.pais = function(app, req, res){
 												var usuarioModel = new app.app.models.UsuarioDAO(connection);
 												usuarioModel.getUsuario(email, function(error, usuario) {
 													usuarioModel.getFotoUsuario(email, function(error, foto_usuario) {
-														res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, usuario: usuario, foto_usuario: foto_usuario});
+														res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias_pais, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, usuario: usuario, foto_usuario: foto_usuario});
 													});
 												});
 											} else {
-												res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, usuario: {}, foto_usuario: {}});
+												res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias_pais, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, usuario: {}, foto_usuario: {}});
 											}
 										});
 									});
