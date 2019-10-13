@@ -299,6 +299,10 @@ body{
 	padding: 3px 0 3px 10%;
 }
 
+.checkbox_checklist{
+	margin-right: 2.8%;
+}
+
 /* Hide the browser's default checkbox */
 .checkbox input{
 	position: absolute;
@@ -325,6 +329,7 @@ body{
 
 .checkmark_checklist{
 	border-radius: 100%;
+	position: relative;
 }
 
 .checkmark_favoritos{

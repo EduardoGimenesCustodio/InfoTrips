@@ -50,112 +50,112 @@ insert into lingua_pais(pais_lingua_pais, lingua_lingua_pais) values(3, 2);
 /* EXIGÊNCIA */
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Vacinas', 'Nenhuma vacina específica necessária. No entanto, vacinas contra difteria, tétano, hepatite B, sarampo, caxumba, rubéola e tuberculose são recomendadas para qualquer viagem internacional', 
-false, true, 1);
+false, 1);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Vacinas', 'Nenhuma vacina específica necessária. No entanto, vacinas contra difteria, tétano, hepatite B, sarampo, caxumba, rubéola e tuberculose são recomendadas para qualquer viagem internacional', 
-false, true, 2);
+false, 2);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Vacinas', 'Nenhuma vacina específica necessária. No entanto, vacinas contra difteria, tétano, hepatite B, sarampo, caxumba, rubéola e tuberculose são recomendadas para qualquer viagem internacional', 
-false, true, 3);
+false, 3);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Passaporte', 'O passaporte é obrigatório e deve ser válido durante o período de permanência no país', 
-true, true, 1);
+true, 1);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Passaporte', 'O passaporte é obrigatório e deve ser válido durante o período de permanência no país', 
-true, true, 2);
+true, 2);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Passaporte', 'O passaporte é obrigatório e deve ser válido no momento da entrada no país', 
-true, true, 3);
+true, 3);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Seguro Viagem', 'Nenhum seguro exigido. No entanto, recomenda-se que os viajantes 
 adquiram um seguro viagem/saúde por precaução', 
-false, true, 1);
+false, 1);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Seguro Viagem', 'Nenhum seguro exigido. No entanto, recomenda-se que os viajantes 
 adquiram um seguro viagem/saúde por precaução', 
-false, true, 2);
+false, 2);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Seguro Viagem', 'Nenhum seguro exigido. No entanto, recomenda-se que os viajantes 
 adquiram um seguro viagem/saúde por precaução', 
-false, true, 3);
+false, 3);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Visto', 'O visto é obrigatório', 
-true, true, 1);
+true, 1);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Visto', 'O visto não é exigido para viagens de até 180 dias', 
-false, true, 2);
+false, 2);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Visto', 'O visto não é exigido para viagens de até 90 dias. Além disso, a entrada é permitida para viajantes que portarem a Cédula de Identidade Civil', 
-false, true, 3);
+false, 3);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('CNH/PID', 'A Carteira Nacional de Habilitação (CNH) e a Permissão Internacional para Dirigir (PID) devem ser apresentadas conjuntamente', 
-false, true, 1);
+false, 1);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('CNH/PID', 'É permitida a direção de veículos pequenos (como carros e motocicletas, de acordo com a licença obtida no Brasil), por um período de 12 meses a partir da data de entrada', 
-false, true, 2);
+false, 2);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('CNH/PID', 'A Carteira Nacional de Habilitação (CNH) é aceita por 90 dias. Para conduzir veículos por mais tempo é necessário solicitar a "licencia para conducir"', 
-false, true, 3);
+false, 3);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Curso de Idioma', 'Nenhum curso de idioma específico necessário para turistas, mas recomenda-se que o viajante tenha noções básicas de inglês. Exames de proficiência da língua inglesa podem ser exigidos daqueles que irão ao país com outros objetivos, como trabalhar e estudar', 
-false, true, 1);
+false, 1);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Curso de Idioma', 'Nenhum curso de idioma específico necessário para turistas. No entanto, jovens de 16 anos ou mais que pretendem obter um visto de estudos de curta duração (Short-term study visa) por 11 meses devem se matricular em um curso no Reino Unido para aprender inglês como idioma estrangeiro. Já aqueles que querem obter o Tier 4 (General) student visa devem comprovar seu conhecimento da língua inglesa, o que geralmente é feito por meio de uma prova (Secure English Language Test) específica para o tipo de curso que se pretende frequentar no país', 
-false, true, 2);
+false, 2);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Curso de Idioma', 'Nenhum curso de idioma específico necessário para turistas, mas recomenda-se que o viajante tenha noções básicas de espanhol', 
-false, true, 3);
+false, 3);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Quantia em Dinheiro', 'Quantia suficiente para cobrir despesas relacionadas a viagem', 
-true, true, 1);
+true, 1);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Quantia em Dinheiro', 'Turistas devem comprovar que serão capazes de se sustentar (e a seus dependentes) sem a necessidade de trabalhar ou recorrer aos benefícios do governo britânico', 
-true, true, 2);
+true, 2);
 
 insert into exigencia(nome_exigencia, descricao_exigencia, 
-isrequired_exigencia, isactive_exigencia, pais_exigencia) 
+isrequired_exigencia, pais_exigencia) 
 values('Quantia em Dinheiro', 'Nenhuma quantia necessária', 
-false, true, 3);
+false, 3);
 
 /* EMBAIXADA */
 

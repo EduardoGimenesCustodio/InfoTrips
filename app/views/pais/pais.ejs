@@ -192,7 +192,18 @@
 	    </section>
 
 	    <section id="secao_checklist" class="secao_pais secao_invisivel_pais">
-		    <p>Checklist</p>
+        <% if (checklist.length > 0) { %>
+          <% for (var i=0; i<checklist.length; i++) { %>
+            <div class="bloco_informacao bloco_informacao_checkbox">
+              <label class="checkbox texto checkbox_checklist">
+                <input type="checkbox" name="">
+                <span class="campo_checkbox checkmark checkmark_checklist"></span>
+              </label>
+
+              <p class="texto texto_bloco_informacao"><%= checklist[i].nome_exigencia %></p> 
+            </div>
+          <% } %>
+        <% } %>
 	    </section>
 
     </body>
