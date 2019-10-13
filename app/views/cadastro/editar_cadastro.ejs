@@ -34,7 +34,11 @@
                 <input type="password" name="senha_usuario" class="campo_formulario" value="<%= usuario[0].senha_usuario %>"  placeholder="Senha" minlength="5" maxlength="20" required>
                 <div class="campo_checkbox_atualizacoes">
                     <label class="checkbox checkbox_atualizacoes texto">receber atualizações sobre países favoritos
-                        <input type="checkbox" name="updatesareactive_usuario" value="<%= usuario[0].updatesareactive_usuario %>" checked="checked">
+                        <% if (usuario[0].updatesareactive_usuario == 1) { %>
+                            <input type="checkbox" name="updatesareactive_usuario" value="1" checked="checked">
+                        <% } else { %>
+                            <input type="checkbox" name="updatesareactive_usuario" value="">
+                        <% } %>
                         <span class="campo_checkbox checkmark checkmark_atualizacoes"></span>
                     </label>
                 </div>
