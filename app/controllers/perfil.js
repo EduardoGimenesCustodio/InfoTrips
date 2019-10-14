@@ -1,4 +1,5 @@
 module.exports.perfil = function(app, req, res){
+
     if (req.session.loggedin) {
         var email = req.session.email;
 	    var connection = app.config.dbConnection();

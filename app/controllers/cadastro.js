@@ -29,7 +29,6 @@ module.exports.cadastrar_usuario = function(app, req, res, nome_foto_usuario){
 			res.render('cadastro/cadastro', {validacao: erro});
 		} else {
 			usuarioModel.cadastrarUsuario(usuario, function(error, result){
-				// for para as exigencia e inserir com user e id exigencia
 				usuarioModel.getUsuario(usuario.email_usuario, function(error, result){
 					var usuario_cadastrado = result;
 					var checklistModel = new app.app.models.ChecklistDAO(connection);
