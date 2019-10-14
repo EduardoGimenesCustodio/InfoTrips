@@ -20,6 +20,16 @@
                 <a href="/" class="titulo_cabecalho"><img src="/img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>    
                 <a href="/favoritos"><img src="/img/branco/icone_lista_favoritos_branco.svg" alt="Botão favoritos" class="botao_cabecalho"></a>        
             </header>
+
+            <div id="mensagem_logout" class="fundo_bloco_detalhe fundo_bloco_detalhe_invisivel">
+                <div class="bloco_informacao bloco_detalhe">
+                    <p class="texto texto_detalhe">Tem certeza que deseja sair?</p>
+                    <form action="/usuario/sair" method="POST">
+                        <input type="submit" value="Sair" class="botao">
+                    </form>
+                    <input type="button" value="Fechar" class="botao" onclick="fechar_bloco_detalhe('mensagem_logout')">
+                </div>
+            </div>
           
             <div class="campo_foto_formulario">
                 <% if (foto_usuario.length > 0) { %>
@@ -35,9 +45,7 @@
             </div>
             
             <a href="editar_perfil?email_usuario=<%=usuario[0].email_usuario%>" class="botao">Editar perfil</a>
-            <form action="/usuario/sair" method="POST">
-                <input type="submit" value="Sair" class="botao">
-            </form>
+            <input type="button" value="Sair" class="botao" onclick="abrir_bloco_detalhe('mensagem_logout')">
         </body>
 
     <script type="text/javascript" src="/js/main.js"></script>
