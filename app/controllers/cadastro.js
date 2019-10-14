@@ -1,5 +1,9 @@
 module.exports.cadastro = function(app, req, res){
-	res.render('cadastro/cadastro', {validacao: {}});
+	if (!req.session.loggedin) {
+		res.render('cadastro/cadastro', {validacao: {}});
+	} else {
+		res.redirect('/perfil');
+	}
 }
 
 module.exports.cadastrar_usuario = function(app, req, res, nome_foto_usuario){

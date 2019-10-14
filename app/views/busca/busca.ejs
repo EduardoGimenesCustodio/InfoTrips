@@ -42,8 +42,9 @@
               </label>
             </a>
           <% } %>
-        <% } else { %>
-          <p class="texto mensagem_busca">País não encontrado</p>
+        <% } %>
+        <% if (mensagem_busca.length > 0) { %>
+          <p class="texto mensagem_busca"><%= mensagem_busca %></p>
         <% } %>
       </section>
 
