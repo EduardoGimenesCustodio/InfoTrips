@@ -35,19 +35,28 @@
         
         <section class="secao_pais">
             <% for (var i=0; i<checklist.length; i++) { %>
+                <div id="<%= checklist[i].id_checklist %>" class="fundo_bloco_detalhe fundo_bloco_detalhe_invisivel">
+                    <div class="bloco_informacao bloco_detalhe">
+                        <div class="cabecalho_bloco_informacao_expansivel">
+                            <h3 class="titulo_bloco_informacao titulo_bloco_informacao_expansivel"><%= checklist[i].nome_exigencia %></h3>
+                            <img src="/img/roxo/icone_x_roxo.svg" alt="Botão desfazer expansão" class="botao_cabecalho" onclick="fechar_bloco_detalhe('<%= checklist[i].id_checklist %>')">
+                        </div>
+                        <p class="texto texto_bloco_informacao texto_bloco_detalhe_checklist"><%= checklist[i].descricao_exigencia %></p>
+                    </div>
+                </div>
+
                 <div class="bloco_informacao bloco_informacao_checkbox">
                     <form method="POST" action="/atualizar/checklist" class="formulario_checklist">
                         <input type="text" name="nome_pais" class="campo_formulario campo_formulario_invisivel" value="<%= pais[0].nome_pais %>" placeholder="Nome do país" maxlength="70" readonly required>
                         <input type="number" name="id_checklist" class="campo_formulario campo_formulario_invisivel" value="<%= checklist[i].id_checklist %>" readonly required>
-
                         <% if (checklist[i].isdone_checklist == 1) { %>
-                            <input type="image" src="/img/roxo/icone_checklist_redondo_marcado_roxo.svg" class="botao_checklist">
+                            <input type="image" src="/img/roxo/icone_checklist_redondo_marcado_roxo.svg" class="botao_cabecalho">
                         <% } else { %>
-                            <input type="image" src="/img/roxo/icone_checklist_redondo_nao_marcado_roxo.svg" class="botao_checklist">
+                            <input type="image" src="/img/roxo/icone_checklist_redondo_nao_marcado_roxo.svg" class="botao_cabecalho">
                         <% } %>
                     </form>
-        
                     <p class="texto texto_bloco_informacao"><%= checklist[i].nome_exigencia %></p>
+                    <img src="img/roxo/icone_info_roxo.svg" alt="Botão ver mais" class="botao_cabecalho" onclick="abrir_bloco_detalhe('<%= checklist[i].id_checklist %>')">
                 </div>
             <% } %>    
         </section>

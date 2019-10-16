@@ -476,7 +476,7 @@ body{
 }
 
 .bandeira_pais{
-	width: 35px;
+	width: 45px;
 	margin-right: 2.8%;
 }
 
@@ -508,12 +508,18 @@ body{
 /* Checklist */
 
 .formulario_checklist{
-	width: 25px;
-	height: 25px;
+	width: 34px;
+	height: 34px;
 	margin-right: 2.8%;
 }
 
 .botao_checklist{
+	display: flex;
+	cursor: pointer;
 	width: 25px;
 	height: 25px;
+}
+
+.texto_bloco_detalhe_checklist{
+	margin-top: 2.8%;
 }
