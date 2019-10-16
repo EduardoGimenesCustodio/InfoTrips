@@ -45,7 +45,7 @@
                     </div>
                 </div>
 
-
+                <% if (checklist[i].isactive_checklist == 1) { %>
                     <div class="bloco_informacao bloco_informacao_checkbox">
                         <form method="POST" action="/atualizar/checklist" class="formulario_checklist">
                             <input type="text" name="nome_pais" class="campo_formulario campo_formulario_invisivel" value="<%= pais[0].nome_pais %>" placeholder="Nome do país" maxlength="70" readonly required>
@@ -63,16 +63,37 @@
                             <form method="POST" action="/ativacao/checklist" class="formulario_toggle">
                                 <input type="text" name="nome_pais" class="campo_formulario campo_formulario_invisivel" value="<%= pais[0].nome_pais %>" placeholder="Nome do país" maxlength="70" readonly required>
                                 <input type="number" name="id_checklist" class="campo_formulario campo_formulario_invisivel" value="<%= checklist[i].id_checklist %>" readonly required>
-                                <% if (checklist[i].isactive_checklist == 1) { %>
-                                    <input type="image" src="/img/roxo/icone_toggle_ligado_roxo.svg" class="botao_toggle">
-                                <% } else { %>
-                                    <input type="image" src="/img/roxo/icone_toggle_nao_ligado_roxo.svg" class="botao_toggle">
-                                <% } %>
+                                <input type="image" src="/img/roxo/icone_toggle_ligado_roxo.svg" class="botao_toggle">
                             </form>
                         <% } %>
 
-                        <img src="img/roxo/icone_info_roxo.svg" alt="Botão ver mais" class="botao_cabecalho" onclick="abrir_bloco_detalhe('<%= checklist[i].id_checklist %>')">
+                        <img src="/img/roxo/icone_info_roxo.svg" alt="Botão ver mais" class="botao_cabecalho" onclick="abrir_bloco_detalhe('<%= checklist[i].id_checklist %>')">
                     </div>
+                <% } else { %>  
+                    <div class="bloco_informacao bloco_informacao_checkbox bloco_informacao_desativado">
+                        <div class="formulario_checklist">
+                            <% if (checklist[i].isdone_checklist == 1) { %>
+                                <input type="image" src="/img/roxo/icone_checklist_redondo_marcado_roxo.svg" class="botao_cabecalho botao_desativado" readonly>
+                            <% } else { %>
+                                <input type="image" src="/img/roxo/icone_checklist_redondo_nao_marcado_roxo.svg" class="botao_cabecalho botao_desativado" readonly>
+                            <% } %>
+                        </div>
+
+                        <p class="texto texto_bloco_informacao"><%= checklist[i].nome_exigencia %></p>
+
+                        <% if (checklist[i].isrequired_exigencia != 1) { %>
+                            <form method="POST" action="/ativacao/checklist" class="formulario_toggle">
+                                <input type="text" name="nome_pais" class="campo_formulario campo_formulario_invisivel" value="<%= pais[0].nome_pais %>" placeholder="Nome do país" maxlength="70" readonly required>
+                                <input type="number" name="id_checklist" class="campo_formulario campo_formulario_invisivel" value="<%= checklist[i].id_checklist %>" readonly required>
+                                <input type="image" src="/img/roxo/icone_toggle_nao_ligado_roxo.svg" class="botao_toggle">
+                            </form>
+                        <% } %>
+
+                        <img src="/img/roxo/icone_info_roxo.svg" alt="Botão ver mais" class="botao_cabecalho botao_desativado">
+                    </div>
+                <% } %>
+                    
+                        
                 
             <% } %>    
         </section>

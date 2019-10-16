@@ -31,13 +31,14 @@ img{
     --cor-primary-light: #C7A4FF;
 	--cor-fundo-pagina: #f5f5f5;
 	--cor-borda-campo-formulario: #707070;
-	--cor-fundo-campo-formulario: white;
-	--cor-letra-campo-formulario: black;
-	--cor-letra-texto: black;
-	--cor-letra-botao: white;
-	--cor-letra-cabecalho-pais: white;
-	--cor-borda-aba-pais: white;
+	--cor-fundo-campo-formulario: #ffffff;
+	--cor-letra-campo-formulario: #000000;
+	--cor-letra-texto: #000000;
+	--cor-letra-botao: #ffffff;
+	--cor-letra-cabecalho-pais: #ffffff;
+	--cor-borda-aba-pais: #ffffff;
 	--cor-fundo-fosco: rgba(0, 0, 0, .8);
+	--cor-fundo-exigencia_desativada: #bdbdbd;
 }
 
 /* Corpo */
@@ -518,20 +519,21 @@ body{
 	margin: 0 2.8% 0 auto;
 }
 
-.formulario_toggle_destivado{
-	opacity: 0.5%;
-}
-
 .botao_toggle{
 	display: flex;
 	cursor: pointer;
 	height: 34px;
 }
 
-.botao_toggle_desativado{
-	position: absolute;
-}
-
 .texto_bloco_detalhe_checklist{
 	margin-top: 2.8%;
+}
+
+.bloco_informacao_desativado{
+	background-color: var(--cor-fundo-exigencia_desativada);
+}
+
+.botao_desativado{
+	cursor: auto;
+	opacity: 0.6;
 }
