@@ -36,12 +36,18 @@
         <section class="secao_pais">
             <% for (var i=0; i<checklist.length; i++) { %>
                 <div class="bloco_informacao bloco_informacao_checkbox">
-                    <label class="checkbox texto checkbox_checklist">
-                        <input type="checkbox" name="">
-                        <span class="campo_checkbox checkmark checkmark_checklist"></span>
-                    </label>
-    
-                    <p class="texto texto_bloco_informacao"><%= checklist[i].nome_exigencia %></p> 
+                    <form method="POST" action="/atualizar/checklist" class="formulario_checklist">
+                        <input type="text" name="nome_pais" class="campo_formulario campo_formulario_invisivel" value="<%= pais[0].nome_pais %>" placeholder="Nome do país" maxlength="70" readonly required>
+                        <input type="number" name="id_checklist" class="campo_formulario campo_formulario_invisivel" value="<%= checklist[i].id_checklist %>" readonly required>
+
+                        <% if (checklist[i].isdone_checklist == 1) { %>
+                            <input type="image" src="/img/roxo/icone_checklist_redondo_marcado_roxo.svg" class="botao_checklist">
+                        <% } else { %>
+                            <input type="image" src="/img/roxo/icone_checklist_redondo_nao_marcado_roxo.svg" class="botao_checklist">
+                        <% } %>
+                    </form>
+        
+                    <p class="texto texto_bloco_informacao"><%= checklist[i].nome_exigencia %></p>
                 </div>
             <% } %>    
         </section>

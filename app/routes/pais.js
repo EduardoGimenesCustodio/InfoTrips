@@ -8,4 +8,8 @@ module.exports = function(app){
 		app.app.controllers.pais.checklist(app, req, res);
 	});
 
+	app.post('/atualizar/checklist', function(req,res){
+		app.app.controllers.pais.atualizar_checklist(app, req, res);
+	});
+
 }

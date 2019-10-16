@@ -96,3 +96,26 @@ module.exports.checklist = function(app, req, res){
 		});
 	}
 }
+
+module.exports.atualizar_checklist = function(app, req, res){
+
+	if (req.body){
+		var checklist_usuario = req.body;
+	} else {
+		res.redirect('/');
+		return;
+	}
+
+	var connection = app.config.dbConnection();
+	var checklistModel = new app.app.models.ChecklistDAO(connection);
+
+	var nome_pais = checklist_usuario.nome_pais;
+
+	checklistModel.consultarStatusChecklist(checklist_usuario, function(error, result){
+		var isdone_checklist = result[0].isdone_checklist;
+		checklistModel.atualizarChecklist(checklist_usuario, isdone_checklist, function(error, result){
+			res.redirect('/checklist?nome_pais='+ nome_pais);
+		});
+	});
+
+}

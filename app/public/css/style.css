@@ -299,10 +299,6 @@ body{
 	padding: 3px 0 3px 10%;
 }
 
-.checkbox_checklist{
-	margin-right: 2.8%;
-}
-
 /* Hide the browser's default checkbox */
 .checkbox input{
 	position: absolute;
@@ -507,4 +503,17 @@ body{
 
 .dados_usuario{
 	margin-bottom: 4%;
+}
+
+/* Checklist */
+
+.formulario_checklist{
+	width: 25px;
+	height: 25px;
+	margin-right: 2.8%;
+}
+
+.botao_checklist{
+	width: 25px;
+	height: 25px;
 }
