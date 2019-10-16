@@ -513,11 +513,23 @@ body{
 	margin-right: 2.8%;
 }
 
-.botao_checklist{
+.formulario_toggle{
+	height: 34px;
+	margin: 0 2.8% 0 auto;
+}
+
+.formulario_toggle_destivado{
+	opacity: 0.5%;
+}
+
+.botao_toggle{
 	display: flex;
 	cursor: pointer;
-	width: 25px;
-	height: 25px;
+	height: 34px;
+}
+
+.botao_toggle_desativado{
+	position: absolute;
 }
 
 .texto_bloco_detalhe_checklist{

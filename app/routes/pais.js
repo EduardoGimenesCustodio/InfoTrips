@@ -12,4 +12,8 @@ module.exports = function(app){
 		app.app.controllers.pais.atualizar_checklist(app, req, res);
 	});
 
+	app.post('/ativacao/checklist', function(req,res){
+		app.app.controllers.pais.ativacao_checklist(app, req, res);
+	});
+
 }

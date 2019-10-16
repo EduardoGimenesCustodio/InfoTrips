@@ -119,3 +119,26 @@ module.exports.atualizar_checklist = function(app, req, res){
 	});
 
 }
+
+module.exports.ativacao_checklist = function(app, req, res){
+
+	if (req.body){
+		var checklist_usuario = req.body;
+	} else {
+		res.redirect('/');
+		return;
+	}
+
+	var connection = app.config.dbConnection();
+	var checklistModel = new app.app.models.ChecklistDAO(connection);
+
+	var nome_pais = checklist_usuario.nome_pais;
+
+	checklistModel.consultarEstadoChecklist(checklist_usuario, function(error, result){
+		var isactive_checklist = result[0].isactive_checklist;
+		checklistModel.ativacaoChecklist(checklist_usuario, isactive_checklist, function(error, result){
+			res.redirect('/checklist?nome_pais='+ nome_pais);
+		});
+	});
+
+}
