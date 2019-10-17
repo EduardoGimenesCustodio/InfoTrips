@@ -5,10 +5,10 @@ module.exports.index = function(app, req, res){
 	    var usuarioModel = new app.app.models.UsuarioDAO(connection);
 
 		usuarioModel.getFotoUsuario(email, function(error, foto_usuario) {
-			res.render('home/index', {mensagem_recepcao: {}, foto_usuario: foto_usuario});
+			res.render('home/index', {mensagem: {}, foto_usuario: foto_usuario});
 		});
 	} else {
-		res.render('home/index', {mensagem_recepcao: {}, foto_usuario: {}});
+		res.render('home/index', {mensagem: {}, foto_usuario: {}});
 	}
 }
 
@@ -22,7 +22,7 @@ module.exports.index_recepcao = function(app, req, res){
 
 		var mensagem = 'Você entrou em sua conta. Seja bem-vindo(a)!';
 		usuarioModel.getFotoUsuario(email, function(error, foto_usuario) {
-			res.render('home/index', {mensagem_recepcao: mensagem, foto_usuario: foto_usuario});
+			res.render('home/index', {mensagem: mensagem, foto_usuario: foto_usuario});
 		});
 	} else {
 		res.redirect('/');

@@ -28,17 +28,14 @@ module.exports.pais = function(app, req, res){
 												usuarioModel.getUsuario(email, function(error, usuario) {
 													usuarioModel.getFotoUsuario(email, function(error, foto_usuario) {
 														historicoModel.getHistoricoPais(email, nome_pais, function(error, result) {
-															console.log(result.length);
 															if (result.length > 0) {
 																historicoModel.atualizarRegistroHistorico(email, nome_pais, function(error, result) {
-																	console.log('atualizou');
 																	res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias_pais, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, usuario: usuario, foto_usuario: foto_usuario, validacao: {}});
 																});
 															} else {
 																var id_usuario = usuario[0].id_usuario;
 																var id_pais = dados_pais[0].id_pais;
 																historicoModel.inserirRegistroHistorico(id_usuario, id_pais, function(error, result) {
-																	console.log('inseriu');
 																	res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias_pais, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, usuario: usuario, foto_usuario: foto_usuario, validacao: {}});
 																});
 															}

@@ -2,7 +2,7 @@ function HistoricoDAO(connection){
 	this._connection = connection;
 }
 
-    HistoricoDAO.prototype.getHistoricoUsuario = function(email, nome_pais, callback){
+    HistoricoDAO.prototype.getHistoricoUsuario = function(email, callback){
 		this._connection.query('select nome_pais, bandeira_pais, data_historico from historico inner join pais on pais_historico = id_pais where usuario_historico = (select id_usuario from usuario where email_usuario = "'+ email +'") order by(data_historico) DESC', callback);
 	}
 

@@ -25,10 +25,13 @@
         <% } %>
       </header>
 
-      <% if (mensagem_recepcao.length > 0) { %>
-        <div id="mensagem_recepcao" class="fundo_bloco_detalhe">
+      <% if (mensagem.length > 0) { %>
+        <div class="fundo_bloco_detalhe">
             <div class="bloco_informacao bloco_detalhe">
-                <p class="texto texto_detalhe"><%= mensagem_recepcao %></p>
+                <p class="texto texto_detalhe"><%= mensagem %></p>
+                <% if (mensagem === 'Faça o login para acessar sua lista de países favoritos') { %>
+                  <a href="/login" class="botao">Login</a>
+                <% } %>
                 <a href="/" class="botao">Fechar</a>
             </div>
         </div>
