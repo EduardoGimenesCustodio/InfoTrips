@@ -15,7 +15,7 @@
 
     <body>
         <header class="cabecalho">
-            <a href="javascript:window.history.go(-1)"><img src="/img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+            <a href="/busca"><img src="/img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
             <a href="/" class="titulo_cabecalho"><img src="/img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
             <% if (foto_usuario.length > 0) { %>
                 <a href="/perfil"><img src="/uploads/<%= foto_usuario[0].nome_foto %>" alt="Botão perfil" class="botao_cabecalho foto_perfil_cabecalho"></a>
@@ -46,7 +46,11 @@
                 </div>
 
                 <% if (checklist[i].isactive_checklist == 1) { %>
-                    <div class="bloco_informacao bloco_informacao_checkbox">
+                    <% if (checklist[i].isdone_checklist == 1) { %>
+                        <div class="bloco_informacao bloco_informacao_checkbox bloco_informacao_checked">
+                    <% } else { %>
+                        <div class="bloco_informacao bloco_informacao_checkbox">
+                    <% } %>       
                         <form method="POST" action="/atualizar/checklist" class="formulario_checklist">
                             <input type="text" name="nome_pais" class="campo_formulario campo_formulario_invisivel" value="<%= pais[0].nome_pais %>" placeholder="Nome do país" maxlength="70" readonly required>
                             <input type="number" name="id_checklist" class="campo_formulario campo_formulario_invisivel" value="<%= checklist[i].id_checklist %>" readonly required>
@@ -73,9 +77,9 @@
                     <div class="bloco_informacao bloco_informacao_checkbox bloco_informacao_desativado">
                         <div class="formulario_checklist">
                             <% if (checklist[i].isdone_checklist == 1) { %>
-                                <input type="image" src="/img/roxo/icone_checklist_redondo_marcado_roxo.svg" class="botao_cabecalho botao_desativado" readonly>
+                                <input type="image" src="/img/roxo/icone_checklist_redondo_marcado_desativado_roxo.svg" class="botao_cabecalho botao_desativado" readonly>
                             <% } else { %>
-                                <input type="image" src="/img/roxo/icone_checklist_redondo_nao_marcado_roxo.svg" class="botao_cabecalho botao_desativado" readonly>
+                                <input type="image" src="/img/roxo/icone_checklist_redondo_nao_marcado_desativado_roxo.svg" class="botao_cabecalho botao_desativado" readonly>
                             <% } %>
                         </div>
 
@@ -89,7 +93,7 @@
                             </form>
                         <% } %>
 
-                        <img src="/img/roxo/icone_info_roxo.svg" alt="Botão ver mais" class="botao_cabecalho botao_desativado">
+                        <img src="/img/roxo/icone_info_desativado_roxo.svg" alt="Botão ver mais" class="botao_cabecalho botao_desativado">
                     </div>
                 <% } %>
                     
