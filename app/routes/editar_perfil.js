@@ -14,7 +14,7 @@ module.exports = function(app){
 			cb(null, 'app/public/uploads/')
 		},
 		filename: function (req, foto_usuario, cb) {
-			cb(null, foto_usuario.originalname);
+			cb(null, foto_usuario.originalname = Date.now() +'_'+ foto_usuario.originalname);
 			nome_foto_usuario = foto_usuario.originalname;
 		}
 	});
