@@ -15,7 +15,7 @@
 
     <body>
       <header class="cabecalho">
-        <a href="javascript:window.history.go(-1)"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+        <a href="/"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
         <a href="/" class="titulo_cabecalho"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
         <% if (foto_usuario.length > 0) { %>
           <a href="/perfil"><img src="uploads/<%= foto_usuario[0].nome_foto %>" alt="Botão perfil" class="botao_cabecalho foto_perfil_cabecalho"></a>
@@ -25,7 +25,11 @@
       </header>
 
       <form class="campo_formulario formulario_busca formulario_tela_busca" action="/busca" method="POST">
-        <input type="search" name="pais_busca" class="campo_formulario campo_formulario_busca" placeholder="Pesquise um país" maxlength="70" required>
+        <% if (pais_pesquisado.length > 0) { %>
+          <input type="search" name="pais_busca" class="campo_formulario campo_formulario_busca" value="<%= pais_pesquisado %>" placeholder="Pesquise um país" maxlength="70" required>
+        <% } else { %>
+          <input type="search" name="pais_busca" class="campo_formulario campo_formulario_busca" placeholder="Pesquise um país" maxlength="70" required>
+        <% } %>
         <input type="image" src="img/roxo/icone_lupa_roxo.svg" class="botao_buscar">
       </form>
 
@@ -35,8 +39,20 @@
             <a href="pais?nome_pais=<%=paises[i].nome_pais%>" class="bloco_informacao bloco_informacao_checkbox">
               <img src="img/bandeiras/<%= paises[i].bandeira_pais %>" alt="Bandeira <%= paises[i].nome_pais %>" class="bandeira_pais">
               <p class="texto texto_bloco_informacao"><%= paises[i].nome_pais %></p>
-      
               
+              <% if (usuario.length > 0) { %>
+                <form method="POST" action="/atualizar/favoritos" class="formulario_checklist formulario_favorito">
+                  <input type="text" name="nome_tela" class="campo_formulario campo_formulario_invisivel" value="/busca" placeholder="Nome da tela" maxlength="70" readonly required>
+                  <input type="text" name="pais_pesquisado" class="campo_formulario campo_formulario_invisivel" value="<%= pais_pesquisado %>" placeholder="País pesquisado" maxlength="70" readonly required>
+                  <input type="text" name="nome_pais" class="campo_formulario campo_formulario_invisivel" value="<%= paises[i].nome_pais %>" placeholder="Nome do país" maxlength="70" readonly required>
+                  <input type="number" name="id_favorito" class="campo_formulario campo_formulario_invisivel" value="<%= paises[i].id_favorito %>" readonly required>
+                  <% if (paises[i].isfavorite_favorito == 1) { %>
+                      <input type="image" src="/img/roxo/icone_favorito_roxo.svg" class="botao_cabecalho">
+                  <% } else { %>
+                      <input type="image" src="/img/roxo/icone_nao_favorito_roxo.svg" class="botao_cabecalho">
+                  <% } %>
+                </form>
+              <% } %>
             </a>
           <% } %>
         <% } %>

@@ -82,9 +82,9 @@ primary key(id_historico),
 foreign key(pais_historico) references pais(id_pais), 
 foreign key(usuario_historico) references usuario(id_usuario));
 
-create table favorito(id_favorito int not null auto_increment, isfavorite 
-int, pais_favorito int, usuario_favorito int, primary 
-key(id_favorito), foreign key(pais_favorito) references 
+create table favorito(id_favorito int not null auto_increment, 
+isfavorite_favorito boolean, pais_favorito int, usuario_favorito int, 
+primary key(id_favorito), foreign key(pais_favorito) references 
 pais(id_pais), foreign key(usuario_favorito) references usuario(id_usuario));
 
 create table exigencia(id_exigencia int not null auto_increment, 

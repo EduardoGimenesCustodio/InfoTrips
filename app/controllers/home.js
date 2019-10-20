@@ -12,8 +12,6 @@ module.exports.index = function(app, req, res){
 	}
 }
 
-// teste
-
 module.exports.index_recepcao = function(app, req, res){
 	if (req.session.loggedin) {
 		var email = req.session.email;

@@ -18,3 +18,30 @@ module.exports.favoritos = function(app, req, res){
         });
     });
 }
+
+module.exports.atualizar_favoritos = function(app, req, res){
+    if (req.body){
+        var favoritos_usuario = req.body;
+	} else {
+		res.redirect('/');
+		return;
+	}
+
+	var connection = app.config.dbConnection();
+	var favoritoModel = new app.app.models.FavoritoDAO(connection);
+
+    var nome_pais = favoritos_usuario.nome_pais;
+    var nome_tela = favoritos_usuario.nome_tela;
+
+	favoritoModel.consultarStatusFavorito(favoritos_usuario, function(error, result){
+		var isfavorite_favorito = result[0].isfavorite_favorito;
+		favoritoModel.atualizarFavorito(favoritos_usuario, isfavorite_favorito, function(error, result){
+            if (nome_tela === '/busca') {
+                var pais_pesquisado = favoritos_usuario.pais_pesquisado;
+                res.redirect('/busca?pais_busca='+ pais_pesquisado);
+            } else {
+                res.redirect(nome_tela +'?nome_pais='+ nome_pais);
+            }
+		});
+	});
+}
