@@ -50,6 +50,31 @@
                 <% } %>
             </section>
 
+            <h1 class="titulo_principal">Favoritos</h1>
+
+            <section class="secao_tela_favoritos">
+                <% if (favoritos_usuario.length > 0) { %>
+                    <% for (var i=0; i<favoritos_usuario.length; i++) { %>
+                        <a href="pais?nome_pais=<%=favoritos_usuario[i].nome_pais%>" class="bloco_informacao bloco_informacao_checkbox">
+                            <img src="img/bandeiras/<%= favoritos_usuario[i].bandeira_pais %>" alt="Bandeira <%= favoritos_usuario[i].nome_pais %>" class="bandeira_pais">
+                            <p class="texto texto_bloco_informacao"><%= favoritos_usuario[i].nome_pais %></p>
+                
+                            <form method="POST" action="/atualizar/favoritos" class="formulario_checklist formulario_favorito">
+                                <input type="text" name="nome_tela" class="campo_formulario campo_formulario_invisivel" value="/favoritos" placeholder="Nome da tela" maxlength="70" readonly required>
+                                <input type="text" name="nome_pais" class="campo_formulario campo_formulario_invisivel" value="<%= favoritos_usuario[i].nome_pais %>" placeholder="Nome do país" maxlength="70" readonly required>
+                                <input type="number" name="id_favorito" class="campo_formulario campo_formulario_invisivel" value="<%= favoritos_usuario[i].id_favorito %>" readonly required>
+                                <% if (favoritos_usuario[i].isfavorite_favorito == 1) { %>
+                                    <input type="image" src="/img/roxo/icone_favorito_roxo.svg" class="botao_cabecalho">
+                                <% } else { %>
+                                    <input type="image" src="/img/roxo/icone_nao_favorito_roxo.svg" class="botao_cabecalho">
+                                <% } %>
+                            </form>
+                        </a>
+                    <% } %>
+                <% } else { %>
+                    <p class="texto mensagem_busca">Nenhum país favoritado</p>
+                <% } %>
+            </section>
         </body>
         <script type="text/javascript" src="js/main.js"></script>
 </html>

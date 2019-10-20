@@ -47,11 +47,11 @@ function PaisDAO(connection){
 	}
 
 	PaisDAO.prototype.buscarPais = function(pais_busca, callback){
-		this._connection.query('select id_pais, nome_pais, bandeira_pais from pais where nome_pais like ?', '%' + pais_busca + '%', callback);
+		this._connection.query('select nome_pais, bandeira_pais from pais where nome_pais like ?', '%' + pais_busca + '%', callback);
 	}
 
 	PaisDAO.prototype.buscarPaisComFavoritos = function(pais_busca, email, callback){
-		this._connection.query('select id_pais, nome_pais, bandeira_pais, isfavorite_favorito, id_favorito from pais inner join favorito on id_pais = pais_favorito where usuario_favorito = (select id_usuario from usuario where email_usuario = "'+ email +'") AND nome_pais like ?', '%' + pais_busca + '%', callback);
+		this._connection.query('select nome_pais, bandeira_pais, isfavorite_favorito, id_favorito from pais inner join favorito on id_pais = pais_favorito where usuario_favorito = (select id_usuario from usuario where email_usuario = "'+ email +'") AND nome_pais like ?', '%' + pais_busca + '%', callback);
 	}
 
 module.exports = function(){
