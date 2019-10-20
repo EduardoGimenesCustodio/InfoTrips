@@ -10,6 +10,10 @@ function PaisDAO(connection){
 		this._connection.query('select * from pais where nome_pais = "' + nome_pais.nome_pais + '"', callback);
 	}
 
+	PaisDAO.prototype.getPaisComFavoritos = function(nome_pais, email, callback){
+		this._connection.query('select * from pais inner join favorito on id_pais = pais_favorito where nome_pais = "' + nome_pais.nome_pais + '" AND usuario_favorito = (select id_usuario from usuario where email_usuario = "'+ email +'")', callback);
+	}
+
 	PaisDAO.prototype.getExigenciasPais = function(nome_pais, callback){
 		this._connection.query('select * from exigencia where pais_exigencia = (select id_pais from pais where nome_pais = "' + nome_pais.nome_pais + '")', callback);
 	}

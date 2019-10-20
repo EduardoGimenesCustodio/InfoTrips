@@ -25,8 +25,23 @@
         </header>
 
         <div class="cabecalho_pais">
-            <h2 class="nome_pais"><%=pais[0].nome_pais %></h2>
+            <div class="nome_pais_cabecalho_pais">
+                <h2 class="nome_pais"><%=pais[0].nome_pais %></h2>
     
+                <% if (usuario.length > 0) { %>
+                    <form method="POST" action="/atualizar/favoritos" class="formulario_checklist formulario_favorito">
+                        <input type="text" name="nome_tela" class="campo_formulario campo_formulario_invisivel" value="/checklist" placeholder="Nome da tela" maxlength="70" readonly required>
+                        <input type="text" name="nome_pais" class="campo_formulario campo_formulario_invisivel" value="<%= pais[0].nome_pais %>" placeholder="Nome do país" maxlength="70" readonly required>
+                        <input type="number" name="id_favorito" class="campo_formulario campo_formulario_invisivel" value="<%= pais[0].id_favorito %>" readonly required>
+                        <% if (pais[0].isfavorite_favorito == 1) { %>
+                            <input type="image" src="/img/branco/icone_favorito_branco.svg" class="botao_cabecalho">
+                        <% } else { %>
+                            <input type="image" src="/img/branco/icone_nao_favorito_branco.svg" class="botao_cabecalho">
+                        <% } %>
+                    </form>
+                <% } %>
+            </div>
+            
             <div class="abas_pais">
                 <a href="pais?nome_pais=<%=pais[0].nome_pais%>" class="aba_pais">Informações</a>
                 <a href="checklist?nome_pais=<%=pais[0].nome_pais%>" class="aba_pais aba_atual_pais">Checklist</a>

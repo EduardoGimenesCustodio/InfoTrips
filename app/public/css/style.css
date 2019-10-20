@@ -405,12 +405,18 @@ body{
 	box-shadow: 0 0 4px 0;
 }
 
+.nome_pais_cabecalho_pais{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4%;
+}
+
 .nome_pais{
 	color: var(--cor-letra-cabecalho-pais);
-	text-align: center;
 	font-weight: bold;
+	text-align: center;
 	font-size: 28px;
-	padding: 4%;
 }
 
 .abas_pais{
@@ -517,7 +523,7 @@ body{
 
 .formulario_toggle{
 	height: 34px;
-	margin: 0 2.8% 0 auto;
+	margin: 0 2.8% 0 2.8%;
 }
 
 .botao_toggle{
@@ -549,5 +555,5 @@ body{
 }
 
 .formulario_favorito{
-	margin-right: 0;
+	margin: 0 0 0 2.8%;
 }
