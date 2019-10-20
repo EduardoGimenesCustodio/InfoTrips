@@ -40,8 +40,17 @@ module.exports.atualizar_favoritos = function(app, req, res){
                 var pais_pesquisado = favoritos_usuario.pais_pesquisado;
                 res.redirect('/busca?pais_busca='+ pais_pesquisado);
             } else {
-                res.redirect(nome_tela +'?nome_pais='+ nome_pais);
+                if (nome_tela === '/favoritos') {
+                    res.redirect('/favoritos');
+                } else {
+                    res.redirect(nome_tela +'?nome_pais='+ nome_pais);
+                }
             }
+
+            // var jsdom = require("jsdom");
+            // var JSDOM = jsdom.JSDOM;
+            // global.document = new JSDOM(html).window.document;
+            // window.history.back();
 		});
 	});
 }
