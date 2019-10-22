@@ -15,7 +15,7 @@
 
         <body>
             <header class="cabecalho">
-                <a href="javascript:window.history.go(-1)"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+                <a href="<%= pagina_anterior %>"><img src="img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
                 <a href="/" class="titulo_cabecalho"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
                 <% if (foto_usuario.length > 0) { %>
                     <a href="/perfil"><img src="uploads/<%= foto_usuario[0].nome_foto %>" alt="Botão perfil" class="botao_cabecalho foto_perfil_cabecalho"></a>
@@ -35,6 +35,7 @@
                 
                             <form method="POST" action="/atualizar/favoritos" class="formulario_checklist formulario_favorito">
                                 <input type="text" name="nome_tela" class="campo_formulario campo_formulario_invisivel" value="/favoritos" placeholder="Nome da tela" maxlength="70" readonly required>
+                                <input type="text" name="tela_anterior" class="campo_formulario campo_formulario_invisivel" value="<%= pagina_anterior %>" placeholder="Nome da tela anterior" maxlength="70" readonly required>
                                 <input type="text" name="nome_pais" class="campo_formulario campo_formulario_invisivel" value="<%= historico_usuario[i].nome_pais %>" placeholder="Nome do país" maxlength="70" readonly required>
                                 <input type="number" name="id_favorito" class="campo_formulario campo_formulario_invisivel" value="<%= historico_usuario[i].id_favorito %>" readonly required>
                                 <% if (historico_usuario[i].isfavorite_favorito == 1) { %>

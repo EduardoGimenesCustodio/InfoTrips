@@ -1,8 +1,19 @@
 module.exports.favoritos = function(app, req, res){
 	if (!req.session.loggedin) {
-        var mensagem = 'Faça o login para acessar sua lista de países favoritos';
-        res.render('home/index', {mensagem: mensagem, foto_usuario: {}});
+        res.redirect('/?notificacao=Faça Login');
         return;
+    }
+
+    if (req.query.pagina_anterior) {
+        if (req.query.pagina_anterior === '/') {
+            var pagina_anterior = '/';
+        } else {
+            if (req.query.pagina_anterior === '/perfil') {
+                var pagina_anterior = '/perfil';
+            }
+        }
+    } else {
+        res.redirect('/');
     }
     
     var email = req.session.email;
@@ -11,11 +22,13 @@ module.exports.favoritos = function(app, req, res){
     var historicoModel = new app.app.models.HistoricoDAO(connection);
     var favoritoModel = new app.app.models.FavoritoDAO(connection);
 
+    
+
     usuarioModel.getUsuario(email, function(error, usuario) {
         usuarioModel.getFotoUsuario(email, function(error, foto_usuario) {
             historicoModel.getHistoricoUsuario(email, function(error, dados_historico_usuario) {
                 favoritoModel.getFavoritosUsuario(email, function(error, dados_favoritos_usuario) {
-                    res.render('favoritos/favoritos', {usuario: usuario, foto_usuario: foto_usuario, historico_usuario: dados_historico_usuario, favoritos_usuario: dados_favoritos_usuario});
+                    res.render('favoritos/favoritos', {usuario: usuario, foto_usuario: foto_usuario, historico_usuario: dados_historico_usuario, favoritos_usuario: dados_favoritos_usuario, pagina_anterior: pagina_anterior});
                 });
             });
         });
@@ -44,16 +57,12 @@ module.exports.atualizar_favoritos = function(app, req, res){
                 res.redirect('/busca?pais_busca='+ pais_pesquisado);
             } else {
                 if (nome_tela === '/favoritos') {
-                    res.redirect('/favoritos');
+                    var tela_anterior = favoritos.tela_anterior;
+                    res.redirect('/favoritos?pagina_anterior='+ tela_anterior);
                 } else {
                     res.redirect(nome_tela +'?nome_pais='+ nome_pais);
                 }
             }
-
-            // var jsdom = require("jsdom");
-            // var JSDOM = jsdom.JSDOM;
-            // global.document = new JSDOM(html).window.document;
-            // window.history.back();
 		});
 	});
 }

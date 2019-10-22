@@ -16,7 +16,7 @@
 
     <body>
       <header class="cabecalho">
-        <a href="/favoritos"><img src="img/branco/icone_lista_favoritos_branco.svg" alt="Botão favoritos" class="botao_cabecalho"></a>
+        <a href="/favoritos?pagina_anterior=/"><img src="img/branco/icone_lista_favoritos_branco.svg" alt="Botão favoritos" class="botao_cabecalho"></a>
         <a href="/" class="titulo_cabecalho"><img src="img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
         <% if (foto_usuario.length > 0) { %>
           <a href="/perfil"><img src="uploads/<%= foto_usuario[0].nome_foto %>" alt="Botão perfil" class="botao_cabecalho foto_perfil_cabecalho"></a>
