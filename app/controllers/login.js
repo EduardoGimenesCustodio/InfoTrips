@@ -16,7 +16,7 @@ module.exports.login_usuario = function(app, req, res){
 			if (result.length > 0) {
 				req.session.loggedin = true;
 				req.session.email = email;
-				res.redirect('/home');
+				res.redirect('/?notificacao=Login Realizado');
 			} else {
 				var erro = 'E-mail ou senha incorretos';
 				res.render('login/login', {validacao: erro});

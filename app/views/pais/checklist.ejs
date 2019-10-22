@@ -15,7 +15,7 @@
 
     <body>
         <header class="cabecalho">
-            <a href="javascript:window.history.go(-1)"><img src="/img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+            <a href="pais?nome_pais=<%=pais[0].nome_pais%>"><img src="/img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
             <a href="/" class="titulo_cabecalho"><img src="/img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
             <% if (foto_usuario.length > 0) { %>
                 <a href="/perfil"><img src="/uploads/<%= foto_usuario[0].nome_foto %>" alt="Botão perfil" class="botao_cabecalho foto_perfil_cabecalho"></a>
