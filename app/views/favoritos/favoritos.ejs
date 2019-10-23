@@ -56,7 +56,7 @@
             <section class="secao_tela_favoritos">
                 <% if (favoritos_usuario.length > 0) { %>
                     <% for (var i=0; i<favoritos_usuario.length; i++) { %>
-                        <a href="pais?nome_pais=<%=favoritos_usuario[i].nome_pais%>" class="bloco_informacao bloco_informacao_checkbox">
+                        <a href="pais?nome_pais_favoritos=<%=favoritos_usuario[i].nome_pais%>" class="bloco_informacao bloco_informacao_checkbox">
                             <img src="img/bandeiras/<%= favoritos_usuario[i].bandeira_pais %>" alt="Bandeira <%= favoritos_usuario[i].nome_pais %>" class="bandeira_pais">
                             <p class="texto texto_bloco_informacao"><%= favoritos_usuario[i].nome_pais %></p>
                 

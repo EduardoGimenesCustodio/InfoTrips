@@ -14,6 +14,7 @@ module.exports.favoritos = function(app, req, res){
         }
     } else {
         res.redirect('/');
+        return;
     }
     
     var email = req.session.email;

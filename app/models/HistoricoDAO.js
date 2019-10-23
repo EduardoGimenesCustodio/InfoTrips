@@ -7,7 +7,7 @@ function HistoricoDAO(connection){
 	}
 
     HistoricoDAO.prototype.getHistoricoPais = function(email, nome_pais, callback){
-		this._connection.query('select * from historico where usuario_historico = (select id_usuario from usuario where email_usuario = "'+ email +'") and pais_historico = (select id_pais from pais where nome_pais = "'+ nome_pais.nome_pais +'")', callback);
+		this._connection.query('select * from historico where usuario_historico = (select id_usuario from usuario where email_usuario = "'+ email +'") and pais_historico = (select id_pais from pais where nome_pais = "'+ nome_pais +'")', callback);
 	}
 
 	HistoricoDAO.prototype.inserirRegistroHistorico = function(id_usuario, id_pais, callback){
@@ -15,7 +15,7 @@ function HistoricoDAO(connection){
     }
     
     HistoricoDAO.prototype.atualizarRegistroHistorico = function(email, nome_pais, callback){
-		this._connection.query('update historico set data_historico = (select now()) where usuario_historico = (select id_usuario from usuario where email_usuario = "'+ email +'") and pais_historico = (select id_pais from pais where nome_pais = "'+ nome_pais.nome_pais +'")', callback);
+		this._connection.query('update historico set data_historico = (select now()) where usuario_historico = (select id_usuario from usuario where email_usuario = "'+ email +'") and pais_historico = (select id_pais from pais where nome_pais = "'+ nome_pais +'")', callback);
 	}
 
 module.exports = function(){
