@@ -398,6 +398,12 @@ body{
 
 /* Pais */
 
+.cabecalho_fixo{
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
 .cabecalho_pais{
 	background-color: var(--cor-primary);
 	width: 100%;
@@ -443,6 +449,7 @@ body{
 .secao_pais{
 	display: block;
 	width: 100%;
+	margin-top: 49%;
 }
 
 .secao_expansivel{

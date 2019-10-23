@@ -11,52 +11,55 @@
       <link rel="stylesheet" href="/css/style.css">
       <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
       <link rel="icon" href="/img/roxo/logo_roxa.png">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
 
     <body>
-      <header class="cabecalho">
-        <a href="/busca"><img src="/img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
-        <a href="/" class="titulo_cabecalho"><img src="/img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
-        <% if (foto_usuario.length > 0) { %>
-          <a href="/perfil"><img src="/uploads/<%= foto_usuario[0].nome_foto %>" alt="Botão perfil" class="botao_cabecalho foto_perfil_cabecalho"></a>
-        <% } else { %>
-          <a href="/perfil"><img src="/img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
-        <% } %>
-      </header>
+      <section class="cabecalho_fixo">
+        <header class="cabecalho">
+          <a href="/busca"><img src="/img/branco/icone_voltar_branco.svg" alt="Botão voltar" class="botao_cabecalho"></a>
+          <a href="/" class="titulo_cabecalho"><img src="/img/branco/titulo_branco.svg" alt="Título InfoTrips" class="titulo"></a>
+          <% if (foto_usuario.length > 0) { %>
+            <a href="/perfil"><img src="/uploads/<%= foto_usuario[0].nome_foto %>" alt="Botão perfil" class="botao_cabecalho foto_perfil_cabecalho"></a>
+          <% } else { %>
+            <a href="/perfil"><img src="/img/branco/icone_perfil_branco.svg" alt="Botão perfil" class="botao_cabecalho"></a>
+          <% } %>
+        </header>
+
+        <div class="cabecalho_pais">
+          <div class="nome_pais_cabecalho_pais">
+            <h2 class="nome_pais"><%=pais[0].nome_pais %></h2>
+
+            <% if (usuario.length > 0) { %>
+              <form method="POST" action="/atualizar/favoritos" class="formulario_checklist formulario_favorito">
+                <input type="text" name="nome_tela" class="campo_formulario campo_formulario_invisivel" value="/pais" placeholder="Nome da tela" maxlength="70" readonly required>
+                <input type="text" name="nome_pais" class="campo_formulario campo_formulario_invisivel" value="<%= pais[0].nome_pais %>" placeholder="Nome do país" maxlength="70" readonly required>
+                <input type="number" name="id_favorito" class="campo_formulario campo_formulario_invisivel" value="<%= pais[0].id_favorito %>" readonly required>
+                <% if (pais[0].isfavorite_favorito == 1) { %>
+                    <input type="image" src="/img/branco/icone_favorito_branco.svg" class="botao_cabecalho">
+                <% } else { %>
+                    <input type="image" src="/img/branco/icone_nao_favorito_branco.svg" class="botao_cabecalho">
+                <% } %>
+              </form>
+            <% } %>
+          </div>
+          
+          <div class="abas_pais">
+            <a href="pais?nome_pais=<%=pais[0].nome_pais%>" class="aba_pais aba_atual_pais">Informações</a>
+            <a href="checklist?nome_pais=<%=pais[0].nome_pais%>" class="aba_pais">Checklist</a>
+          </div>
+        </div>
+      </section>
 
       <% if (validacao.length > 0) { %>
         <div id="mensagem_checklist_fazer_login" class="fundo_bloco_detalhe">
-            <div class="bloco_informacao bloco_detalhe">
-                <p class="texto texto_detalhe"><%= validacao %></p>
-                <a href="/login" class="botao">Login</a>
-                <a href="javascript:window.history.go(-1)" class="botao">Fechar</a>
-            </div>
+          <div class="bloco_informacao bloco_detalhe">
+            <p class="texto texto_detalhe"><%= validacao %></p>
+            <a href="/login" class="botao">Login</a>
+            <a href="javascript:window.history.go(-1)" class="botao">Fechar</a>
+          </div>
         </div>
       <% } %>
-
-      <div class="cabecalho_pais">
-        <div class="nome_pais_cabecalho_pais">
-          <h2 class="nome_pais"><%=pais[0].nome_pais %></h2>
-
-          <% if (usuario.length > 0) { %>
-            <form method="POST" action="/atualizar/favoritos" class="formulario_checklist formulario_favorito">
-              <input type="text" name="nome_tela" class="campo_formulario campo_formulario_invisivel" value="/pais" placeholder="Nome da tela" maxlength="70" readonly required>
-              <input type="text" name="nome_pais" class="campo_formulario campo_formulario_invisivel" value="<%= pais[0].nome_pais %>" placeholder="Nome do país" maxlength="70" readonly required>
-              <input type="number" name="id_favorito" class="campo_formulario campo_formulario_invisivel" value="<%= pais[0].id_favorito %>" readonly required>
-              <% if (pais[0].isfavorite_favorito == 1) { %>
-                  <input type="image" src="/img/branco/icone_favorito_branco.svg" class="botao_cabecalho">
-              <% } else { %>
-                  <input type="image" src="/img/branco/icone_nao_favorito_branco.svg" class="botao_cabecalho">
-              <% } %>
-            </form>
-          <% } %>
-        </div>
-		    
-		    <div class="abas_pais">
-          <a href="pais?nome_pais=<%=pais[0].nome_pais%>" class="aba_pais aba_atual_pais">Informações</a>
-          <a href="checklist?nome_pais=<%=pais[0].nome_pais%>" class="aba_pais">Checklist</a>
-		    </div>
-	    </div>
 
 	    <section class="secao_pais">
         <div class="bloco_informacao">
@@ -209,8 +212,9 @@
     </body>
     <script type="text/javascript" src="/js/main.js"></script>
     
-    <!-- <script>
-      JQuery(document).ready(function($) {
+    <!-- Botão voltar ao topo -->
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
         $(window).scroll(function () {
           if ($(this).scrollTop() > 100) {
             $('#botao_voltar_topo').fadeIn();
@@ -226,5 +230,5 @@
           return false;
         });
       });
-    </script> -->
+    </script>
 </html>
