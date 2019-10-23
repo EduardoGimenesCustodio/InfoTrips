@@ -14,6 +14,11 @@ module.exports.pais = function(app, req, res){
 			return;
 		}
 	}
+
+	if (nome_pais === 'Brasil') {
+		res.redirect('/busca');
+		return;
+	}
 	
 	paisModel.getExigenciasPais(nome_pais, function(error, dados_exigencias_pais){
 		paisModel.getEmbaixadaBrasil(nome_pais, function(error, dados_embaixada_brasil){
@@ -78,6 +83,11 @@ module.exports.checklist = function(app, req, res){
 	if (req.query.nome_pais){
 		var nome_pais = req.query.nome_pais;
 	} else {
+		res.redirect('/busca');
+		return;
+	}
+
+	if (nome_pais === 'Brasil') {
 		res.redirect('/busca');
 		return;
 	}

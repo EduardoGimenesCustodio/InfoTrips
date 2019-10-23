@@ -61,7 +61,13 @@ module.exports.cadastrar_usuario = function(app, req, res, nome_foto_usuario){
 								var id_exigencia = exigencias_paises[i].id_exigencia;
 								checklistModel.registrarChecklistUsuario(id_usuario, id_exigencia, function(error, result){});
 							}
-							app.app.controllers.login.login_usuario(app, req, res);
+							paisModel.getPaises(function(error, paises){
+								for (var i=0; i<paises.length; i++) {
+									var id_pais = paises[i].id_pais;
+									favoritoModel.registrarFavoritosUsuario(id_usuario, id_pais, function(error, result){});
+								}
+								app.app.controllers.login.login_usuario(app, req, res);
+							});
 						});
 					}
 				});

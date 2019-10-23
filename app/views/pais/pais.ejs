@@ -202,7 +202,29 @@
             <p class="texto texto_bloco_informacao">Não há alertas para esse país</p>
           </div>
         <% } %>
-	    </section>
+      </section>
+      
+      <img src="img/roxo/icone_drop_up_redondo_roxo.svg" alt="Botão voltar ao topo" id="botao_voltar_topo" class="botao_cabecalho botao_voltar_topo">
+
     </body>
     <script type="text/javascript" src="/js/main.js"></script>
+    
+    <!-- <script>
+      JQuery(document).ready(function($) {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+            $('#botao_voltar_topo').fadeIn();
+          } else {
+            $('#botao_voltar_topo').fadeOut();
+          }
+        });
+
+        $('#botao_voltar_topo').click(function () {
+          $('body,html').animate({
+            scrollTop: 0
+          }, 800);
+          return false;
+        });
+      });
+    </script> -->
 </html>
