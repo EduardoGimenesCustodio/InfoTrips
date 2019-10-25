@@ -27,7 +27,7 @@
         </header>
 
         <div class="cabecalho_pais">
-          <div class="nome_pais_cabecalho_pais">
+          <div class="nome_pais_cabecalho_pais">  
             <h2 class="nome_pais"><%=pais[0].nome_pais %></h2>
 
             <% if (usuario.length > 0) { %>
@@ -61,7 +61,11 @@
         </div>
       <% } %>
 
-	    <section class="secao_pais">
+      <% if (pais[0].nome_pais === 'Estados Unidos da América') { %>
+	      <section class="secao_pais secao_pais_cabecalho_maior">
+      <% } else { %>
+        <section class="secao_pais">
+      <% } %>
         <div class="bloco_informacao">
           <h3 class="titulo_bloco_informacao">Informações Turísticas</h3>
           <p class="texto texto_bloco_informacao"><%=pais[0].informacoes_turisticas_pais %></p>

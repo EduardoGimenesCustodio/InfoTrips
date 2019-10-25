@@ -11,7 +11,7 @@ module.exports.busca = function(app, req, res){
 			}
 		}
 
-		if ((pais_busca === 'eua') || (pais_busca === 'EUA')) {
+		if ((pais_busca === 'eua') || (pais_busca === 'EUA') || (pais_busca === 'Eua')) {
 			pais_busca = 'Estados Unidos da América';
 		}
 

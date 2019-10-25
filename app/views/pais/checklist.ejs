@@ -50,7 +50,11 @@
             </div>
         </section>
 
-        <section class="secao_pais">
+        <% if (pais[0].nome_pais === 'Estados Unidos da América') { %>
+            <section class="secao_pais secao_pais_cabecalho_maior">
+        <% } else { %>
+            <section class="secao_pais">
+        <% } %>
             <% for (var i=0; i<checklist.length; i++) { %>
                 <div id="<%= checklist[i].id_checklist %>" class="fundo_bloco_detalhe fundo_bloco_detalhe_invisivel">
                     <div class="bloco_informacao bloco_detalhe">
