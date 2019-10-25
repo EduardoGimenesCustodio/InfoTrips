@@ -1,29 +1,3 @@
-// Carrossel
-
-var carrossel = ['item1_carrossel', 'item2_carrossel', 'item3_carrossel', 'item4_carrossel'];
-var itemCarrosselAtual = 0;
-
-function mudar_item_automaticamente() {
-    document.getElementById(carrossel[itemCarrosselAtual]).className = 'item_carrossel';
-    document.getElementById('ponto_'+ carrossel[itemCarrosselAtual]).className = 'ponto_carrossel';
-    itemCarrosselAtual = (itemCarrosselAtual + 1) % carrossel.length;
-    document.getElementById(carrossel[itemCarrosselAtual]).className = 'item_carrossel item_carrossel_atual';
-    document.getElementById('ponto_'+ carrossel[itemCarrosselAtual]).className = 'ponto_carrossel ponto_carrossel_atual';
-}
-
-function mudar_item(posicao_item_carrossel) {
-    itemCarrosselAtual = posicao_item_carrossel;
-    for(var i = 0; i < carrossel.length; i++) {
-        if(carrossel[i] === carrossel[itemCarrosselAtual]) {
-            document.getElementById(carrossel[i]).className = 'item_carrossel item_carrossel_atual';
-            document.getElementById('ponto_'+ carrossel[i]).className = 'ponto_carrossel ponto_carrossel_atual';
-        } else {
-            document.getElementById(carrossel[i]).className = 'item_carrossel';
-            document.getElementById('ponto_'+ carrossel[i]).className = 'ponto_carrossel';
-        }
-    }
-}
-
 // Preview da foto de perfil
 
 function previewFotoPerfil(imagem_preview) {

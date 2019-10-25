@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <MER>
 	<Informacoes>
-		<Posicao Left="1043" Top="522"/>
+		<Posicao Left="1043" Top="827"/>
 		<TotalItens Valor="322"/>
 		<Tipo Valor="CONCEITUAL"/>
 		<Versao Valor="2.0.0"/>
@@ -1096,7 +1096,7 @@
           <MinCard Valor="1"/>
           <Composto Valor="0"/>
           <Identificador Valor="0"/>
-          <Tipo Valor="varchar(200)"/>
+          <Tipo Valor="varchar(1000)"/>
           <Multivalorado Valor="0"/>
           <Orientacao Valor="3"/>
           <TamAuto Valor="-1"/>

@@ -110,7 +110,7 @@ body{
 	width: 100%;
 	margin-bottom: 2.8%;
 	padding: 0 2.8% 0 2.8%;
-	font-size: 20px;
+	font-size: 19px;
 }
 
 .titulo_secundario_roxo{
@@ -126,23 +126,13 @@ body{
 
 /* Carrossel */
 
-#carrossel{
+.active div{
+	background-color: var(--cor-primary-dark);
+}
+
+.carrossel{
 	width: 100%;
 	margin: 10% 0 10% 0;
-	padding: 2.8%;
-	/* position: relative; */
-	overflow: hidden;
-}
-
-.item_carrossel{
-	display: none;
-	animation-name: transicao;
-	animation-duration: 20s;
-	animation-iteration-count: infinite;
-}
-
-.item_carrossel_atual{
-	display: block;
 }
 
 .imagem_carrossel{
@@ -156,16 +146,9 @@ body{
 	color: var(--cor-primary-dark);
 	text-align: center;
 	font-weight: bold;
-	margin-top: 5%;
+	margin: 5% 0 15% 0;
 	padding: 0 10% 0 10%;
 	font-size: 22px;
-}
-
-.pontos_carrossel{
-	display: flex;
-	width: 60%;
-	height: 30px;
-	margin: 5% auto 0 auto;
 }
 
 .ponto_carrossel{
@@ -174,13 +157,7 @@ body{
 	cursor: pointer;
 	width: 30px;
 	height: 30px;
-	margin: 0 auto 0 auto;
 	border-radius: 100%;
-}
-
-.ponto_carrossel_atual{
-	border: none;
-	background-color: var(--cor-primary-dark);
 }
 
 /* Campos formulário */
