@@ -81,6 +81,27 @@
           <% } %>
         </div>
 
+        <div id="bloco_informacao_fusohorarios" class="bloco_informacao bloco_informacao_expansivel" onclick="abrir_secao_informacao('bloco_informacao_fusohorarios', 'secao_fusohorarios')">
+          <div class="cabecalho_bloco_informacao_expansivel">
+            <h3 class="titulo_bloco_informacao titulo_bloco_informacao_expansivel">Fuso horários</h3>
+            <img src="img/roxo/icone_expandir_roxo.svg" alt="Botão expandir" class="botao_cabecalho">
+          </div>
+          <p class="texto texto_bloco_informacao">Clique para conhecer o(s) fuso horário(s) desse país</p>
+        </div>
+
+        <div id="secao_fusohorarios" class="bloco_informacao bloco_informacao_invisivel secao_expansivel">
+          <div class="cabecalho_bloco_informacao_expansivel">
+            <h3 class="titulo_bloco_informacao titulo_bloco_informacao_expansivel">Fuso horários</h3>
+            <img src="img/roxo/icone_desfazer_expansao_roxo.svg" alt="Botão desfazer expansão" class="botao_cabecalho" onclick="fechar_secao_informacao('bloco_informacao_fusohorarios', 'secao_fusohorarios')">
+          </div>
+          <% for (var i=0; i<fusohorarios_pais.length; i++) { %>
+            <div class="dados_expandidos">
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Fuso horário:</span> <%=fusohorarios_pais[i].descricao_fusohorario %></p>
+              <p class="texto texto_bloco_informacao"><span class="texto texto_bloco_informacao texto_destaque">Região:</span> <%=fusohorarios_pais[i].regiao_fusohorario_pais %></p>
+            </div>
+          <% } %>
+        </div>
+
         <% for (var i=0; i<exigencias_pais.length; i++) { %>
           <% if (exigencias_pais[i].nome_exigencia === 'Visto' && vistos_pais.length > 0) { %>
             <div id="bloco_informacao_visto" class="bloco_informacao bloco_informacao_expansivel" onclick="abrir_secao_informacao('bloco_informacao_visto', 'secao_visto')">

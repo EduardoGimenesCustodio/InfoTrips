@@ -11,6 +11,10 @@ module.exports.busca = function(app, req, res){
 			}
 		}
 
+		if ((pais_busca === 'eua') || (pais_busca === 'EUA')) {
+			pais_busca = 'Estados Unidos da América';
+		}
+
 		var paisModel = new app.app.models.PaisDAO(connection);
 
 		if (req.session.loggedin) {

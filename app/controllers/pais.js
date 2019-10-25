@@ -29,39 +29,41 @@ module.exports.pais = function(app, req, res){
 							paisModel.getMoedasPais(nome_pais, function(error, dados_moedas_pais){
 								paisModel.getLinguasPais(nome_pais, function(error, dados_linguas_pais){
 									paisModel.getAlertasPais(nome_pais, function(error, dados_alertas_pais){
-										if (req.session.loggedin) {
-											var email = req.session.email;
-											var usuarioModel = new app.app.models.UsuarioDAO(connection);
-											var historicoModel = new app.app.models.HistoricoDAO(connection);
-											paisModel.getPaisComFavoritos(nome_pais, email, function(error, dados_pais){
-												usuarioModel.getUsuario(email, function(error, usuario) {
-													usuarioModel.getFotoUsuario(email, function(error, foto_usuario) {
-														historicoModel.getHistoricoPais(email, nome_pais, function(error, result) {
-															if (result.length > 0) {
-																historicoModel.atualizarRegistroHistorico(email, nome_pais, function(error, result) {
-																	res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias_pais, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, usuario: usuario, foto_usuario: foto_usuario, validacao: {}});
-																});
-															} else {
-																var id_usuario = usuario[0].id_usuario;
-																var id_pais = dados_pais[0].id_pais;
-																historicoModel.inserirRegistroHistorico(id_usuario, id_pais, function(error, result) {
-																	res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias_pais, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, usuario: usuario, foto_usuario: foto_usuario, validacao: {}});
-																});
-															}
+										paisModel.getFusohorariosPais(nome_pais, function(error, dados_fusohorarios_pais){
+											if (req.session.loggedin) {
+												var email = req.session.email;
+												var usuarioModel = new app.app.models.UsuarioDAO(connection);
+												var historicoModel = new app.app.models.HistoricoDAO(connection);
+												paisModel.getPaisComFavoritos(nome_pais, email, function(error, dados_pais){
+													usuarioModel.getUsuario(email, function(error, usuario) {
+														usuarioModel.getFotoUsuario(email, function(error, foto_usuario) {
+															historicoModel.getHistoricoPais(email, nome_pais, function(error, result) {
+																if (result.length > 0) {
+																	historicoModel.atualizarRegistroHistorico(email, nome_pais, function(error, result) {
+																		res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias_pais, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, fusohorarios_pais: dados_fusohorarios_pais, usuario: usuario, foto_usuario: foto_usuario, validacao: {}});
+																	});
+																} else {
+																	var id_usuario = usuario[0].id_usuario;
+																	var id_pais = dados_pais[0].id_pais;
+																	historicoModel.inserirRegistroHistorico(id_usuario, id_pais, function(error, result) {
+																		res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias_pais, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, fusohorarios_pais: dados_fusohorarios_pais, usuario: usuario, foto_usuario: foto_usuario, validacao: {}});
+																	});
+																}
+															});
 														});
 													});
 												});
-											});
-										} else {
-											paisModel.getPais(nome_pais, function(error, dados_pais){
-												if (req.query.nome_pais_notificacao) {
-													var erro = 'Faça o login para acessar sua checklist desse país';
-													res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias_pais, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, usuario: {}, foto_usuario: {}, validacao: erro});	
-												} else {
-													res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias_pais, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, usuario: {}, foto_usuario: {}, validacao: {}});
-												}
-											});
-										}
+											} else {
+												paisModel.getPais(nome_pais, function(error, dados_pais){
+													if (req.query.nome_pais_notificacao) {
+														var erro = 'Faça o login para acessar sua checklist desse país';
+														res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias_pais, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, fusohorarios_pais: dados_fusohorarios_pais, usuario: {}, foto_usuario: {}, validacao: erro});	
+													} else {
+														res.render('pais/pais', {pais: dados_pais, exigencias_pais: dados_exigencias_pais, embaixada_brasil: dados_embaixada_brasil, embaixada_pais: dados_embaixada_pais, consulados_brasil: dados_consulados_brasil, consulados_pais: dados_consulados_pais, vistos_pais: dados_vistos_pais, moedas_pais: dados_moedas_pais, linguas_pais: dados_linguas_pais, alertas_pais: dados_alertas_pais, fusohorarios_pais: dados_fusohorarios_pais, usuario: {}, foto_usuario: {}, validacao: {}});
+													}
+												});
+											}
+										});
 									});
 								});
 							});

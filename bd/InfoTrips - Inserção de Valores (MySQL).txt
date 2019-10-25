@@ -717,3 +717,56 @@ taxa_solicitacao_visto, taxa_adicional_visto, pais_visto)
 values('Tier 4 (Child) student visa', 'Jovem de 4 a 17 anos que pretende estudar em uma escola independente no Reino Unido', 
 'Duração do curso (até 3 anos) mais 4 meses depois', 
 '348 euros', 'Healthcare Surcharge (sobretaxa de saúde)', 2);
+
+/* FUSO HORÁRIO */
+
+insert into fusohorario(descricao_fusohorario) values("UTC-6");
+insert into fusohorario(descricao_fusohorario) values("UTC-11");
+insert into fusohorario(descricao_fusohorario) values("UTC-5");
+insert into fusohorario(descricao_fusohorario) values("UTC-8");
+insert into fusohorario(descricao_fusohorario) values("UTC-7");
+insert into fusohorario(descricao_fusohorario) values("UTC-10");
+insert into fusohorario(descricao_fusohorario) values("UTC-9");
+insert into fusohorario(descricao_fusohorario) values("UTC+1");
+insert into fusohorario(descricao_fusohorario) values("UTC+0");
+insert into fusohorario(descricao_fusohorario) values("UTC-3");
+
+insert into fusohorario_pais(regiao_fusohorario_pais, pais_fusohorario_pais, fusohorario_fusohorario_pais) 
+values("Arkansas, Nebrasca, Minesota, Alabama, Dakota do Norte, Wisconsin, Oclaoma, Cansas, Ilinóis, Iova, Luisiana, Tenessi (Memphis, Nashville), Dakota do Sul, Texas (Exceto El Paso), Flórida (Pensacola), Mississípi, Missúri", 
+1, 1);
+
+insert into fusohorario_pais(regiao_fusohorario_pais, pais_fusohorario_pais, fusohorario_fusohorario_pais) 
+values("Nova Jérsia (Pago Pago)", 
+1, 2);
+
+insert into fusohorario_pais(regiao_fusohorario_pais, pais_fusohorario_pais, fusohorario_fusohorario_pais) 
+values("Virgínia Ocidental, Kentucky, Massachusetts, Vermonte, Delauare (Dover, Washington), Michigão, Carolina do Sul, Nova Hampshire, Tenessi (Knoxville), Ohio, Nova Iorque, Coneticute, Pensilvânia, Flórida (exceto Pensacola, Indiana, Carolina do Norte, Maine, Virgínia, Maryland, Geórgia, Ilha de Rodes, Nova Jérsia (exceto Pago Pago)", 
+1, 3);
+
+insert into fusohorario_pais(regiao_fusohorario_pais, pais_fusohorario_pais, fusohorario_fusohorario_pais) 
+values("Washington, Nevada, Arizona, Oregão, Califórnia", 
+1, 4);
+
+insert into fusohorario_pais(regiao_fusohorario_pais, pais_fusohorario_pais, fusohorario_fusohorario_pais) 
+values("Utá, Idaho, Wyoming, Novo México, Texas (El Paso), Montana, Colorado", 
+1, 5);
+
+insert into fusohorario_pais(regiao_fusohorario_pais, pais_fusohorario_pais, fusohorario_fusohorario_pais) 
+values("Alasca (Adak), Havaí", 
+1, 6);
+
+insert into fusohorario_pais(regiao_fusohorario_pais, pais_fusohorario_pais, fusohorario_fusohorario_pais) 
+values("Alasca (Exceto Adak)", 
+1, 7);
+
+insert into fusohorario_pais(regiao_fusohorario_pais, pais_fusohorario_pais, fusohorario_fusohorario_pais) 
+values("Gibraltar", 
+2, 8);
+
+insert into fusohorario_pais(regiao_fusohorario_pais, pais_fusohorario_pais, fusohorario_fusohorario_pais) 
+values("Todo o território (exceto Gibraltar)", 
+2, 9);
+
+insert into fusohorario_pais(regiao_fusohorario_pais, pais_fusohorario_pais, fusohorario_fusohorario_pais) 
+values("Todo o território", 
+3, 10);

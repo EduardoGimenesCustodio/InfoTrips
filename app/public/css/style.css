@@ -407,7 +407,6 @@ body{
 .cabecalho_pais{
 	background-color: var(--cor-primary);
 	width: 100%;
-	margin-bottom: 2.8%;
 	box-shadow: 0 0 4px 0;
 }
 

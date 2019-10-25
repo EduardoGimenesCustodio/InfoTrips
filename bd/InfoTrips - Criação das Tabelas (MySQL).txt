@@ -12,7 +12,7 @@ create table fusohorario(id_fusohorario int not null auto_increment,
 descricao_fusohorario varchar(15), primary key(id_fusohorario));
 
 create table fusohorario_pais(id_fusohorario_pais int not null 
-auto_increment, regiao_fusohorario_pais varchar(200), 
+auto_increment, regiao_fusohorario_pais varchar(1000), 
 pais_fusohorario_pais int, 
 fusohorario_fusohorario_pais int, 
 primary key(id_fusohorario_pais), 
