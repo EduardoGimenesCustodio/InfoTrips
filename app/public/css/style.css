@@ -134,6 +134,11 @@ body{
 	z-index: 0;
 }
 
+.carousel-indicators li{
+	width: 34px;
+	margin: 0 2.8% 0 2.8%;
+}
+
 .carrossel{
 	width: 100%;
 	margin: 10% 0 10% 0;
@@ -159,8 +164,8 @@ body{
 	border: 4px solid;
 	border-color: var(--cor-primary-dark);
 	cursor: pointer;
-	width: 30px;
-	height: 30px;
+	width: 34px;
+	height: 34px;
 	border-radius: 100%;
 }
 
@@ -211,6 +216,7 @@ body{
 
 .formulario_busca{
 	display: flex;
+	align-items: center;
 }
 
 .formulario_tela_busca{
@@ -306,15 +312,6 @@ body{
 	border-radius: 5px;
 }
 
-.checkmark_checklist{
-	border-radius: 100%;
-	position: relative;
-}
-
-.checkmark_favoritos{
-	position: relative;
-}
-
 /* When the checkbox is checked, add a blue background */
 .checkbox input:checked ~ .checkmark{
 	background-color: var(--cor-primary-dark);
@@ -352,6 +349,8 @@ body{
 	width: 180px;
 	margin: 4% auto 4% auto;
 }
+
+/* Bloco detalhe */
 
 .bloco_detalhe{
 	margin: 0 auto 0 auto;
@@ -555,4 +554,228 @@ body{
 
 .formulario_favorito{
 	margin: 0 0 0 2.8%;
+}
+
+
+
+/* 480 x 800 */
+/* 768 x 1024 */
+/* 960 x 1280*/
+/* 1280 */
+
+/* MOBILE FIRST */
+
+/* SMALL DEVICES - SMARTPHONES */
+@media screen and (min-width: 480px) {
+
+	/* Cabeçalho */
+
+	.cabecalho{
+		padding: 3.2%;
+	}
+
+	.botao_cabecalho{
+		width: 44px;
+		height: 44px;
+	}
+
+	.titulo{
+		height: 44px;
+	}
+
+	.titulo_cadastro{
+		padding-right: 44px;
+	}
+
+	/* Títulos */
+
+	.titulo_principal{
+		padding: 0 3.2% 0 3.2%;
+		font-size: 36px;
+	}
+
+	.titulo_secundario{
+		margin-bottom: 3.2%;
+		padding: 0 3.2% 0 3.2%;
+		font-size: 26px;
+	}
+
+	/* Texto */
+
+	.texto{
+		font-size: 23px;
+	}
+
+	/* Carrossel */
+
+	.carrossel{
+		margin: 9% 0 9% 0;
+	}
+
+	.imagem_carrossel{
+		width: 220px;
+		height: 220px;
+	}
+
+	.texto_carrossel{
+		margin: 5% 0 12% 0;
+		font-size: 30px;
+	}
+
+	.carousel-indicators li{
+		width: 34px;
+		margin: 0 3.2% 0 3.2%;
+	}
+
+	.ponto_carrossel{
+		width: 44px;
+		height: 44px;
+	}
+
+	/* Campos formulário */
+
+	.campo_foto_formulario{
+		width: 220px;
+		height: 220px;
+	}
+
+	.campo_foto_perfil{
+		width: 220px;
+		height: 220px;
+	}
+
+	.foto_perfil{
+		width: 220px;
+		height: 220px;
+	}
+
+	.campo_formulario{
+		width: 93.6%;
+		margin: 0 3.2% 3.2% 3.2%;
+		padding: 3.2%;
+		font-size: 25px;
+	}
+
+	.campo_formulario_busca{
+		border: none;
+		width: 88%;
+		margin: 0 auto 0 0;
+		padding: 0;
+		border-radius: 0;
+	}
+
+	.formulario_tela_busca{
+		margin: 4% 3.2% 4% 3.2%;
+	}
+
+	.botao_buscar{
+		width: 44px;
+		height: 44px;
+	}
+
+	.texto_login{
+		margin-top: 3.2%;
+	}
+
+	.botao{
+		width: 50%;
+		margin: 3.2% auto 0 auto;
+		padding: 3.2%;
+		font-size: 25px;
+	}
+
+	/* Checkbox */
+
+	.campo_checkbox{
+		width: 35px;
+		height: 35px;
+	}
+
+	.campo_checkbox_atualizacoes{
+		padding: 3.2%;
+	}
+
+	.checkbox .checkmark:after {
+		left: 8px;
+		width: 12px;
+		height: 17px;
+	}
+
+	/* Login */
+
+	.logo_titulo{
+		width: 220px;
+	}
+
+	/* Bloco detalhe */
+
+	.texto_detalhe{
+		font-size: 25px;
+	}
+
+	/* País */
+
+	.nome_pais{
+		font-size: 36px;
+	}
+		
+	.aba_pais{
+		padding: 3.2%;
+		font-size: 25px;
+	}
+	
+	.secao_expansivel{
+		margin-top: 3.2%;
+	}
+	
+	.bloco_informacao{
+		width: 93.6%;
+		margin: 0 auto 3.2% auto;
+		padding: 3.2%;
+	}
+	
+	.titulo_bloco_informacao{
+		font-size: 25px;
+		margin-bottom: 3.2%;
+	}
+				
+	.bandeira_pais{
+		width: 55px;
+		margin-right: 3.2%;
+	}
+		
+	.dados_expandidos{
+		padding: 3.2% 0 3.2% 0;
+	}
+	
+	.botao_voltar_topo{
+		margin: 0 3.2% 3.2% 0;
+	}
+
+	/* Checklist */
+
+	.formulario_checklist{
+		width: 44px;
+		height: 44px;
+		margin-right: 3.2%;
+	}
+
+	.formulario_toggle{
+		height: 44px;
+		margin: 0 3.2% 0 3.2%;
+	}
+
+	.botao_toggle{
+		height: 44px;
+	}
+
+	.texto_bloco_detalhe_checklist{
+		margin-top: 3.2%;
+	}
+
+	/* Favoritos */
+	
+	.formulario_favorito{
+		margin: 0 0 0 3.2%;
+	}
 }
