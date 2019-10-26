@@ -489,6 +489,7 @@ body{
 }
 
 .titulo_bloco_informacao_expansivel{
+	height: 18px;
 	margin: 0 auto 0 0;
 }
 
@@ -566,8 +567,8 @@ body{
 /* MOBILE FIRST */
 
 /* SMALL DEVICES - SMARTPHONES */
+/* 480 x 800 */
 @media screen and (min-width: 480px) {
-
 	/* Cabeçalho */
 
 	.cabecalho{
@@ -623,7 +624,7 @@ body{
 	}
 
 	.carousel-indicators li{
-		width: 34px;
+		width: 44px;
 		margin: 0 3.2% 0 3.2%;
 	}
 
@@ -678,7 +679,6 @@ body{
 	}
 
 	.botao{
-		width: 50%;
 		margin: 3.2% auto 0 auto;
 		padding: 3.2%;
 		font-size: 25px;
@@ -738,6 +738,11 @@ body{
 		font-size: 25px;
 		margin-bottom: 3.2%;
 	}
+
+	.titulo_bloco_informacao_expansivel{
+		height: 25px;
+		margin: 0 auto 0 0;
+	}
 				
 	.bandeira_pais{
 		width: 55px;
@@ -774,8 +779,249 @@ body{
 	}
 
 	/* Favoritos */
-	
+
 	.formulario_favorito{
 		margin: 0 0 0 3.2%;
+	}
+}
+
+/* SMALL DEVICES - TABLETS */
+/* 768 x 1024 */
+@media screen and (min-width: 768px) {
+	/* Cabeçalho */
+
+	.cabecalho{
+		padding: 3%;
+		box-shadow: 0 0 8px 0;
+	}
+	
+	.cabecalho_login{
+		box-shadow: 0 0 0 0;
+	}
+
+	.botao_cabecalho{
+		width: 50px;
+		height: 50px;
+	}
+
+	.titulo{
+		height: 50px;
+	}
+
+	.titulo_cadastro{
+		padding-right: 50px;
+	}
+
+	/* Títulos */
+
+	.titulo_principal{
+		padding: 0 3% 0 3%;
+		font-size: 41px;
+	}
+
+	.titulo_secundario{
+		margin-bottom: 3%;
+		padding: 0 3% 0 3%;
+		font-size: 31px;
+	}
+
+	/* Texto */
+
+	.texto{
+		font-size: 28px;
+	}
+
+	/* Carrossel */
+
+	.carrossel{
+		margin: 10% 0 10% 0;
+	}
+
+	.imagem_carrossel{
+		width: 250px;
+		height: 250px;
+	}
+
+	.texto_carrossel{
+		margin: 5% 0 15% 0;
+		font-size: 35px;
+	}
+
+	.carousel-indicators li{
+		width: 50px;
+		margin: 0 3% 0 3%;
+	}
+
+	.ponto_carrossel{
+		width: 50px;
+		height: 50px;
+	}
+
+	/* Campos formulário */
+
+	.campo_foto_formulario{
+		width: 250px;
+		height: 250px;
+	}
+
+	.campo_foto_perfil{
+		width: 250px;
+		height: 250px;
+	}
+
+	.foto_perfil{
+		width: 250px;
+		height: 250px;
+	}
+
+	.campo_formulario{
+		width: 85%;
+		margin: 0 7.5% 3% 7.5%;
+		padding: 2.8%;
+		font-size: 30px;
+	}
+
+	.campo_formulario_busca{
+		border: none;
+		width: 88%;
+		margin: 0 auto 0 0;
+		padding: 0;
+		border-radius: 0;
+	}
+
+	.formulario_tela_busca{
+		margin: 4% 7.5% 4% 7.5%;
+	}
+
+	.botao_buscar{
+		width: 50px;
+		height: 50px;
+	}
+
+	.texto_login{
+		margin-top: 3%;
+	}
+
+	.botao{
+		width: 40%;
+		margin: 3% auto 0 auto;
+		padding: 2.8%;
+		font-size: 30px;
+	}
+
+	/* Checkbox */
+
+	.campo_checkbox{
+		width: 40px;
+		height: 40px;
+	}
+
+	.campo_checkbox_atualizacoes{
+		padding: 3% 7.5% 3% 7.5%;
+	}
+
+	.checkbox .checkmark:after {
+		left: 9px;
+		width: 14px;
+		height: 19px;
+	}
+
+	/* Login */
+
+	.logo_titulo{
+		width: 250px;
+	}
+
+	/* Bloco detalhe */
+
+	.texto_detalhe{
+		font-size: 30px;
+	}
+
+	/* País */
+
+	.cabecalho_pais{
+		box-shadow: 0 0 8px 0;
+	}
+
+	.nome_pais_cabecalho_pais{
+		padding: 3.5%;
+	}
+
+	.nome_pais{
+		font-size: 41px;
+	}
+		
+	.aba_pais{
+		padding: 2.8%;
+		font-size: 30px;
+	}
+
+	.secao_pais{
+		margin-top: 40%;
+	}
+
+	.secao_pais_cabecalho_maior{
+		margin-top: 40%;
+	}
+	
+	.secao_expansivel{
+		margin-top: 3%;
+	}
+	
+	.bloco_informacao{
+		width: 85%;
+		margin: 0 auto 3% auto;
+		padding: 2.8%;
+	}
+	
+	.titulo_bloco_informacao{
+		font-size: 30px;
+		margin-bottom: 3%;
+	}
+
+	.titulo_bloco_informacao_expansivel{
+		height: 30px;
+		margin: 0 auto 0 0;
+	}
+				
+	.bandeira_pais{
+		width: 60px;
+		margin-right: 3%;
+	}
+		
+	.dados_expandidos{
+		padding: 2.8% 0 2.8% 0;
+	}
+	
+	.botao_voltar_topo{
+		margin: 0 7.5% 3% 0;
+	}
+
+	/* Checklist */
+
+	.formulario_checklist{
+		width: 50px;
+		height: 50px;
+		margin-right: 3%;
+	}
+
+	.formulario_toggle{
+		height: 50px;
+		margin: 0 3% 0 3%;
+	}
+
+	.botao_toggle{
+		height: 50px;
+	}
+
+	.texto_bloco_detalhe_checklist{
+		margin-top: 3%;
+	}
+
+	/* Favoritos */
+
+	.formulario_favorito{
+		margin: 0 0 0 3%;
 	}
 }
