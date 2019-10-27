@@ -180,6 +180,7 @@ body{
 
 .campo_invisivel_formulario{
 	position: absolute;
+	cursor: pointer;
 	opacity: 0;
 }
 
@@ -1282,5 +1283,263 @@ body{
 /* LARGE DEVICES - WIDE SCREENS */
 /* 1280 */
 @media screen and (min-width: 1280px) {
+	/* Cabeçalho */
 
+	.cabecalho{
+		padding: 1%;
+		box-shadow: 0 0 7px 0;
+	}
+	
+	.cabecalho_login{
+		box-shadow: 0 0 0 0;
+	}
+
+	.botao_cabecalho{
+		width: 35px;
+		height: 35px;
+	}
+
+	.titulo{
+		height: 35px;
+	}
+
+	.titulo_cadastro{
+		padding-right: 35px;
+	}
+
+	/* Títulos */
+
+	.titulo_principal{
+		margin-top: 2%;
+		padding: 0 1% 0 1%;
+		font-size: 30px;
+	}
+
+	.titulo_secundario{
+		margin-bottom: 1%;
+		padding: 0 1% 0 1%;
+		font-size: 20px;
+	}
+
+	/* Texto */
+
+	.texto{
+		font-size: 15px;
+	}
+
+	/* Carrossel */
+
+	.carrossel{
+		margin: 3.5% 0 3.5% 0;
+	}
+
+	.imagem_carrossel{
+		width: 180px;
+		height: 180px;
+	}
+
+	.texto_carrossel{
+		margin: 2% 0 4% 0;
+		font-size: 20px;
+	}
+
+	.carousel-indicators li{
+		width: 35px;
+		margin: 0 1% 0 1%;
+	}
+
+	.ponto_carrossel{
+		width: 35px;
+		height: 35px;
+	}
+
+	/* Campos formulário */
+
+	.campo_foto_formulario{
+		width: 180px;
+		height: 180px;
+		margin: 1.5% auto 1.5% auto;
+	}
+
+	.campo_foto_perfil{
+		width: 180px;
+		height: 180px;
+	}
+
+	.foto_perfil{
+		width: 180px;
+		height: 180px;
+	}
+
+	.campo_formulario{
+		width: 50%;
+		margin: 0 25% 1% 25%;
+		padding: 1%;
+		font-size: 15px;
+	}
+
+	.campo_formulario_busca{
+		border: none;
+		width: 88%;
+		margin: 0 auto 0 0;
+		padding: 0;
+		border-radius: 0;
+	}
+
+	.formulario_tela_busca{
+		margin: 2% 25% 2% 25%;
+	}
+
+	.botao_buscar{
+		width: 30px;
+		height: 30px;
+	}
+
+	.texto_login{
+		margin-top: 1%;
+	}
+
+	.botao{
+		width: 20%;
+		margin: 1% auto 0 auto;
+		padding: 1%;
+		font-size: 15px;
+	}
+
+	/* Checkbox */
+
+	.campo_checkbox{
+		width: 25px;
+		height: 25px;
+	}
+
+	.checkbox_atualizacoes{
+		padding: 3px 0 3px 6%;
+	}
+
+	.campo_checkbox_atualizacoes{
+		padding: 1% 25% 1% 25%;
+	}
+
+	.checkbox .checkmark:after {
+		left: 5px;
+		width: 7px;
+		height: 10px;
+	}
+
+	/* Login */
+
+	.logo_titulo{
+		width: 180px;
+		margin: 1.5% auto 1.5% auto;
+	}
+
+	/* Bloco detalhe */
+
+	.texto_detalhe{
+		font-size: 20px;
+	}
+
+	/* País */
+
+	.cabecalho_pais{
+		box-shadow: 0 0 7px 0;
+	}
+
+	.nome_pais_cabecalho_pais{
+		padding: 1%;
+	}
+
+	.nome_pais{
+		font-size: 22px;
+	}
+
+	.aba_pais{
+		border-bottom: 3px solid;
+		border-color: var(--cor-primary);
+		padding: 0.6%;
+		font-size: 20px;
+	}
+
+	.aba_atual_pais{
+		border-color: var(--cor-borda-aba-pais);
+	}
+
+	.secao_pais{
+		margin-top: 13%;
+	}
+
+	.secao_pais_cabecalho_maior{
+		margin-top: 13%;
+	}
+	
+	.secao_expansivel{
+		margin-top: 3%;
+	}
+	
+	.bloco_informacao{
+		width: 50%;
+		margin: 0 auto 1% auto;
+		padding: 1%;
+	}
+	
+	.titulo_bloco_informacao{
+		font-size: 20px;
+		margin-bottom: 1%;
+	}
+
+	.titulo_bloco_informacao_expansivel{
+		height: 20px;
+		margin: 0 auto 0 0;
+	}
+				
+	.bandeira_pais{
+		width: 40px;
+		margin-right: 1%;
+	}
+		
+	.dados_expandidos{
+		padding: 1% 0 1% 0;
+	}
+	
+	.botao_voltar_topo{
+		margin: 0 1% 1% 0;
+	}
+
+	/* Perfil */
+
+	.dados_usuario{
+		margin-bottom: 2%;
+	}
+
+	/* Checklist */
+
+	.formulario_checklist{
+		width: 35px;
+		height: 35px;
+		margin-right: 1%;
+	}
+
+	.formulario_toggle{
+		height: 35px;
+		margin: 0 1% 0 1%;
+	}
+
+	.botao_toggle{
+		height: 35px;
+	}
+
+	.texto_bloco_detalhe_checklist{
+		margin-top: 1%;
+	}
+
+	/* Favoritos */
+
+	.secao_tela_favoritos{
+		margin-top: 2%;
+	}
+
+	.formulario_favorito{
+		margin: 0 0 0 1%;
+	}
 }
