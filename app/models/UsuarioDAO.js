@@ -34,8 +34,12 @@ function UsuarioDAO(connection){
 		this._connection.query('update foto set nome_foto = "' + foto_usuario + '" where usuario_foto = ' + usuario_cadastrado[0].id_usuario, callback);
 	}
 
-	UsuarioDAO.prototype.loginUsuario = function(email, senha, callback) {
-		this._connection.query('select * from usuario where email_usuario = ? AND senha_usuario = ?', [email, senha], callback);
+	UsuarioDAO.prototype.getSenhaUsuario = function(email, callback) {
+		this._connection.query('select senha_usuario from usuario where email_usuario = ?', email, callback);
+	}
+
+	UsuarioDAO.prototype.loginUsuario = function(email, callback) {
+		this._connection.query('select * from usuario where email_usuario = ?', email, callback);
 	}
 
 module.exports = function(){

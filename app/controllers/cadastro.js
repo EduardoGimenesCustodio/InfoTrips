@@ -28,6 +28,26 @@ module.exports.cadastrar_usuario = function(app, req, res, nome_foto_usuario){
 			var erro = 'E-mail já cadastrado em outra conta';
 			res.render('cadastro/cadastro', {validacao: erro});
 		} else {
+			var crypto = require('crypto');
+			var alg = 'aes-256-ctr';
+			var pwd = 'abcdabcbcbcdabcdabadabcdabcdabcd';
+
+			function crypt(senha) {
+				var iv = crypto.randomBytes(16)
+				var cipher = crypto.createCipheriv(alg, pwd, iv)
+				var crypted = cipher.update(senha, 'utf8', 'hex') + cipher.final('hex')
+				return iv.toString('hex')+':'+crypted;
+			}
+
+			function decrypt(senha) {
+				var parts = senha.split(':');
+				var decipher = crypto.createDecipheriv(alg, pwd, new Buffer(parts[0], 'hex'));
+				var plain = decipher.update(parts[1], 'hex', 'utf8') + decipher.final('utf8');
+				return plain;
+			}
+
+			usuario.senha_usuario = crypt(usuario.senha_usuario);
+
 			usuarioModel.cadastrarUsuario(usuario, function(error, result){
 				usuarioModel.getUsuario(usuario.email_usuario, function(error, result){
 					var usuario_cadastrado = result;
@@ -49,6 +69,7 @@ module.exports.cadastrar_usuario = function(app, req, res, nome_foto_usuario){
 										var id_pais = paises[i].id_pais;
 										favoritoModel.registrarFavoritosUsuario(id_usuario, id_pais, function(error, result){});
 									}
+									usuario.senha_usuario = decrypt(usuario.senha_usuario);
 									app.app.controllers.login.login_usuario(app, req, res);
 								});
 							});
@@ -66,6 +87,7 @@ module.exports.cadastrar_usuario = function(app, req, res, nome_foto_usuario){
 									var id_pais = paises[i].id_pais;
 									favoritoModel.registrarFavoritosUsuario(id_usuario, id_pais, function(error, result){});
 								}
+								usuario.senha_usuario = decrypt(usuario.senha_usuario);
 								app.app.controllers.login.login_usuario(app, req, res);
 							});
 						});

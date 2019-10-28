@@ -31,7 +31,7 @@
                 </div>
                 <input type="text" name="nome_usuario" class="campo_formulario" value="<%= usuario[0].nome_usuario %>" placeholder="Nome" minlength="10" maxlength="70" required>
                 <input type="email" name="email_usuario" class="campo_formulario campo_formulario_invisivel" value="<%= usuario[0].email_usuario %>" placeholder="E-mail" maxlength="70" readonly required>
-                <input type="password" name="senha_usuario" class="campo_formulario" value="<%= usuario[0].senha_usuario %>"  placeholder="Senha" minlength="5" maxlength="20" required>
+                <input type="password" name="senha_usuario" class="campo_formulario" value="<%= usuario[0].senha_usuario %>"  placeholder="Senha" minlength="5" maxlength="10" required>
                 <div class="campo_checkbox_atualizacoes">
                     <label class="checkbox checkbox_atualizacoes texto">receber atualizações sobre países favoritos
                         <% if (usuario[0].updatesareactive_usuario == 1) { %>
