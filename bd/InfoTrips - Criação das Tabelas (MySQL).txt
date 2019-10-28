@@ -71,7 +71,7 @@ foreign key(pais_sede_embaixada) references pais(id_pais));
 create table usuario(id_usuario int not null auto_increment, 
 nome_usuario varchar(70), 
 email_usuario varchar(70), 
-senha_usuario varchar(20), 
+senha_usuario varchar(500), 
 updatesareactive_usuario boolean, 
 primary key(id_usuario));
 

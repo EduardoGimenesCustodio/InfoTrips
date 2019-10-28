@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <MER>
 	<Informacoes>
-		<Posicao Left="919" Top="680"/>
+		<Posicao Left="919" Top="405"/>
 		<TotalItens Valor="193"/>
 		<Tipo Valor="LÓGICO"/>
 		<Versao Valor="2.0.0"/>
@@ -1335,7 +1335,7 @@
           <ApenasSeparador Valor="0"/>
           <IsKey Valor="0"/>
           <IsFKey Valor="0"/>
-          <Tipo Valor="varchar(20)"/>
+          <Tipo Valor="varchar(500)"/>
           <TabOrigem Valor="0"/>
           <CampoOrigem Valor="0"/>
           <Complemento Valor=""/>
