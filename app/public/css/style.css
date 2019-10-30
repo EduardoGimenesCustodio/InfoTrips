@@ -494,6 +494,11 @@ body{
 	margin: 0 auto 0 0;
 }
 
+.link_bloco_informacao{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
 .dados_expandidos{
 	border-bottom: 2px solid;
 	border-color: var(--cor-primary-dark);

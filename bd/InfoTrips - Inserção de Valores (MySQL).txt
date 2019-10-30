@@ -7,13 +7,13 @@ insert into pais(nome_pais) values('Reino Unido');
 insert into pais(nome_pais) values('Argentina');
 insert into pais(nome_pais) values('Brasil');
 
-update pais set informacoes_turisticas_pais='Site para planejamento de viagens: Google Travel. Site sobre turismo: www.visiteosusa.com.br' 
+update pais set informacoes_turisticas_pais='http://www.visiteosusa.com.br' 
 where id_pais=1;
 
-update pais set informacoes_turisticas_pais='Site para planejamento de viagens: Google Travel. Site sobre turismo: www.getyourguide.pt/reino-unido' 
+update pais set informacoes_turisticas_pais='https://www.getyourguide.pt/reino-unido-n35/' 
 where id_pais=2;
 
-update pais set informacoes_turisticas_pais='Site para planejamento de viagens: Google Travel. Site sobre turismo: www.mundoo.com.br' 
+update pais set informacoes_turisticas_pais='https://viagemeturismo.abril.com.br/paises/argentina-2/' 
 where id_pais=3;
 
 update pais set bandeira_pais='Bandeira_Estados_Unidos_da_America.png' 
