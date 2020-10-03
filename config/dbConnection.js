@@ -3,9 +3,9 @@ var mysql = require('mysql');
 var connMySQL = function(){
 	console.log('Conexão com o DB foi estabelecida');
 	return mysql.createConnection({
-		host: 'localhost',
-		user: 'root',
-		password: 'root',
+		host: 'mysql669.umbler.com',
+		user: 'infotrips',
+		password: 'rootinfotrips',
 		database: 'infotrips'			
 	});
 }
