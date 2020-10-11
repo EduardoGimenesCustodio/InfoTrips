@@ -1,8 +1,13 @@
-/* InfoTrips - Criação das Tabelas */
+/* InfoTrips - Criaï¿½ï¿½o das Tabelas */
 
 create database infotrips;
 
 use infotrips;
+
+create table admin(id_admin int not null auto_increment, 
+email_admin varchar(70), 
+senha_admin varchar(500), 
+primary key(id_admin));
 
 create table pais(id_pais int not null auto_increment, nome_pais varchar(70), 
 informacoes_turisticas_pais varchar(500), bandeira_pais varchar(100), 
@@ -16,9 +21,9 @@ auto_increment, regiao_fusohorario_pais varchar(1000),
 pais_fusohorario_pais int, 
 fusohorario_fusohorario_pais int, 
 primary key(id_fusohorario_pais), 
-foreign key(pais_fusohorario_pais) references pais(id_pais), 
+foreign key(pais_fusohorario_pais) references pais(id_pais) on update cascade on delete cascade, 
 foreign key(fusohorario_fusohorario_pais) references 
-fusohorario(id_fusohorario));
+fusohorario(id_fusohorario) on update cascade on delete cascade);
 
 create table alerta(id_alerta int not null auto_increment, titulo_alerta 
 varchar(70), data_alerta date, descricao_alerta varchar(200), 
@@ -27,8 +32,8 @@ primary key(id_alerta));
 create table alerta_pais(id_alerta_pais int not null auto_increment, 
 alerta_alerta_pais int, pais_alerta_pais int, 
 primary key(id_alerta_pais), 
-foreign key(alerta_alerta_pais) references alerta(id_alerta), 
-foreign key(pais_alerta_pais) references pais(id_pais));
+foreign key(alerta_alerta_pais) references alerta(id_alerta) on update cascade on delete cascade, 
+foreign key(pais_alerta_pais) references pais(id_pais) on update cascade on delete cascade);
 
 create table moeda(id_moeda int not null auto_increment, 
 nome_moeda varchar(50), 
@@ -37,8 +42,8 @@ primary key(id_moeda));
 create table moeda_pais(id_moeda_pais int not null auto_increment, 
 pais_moeda_pais int, moeda_moeda_pais int, 
 primary key(id_moeda_pais), 
-foreign key(pais_moeda_pais) references pais(id_pais), 
-foreign key(moeda_moeda_pais) references moeda(id_moeda));
+foreign key(pais_moeda_pais) references pais(id_pais) on update cascade on delete cascade, 
+foreign key(moeda_moeda_pais) references moeda(id_moeda) on update cascade on delete cascade);
 
 create table visto(id_visto int not null auto_increment, 
 nome_visto varchar(50), 
@@ -48,7 +53,7 @@ taxa_solicitacao_visto varchar(150),
 taxa_adicional_visto varchar(150), 
 pais_visto int, 
 primary key(id_visto), 
-foreign key(pais_visto) references pais(id_pais));
+foreign key(pais_visto) references pais(id_pais) on update cascade on delete cascade);
 
 create table consulado(id_consulado int not null auto_increment, 
 endereco_consulado varchar(200), 
@@ -56,8 +61,8 @@ telefone_consulado varchar(50),
 email_consulado varchar(70), 
 pais_representado_consulado int, pais_sede_consulado int, 
 primary key(id_consulado), 
-foreign key(pais_representado_consulado) references pais(id_pais), 
-foreign key(pais_sede_consulado) references pais(id_pais));
+foreign key(pais_representado_consulado) references pais(id_pais) on update cascade on delete cascade, 
+foreign key(pais_sede_consulado) references pais(id_pais) on update cascade on delete cascade);
 
 create table embaixada(id_embaixada int not null auto_increment, 
 endereco_embaixada varchar(200), 
@@ -65,8 +70,8 @@ telefone_embaixada varchar(50),
 email_embaixada varchar(70), 
 pais_representado_embaixada int, pais_sede_embaixada int, 
 primary key(id_embaixada), 
-foreign key(pais_representado_embaixada) references pais(id_pais), 
-foreign key(pais_sede_embaixada) references pais(id_pais));
+foreign key(pais_representado_embaixada) references pais(id_pais) on update cascade on delete cascade, 
+foreign key(pais_sede_embaixada) references pais(id_pais) on update cascade on delete cascade);
 
 create table usuario(id_usuario int not null auto_increment, 
 nome_usuario varchar(70), 
@@ -79,25 +84,25 @@ create table historico(id_historico int not null auto_increment,
 data_historico timestamp default current_timestamp, 
 pais_historico int, usuario_historico int, 
 primary key(id_historico), 
-foreign key(pais_historico) references pais(id_pais), 
-foreign key(usuario_historico) references usuario(id_usuario));
+foreign key(pais_historico) references pais(id_pais) on update cascade on delete cascade, 
+foreign key(usuario_historico) references usuario(id_usuario) on update cascade on delete cascade);
 
 create table favorito(id_favorito int not null auto_increment, 
 isfavorite_favorito boolean, pais_favorito int, usuario_favorito int, 
 primary key(id_favorito), foreign key(pais_favorito) references 
-pais(id_pais), foreign key(usuario_favorito) references usuario(id_usuario));
+pais(id_pais) on update cascade on delete cascade, foreign key(usuario_favorito) references usuario(id_usuario) on update cascade on delete cascade);
 
 create table exigencia(id_exigencia int not null auto_increment, 
 nome_exigencia varchar(150), descricao_exigencia varchar(600), 
 isrequired_exigencia boolean, isactive_exigencia boolean, 
 pais_exigencia int, primary key(id_exigencia), 
-foreign key(pais_exigencia) references pais(id_pais));
+foreign key(pais_exigencia) references pais(id_pais) on update cascade on delete cascade);
 
 create table checklist(id_checklist int not null auto_increment, 
-isdone_checklist boolean, exigencia_checklist int, 
+isdone_checklist boolean, isactive_checklist boolean, exigencia_checklist int, 
 usuario_checklist int, primary key(id_checklist), 
-foreign key(exigencia_checklist) references exigencia(id_exigencia), 
-foreign key(usuario_checklist) references usuario(id_usuario));
+foreign key(exigencia_checklist) references exigencia(id_exigencia) on update cascade on delete cascade, 
+foreign key(usuario_checklist) references usuario(id_usuario) on update cascade on delete cascade);
 
 create table lingua(id_lingua int not null auto_increment, nome_lingua varchar(70), 
 primary key(id_lingua));
@@ -105,11 +110,11 @@ primary key(id_lingua));
 create table lingua_pais(id_lingua_pais int not null auto_increment, 
 pais_lingua_pais int, lingua_lingua_pais int, 
 primary key(id_lingua_pais), 
-foreign key(pais_lingua_pais) references pais(id_pais), 
-foreign key(lingua_lingua_pais) references lingua(id_lingua));
+foreign key(pais_lingua_pais) references pais(id_pais) on update cascade on delete cascade, 
+foreign key(lingua_lingua_pais) references lingua(id_lingua) on update cascade on delete cascade);
 
 create table foto(id_foto int not null auto_increment, 
 nome_foto varchar(100), 
 usuario_foto int, 
 primary key(id_foto), 
-foreign key(usuario_foto) references usuario(id_usuario));
+foreign key(usuario_foto) references usuario(id_usuario) on update cascade on delete cascade);

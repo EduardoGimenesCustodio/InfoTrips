@@ -58,8 +58,10 @@ module.exports.cadastrar_usuario = function(app, req, res, nome_foto_usuario){
 					if (foto_usuario) {
 						usuarioModel.cadastrarFotoUsuario(usuario_cadastrado, foto_usuario, function(error, result){
 
+							
 							checklistModel.getExigenciasPaises(function(error, exigencias_paises){
 								var id_usuario = usuario_cadastrado[0].id_usuario;
+								
 								for (var i=0; i<exigencias_paises.length; i++) {
 									var id_exigencia = exigencias_paises[i].id_exigencia;
 									checklistModel.registrarChecklistUsuario(id_usuario, id_exigencia, function(error, result){});
@@ -78,6 +80,7 @@ module.exports.cadastrar_usuario = function(app, req, res, nome_foto_usuario){
 
 						checklistModel.getExigenciasPaises(function(error, exigencias_paises){
 							var id_usuario = usuario_cadastrado[0].id_usuario;
+							
 							for (var i=0; i<exigencias_paises.length; i++) {
 								var id_exigencia = exigencias_paises[i].id_exigencia;
 								checklistModel.registrarChecklistUsuario(id_usuario, id_exigencia, function(error, result){});

@@ -17,7 +17,7 @@ app.use(session({
 app.use(express.static('./app/public'));
 
 app.use(bodyParser.urlencoded({extended:true}));
-//aqui parametrizamos como o bodyParser vai tratar os formuklários.
+//aqui parametrizamos como o bodyParser vai tratar os formulários.
 //o parametro extend:true vai permitir que seja implementada através de Json
 //as url codificadas.
 
