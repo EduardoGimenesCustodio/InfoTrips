@@ -1,5 +1,3 @@
-# InfoTrips
+## Description
 
-Projeto desenvolvido como TCC do curso técnico em Informática para Internet no IFMS. Consiste em um site informativo sobre viagens internacionais no qual brasileiros podem consultar as regras de outros países para a entrada de estrangeiros em seus territórios.
-
-Tecnologias usadas: JavaScript, HTML, CSS, Node.JS, Bootstrap, MySQL e jQuery.
+Project developed as Course Completion Work of the technical course in Computing for the Internet at IFMS. It consists of an informative website about international travel in which Brazilians can consult the rules of other countries for the entry of foreigners in their territories.
